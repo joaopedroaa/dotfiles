@@ -1,15 +1,32 @@
 ### .zshrc
 
-`ln -sv ~/dotfiles/.zshrc ~`
+```shell
+ln -sv ~/dotfiles/.zshrc ~
+```
 
 ### .gitconfig
 
-`ln -sv ~/dotfiles/.gitconfig ~`
+```shell
+ln -sv ~/dotfiles/.gitconfig ~
+```
 
 ### .bashrc
 
-`ln -sv ~/dotfiles/.bashrc ~`
+```shell
+ln -sv ~/dotfiles/.bashrc ~
+```
 
 ### .profile
 
-`ln -sv ~/dotfiles/.profile ~`
+```shell
+ln -sv ~/dotfiles/.profile ~
+```
+
+### All
+
+```shell
+ln -sv ~/dotfiles/.zshrc ~ &
+ln -sv ~/dotfiles/.gitconfig ~ &
+ln -sv ~/dotfiles/.bashrc ~ &
+ln -sv ~/dotfiles/.profile ~
+```
