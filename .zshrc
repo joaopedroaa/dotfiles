@@ -2,10 +2,11 @@
 ZSH_THEME="robbyrussell"
 
 export ZSH="/home/pedro/.oh-my-zsh"
-export PATH="$(yarn global bin):$PATH"
+export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:`pwd`/flutter/bin"
+export PATH="$PATH:`pwd`/flutter/bin/cache/dart-sdk/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="/home/pedro/anaconda3/bin:$PATH"
+export PATH="$PATH:/home/pedro/anaconda3/bin"
 
 plugins=(
   git
@@ -39,6 +40,11 @@ alias dc="docker-compose"
 alias remove="rm -rf"
 alias openfolder="xdg-open"
 alias openconda="anaconda-navigator"
+
+alias clean="sudo apt-get clean"
+alias update="sudo apt-get update"
+alias upgrade="sudo apt-get upgrade"
+alias autoremove="sudo apt autoremove"
 
 alias fun="echo -e '
 sl
