@@ -1,4 +1,4 @@
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 ZSH_THEME="spaceship"
 
 SPACESHIP_PROMPT_ORDER=(
@@ -23,6 +23,11 @@ export PATH="$PATH:`pwd`/flutter/bin"
 export PATH="$PATH:`pwd`/flutter/bin/cache/dart-sdk/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/home/pedro/anaconda3/bin"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -68,6 +73,7 @@ plugins=(
   dnf
   fzf
   )
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
