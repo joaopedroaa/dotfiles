@@ -17,15 +17,25 @@ SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SUFFIX=" "
 
+
+# Oh My Zsh
 export ZSH="/home/pedro/.oh-my-zsh"
-export PATH="$PATH:$(yarn global bin)"
-export PATH="$PATH:`pwd`/flutter/bin"
-export PATH="$PATH:`pwd`/flutter/bin/cache/dart-sdk/bin"
-export PATH="$PATH:$HOME/.rvm/bin" 
-export PATH="$PATH:/home/pedro/anaconda3/bin"
+# Android Studio
+export ANDROID_HOME=~/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+# Nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Flutter
+export PATH="$PATH:`pwd`/flutter/bin"
+export PATH="$PATH:`pwd`/flutter/bin/cache/dart-sdk/bin"
+# Etc
+export PATH="$PATH:$(yarn global bin)"
+export PATH="$PATH:$HOME/.rvm/bin" 
+export PATH="$PATH:/home/pedro/anaconda3/bin"
+
 
 
 alias zshrc="code ~/dotfiles/.zshrc"
