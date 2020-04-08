@@ -18,6 +18,7 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SUFFIX=" "
 
 
+
 # Oh My Zsh
 export ZSH="/home/pedro/.oh-my-zsh"
 # Android Studio
@@ -35,6 +36,7 @@ export PATH="$PATH:`pwd`/flutter/bin/cache/dart-sdk/bin"
 export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:$HOME/.rvm/bin" 
 export PATH="$PATH:/home/pedro/anaconda3/bin"
+export PATH="$PATH:/snap/bin"
 
 
 
@@ -56,15 +58,7 @@ alias cljs="cdf && cd FolderJavaScript && c.."
 # Docker
 alias dc="docker-compose"     
 
-# Etc
-alias remove="rm -rf"
-alias openfolder="xdg-open"
-alias openconda="anaconda-navigator"
-
-alias clean="sudo apt-get clean"
-alias update="sudo apt-get update"
-alias upgrade="sudo apt-get upgrade"
-alias autoremove="sudo apt autoremove"
+alias xamp="cd /opt/lampp && sudo ./manager-linux-x64.run"     
 
 
 plugins=(
