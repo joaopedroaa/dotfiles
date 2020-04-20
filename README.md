@@ -22,6 +22,11 @@ ln -sv ~/dotfiles/.profile ~
 ln -sv ~/dotfiles/.zshrc ~
 ```
 
+```shell
+ln -sv ~/dotfiles/redshift.conf ~/.config/redshift.conf 
+
+```
+
 ### All
 
 ```shell
