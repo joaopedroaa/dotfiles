@@ -18,26 +18,27 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SUFFIX=" "
 
 
-
 # Oh My Zsh
-export ZSH="/home/pedro/.oh-my-zsh"
+export ZSH="/home/joaopedro/.oh-my-zsh"
+
 # Android Studio
 export ANDROID_HOME=~/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # Nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Flutter
 export PATH="$PATH:`pwd`/flutter/bin"
 export PATH="$PATH:`pwd`/flutter/bin/cache/dart-sdk/bin"
-# Etc
-export PATH="$PATH:$(yarn global bin)"
-export PATH="$PATH:$HOME/.rvm/bin" 
-export PATH="$PATH:/home/pedro/anaconda3/bin"
-export PATH="$PATH:/snap/bin"
 
+# Etc
+export PATH="$PATH:$HOME/.rvm/bin" 
+export PATH="$PATH:/home/joaopedro/anaconda3/bin"
+export PATH="$PATH:/snap/bin"
 
 
 alias zshrc="code ~/dotfiles/.zshrc"
@@ -51,15 +52,13 @@ alias cdf="cd ~/folder/"
 alias cdp="cd ~/projects/"
 
 # <--  Folder  --> #
-alias clcss="cdf && cd FolderCSS && c.."
+alias clweb="cdf && cd FolderWeb && c.."
 alias clpy="cdf && cd FolderPython && c.."
 alias cljs="cdf && cd FolderJavaScript && c.."
 
 # Docker
 alias dc="docker-compose"     
-
-alias xamp="cd /opt/lampp && sudo ./manager-linux-x64.run"     
-
+alias apacheConfig="code /etc/httpd/conf/httpd.conf"     
 
 plugins=(
   git
@@ -67,17 +66,24 @@ plugins=(
   fzf
   )
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
   
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-### End of Zinit's installer chunk
+# End of Zinit's installer chunk
 
 zplugin light zsh-users/zsh-autosuggestions
 zplugin light zsh-users/zsh-completions
 zplugin light zsh-users/zsh-history-substring-search
 zplugin light zdharma/fast-syntax-highlighting
 zplugin light buonomo/yarn-completion
+
+### End of Zinit's installer chunk
+fpath=($fpath "/home/joaopedro/.zfunctions")
+
+  # Set Spaceship ZSH as a prompt
+  autoload -U promptinit; promptinit
+  prompt spaceship
