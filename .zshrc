@@ -16,6 +16,7 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_CHAR_SYMBOL="λ"
 
 
 # Oh My Zsh
@@ -30,6 +31,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Deno
+export DENO_INSTALL="/home/joaopedro/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Flutter
 export PATH="$PATH:`pwd`/flutter/bin"
@@ -48,8 +53,8 @@ alias dotfiles="code ~/dotfiles"
 alias c.="code ." alias C.="c."                    
 alias c..="code . && exit" alias C..="c.."
 
-alias cdf="cd ~/folder/"
-alias cdp="cd ~/projects/"
+alias cdf="cd /run/media/joaopedro/External/Manjaro/folder/"
+alias cdp="cd /run/media/joaopedro/External/Manjaro/projects/"
 
 # <--  Folder  --> #
 alias clweb="cdf && cd FolderWeb && c.."
