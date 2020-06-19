@@ -1,3 +1,24 @@
+alias zshrc="code ~/dotfiles/.zshrc"
+alias hosts="code /etc/hosts"
+alias dotfiles="code ~/dotfiles"
+
+alias c.="code ." alias C.="c."                    
+alias c..="code . && exit" alias C..="c.."
+
+alias cdf="cd /run/media/joaopedro/External/Manjaro/folder/"
+alias cdp="cd /run/media/joaopedro/External/Manjaro/projects/"
+
+# <--  Folder  --> #
+alias clweb="cdf && cd FolderWeb && c.."
+alias clpy="cdf && cd FolderPython && c.."
+alias cljs="cdf && cd FolderJavaScript && c.."
+
+# Docker
+alias dc="docker-compose"     
+alias apacheConfig="code /etc/httpd/conf/httpd.conf"   
+
+
+# Zsh Theme
 ZSH_THEME="spaceship"
 
 SPACESHIP_PROMPT_ORDER=(
@@ -45,35 +66,21 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/home/joaopedro/anaconda3/bin"
 export PATH="$PATH:/snap/bin"
 
+# opam configuration
+test -r /home/joaopedro/.opam/opam-init/init.zsh && . /home/joaopedro/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-alias zshrc="code ~/dotfiles/.zshrc"
-alias hosts="code /etc/hosts"
-alias dotfiles="code ~/dotfiles"
-
-alias c.="code ." alias C.="c."                    
-alias c..="code . && exit" alias C..="c.."
-
-alias cdf="cd /run/media/joaopedro/External/Manjaro/folder/"
-alias cdp="cd /run/media/joaopedro/External/Manjaro/projects/"
-
-# <--  Folder  --> #
-alias clweb="cdf && cd FolderWeb && c.."
-alias clpy="cdf && cd FolderPython && c.."
-alias cljs="cdf && cd FolderJavaScript && c.."
-
-# Docker
-alias dc="docker-compose"     
-alias apacheConfig="code /etc/httpd/conf/httpd.conf"     
-
-plugins=(
-  git
-  dnf
-  fzf
-  )
-
-# source $ZSH/oh-my-zsh.sh
   
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+################################################################################
+
+# plugins=(
+#   git
+#   dnf
+#   fzf
+#   )
+
+# # source $ZSH/oh-my-zsh.sh
+  
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
@@ -92,3 +99,4 @@ fpath=($fpath "/home/joaopedro/.zfunctions")
   # Set Spaceship ZSH as a prompt
   autoload -U promptinit; promptinit
   prompt spaceship
+
