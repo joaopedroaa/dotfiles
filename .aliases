@@ -1,0 +1,23 @@
+# Code /
+alias zshrc="code ~/dotfiles/.zshrc"
+alias hosts="code /etc/hosts"
+alias dotfiles="code ~/dotfiles"
+
+# Code .
+alias c.="code ." alias C.="c."
+alias c..="code . && exit" alias C..="c.."
+
+# cdX
+alias cdf="cd /run/media/joaopedro/External/Manjaro/folder/"
+alias cdp="cd /run/media/joaopedro/External/Manjaro/projects/"
+
+# Folder
+alias clweb="cdf && cd FolderWeb && c.."
+alias clpy="cdf && cd FolderPython && c.."
+alias cljs="cdf && cd FolderJavaScript && c.."
+
+# Docker
+alias dc="docker-compose"
+alias apacheConfig="code /etc/httpd/conf/httpd.conf"
+
+
