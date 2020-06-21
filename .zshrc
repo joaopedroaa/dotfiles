@@ -41,5 +41,5 @@ zplugin light buonomo/yarn-completion
 
 
 # aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/dotfiles/.aliases ]] && source ~/dotfiles/.aliases
 

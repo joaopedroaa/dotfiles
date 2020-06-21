@@ -1,5 +1,7 @@
+ln -sv ~/dotfiles/.aliases ~/ 
 ln -sv ~/dotfiles/.gitconfig ~/ 
 ln -sv ~/dotfiles/.profile ~/ 
+ln -sv ~/dotfiles/.zshenv ~/ 
 ln -sv ~/dotfiles/.zshrc ~/ 
 ln -sv ~/dotfiles/hosts /etc 
 mkdir ~/.config/redshift & ln -sv ~/dotfiles/redshift.conf ~/.config/redshift
@@ -14,10 +16,10 @@ yay -S firefox-nightly firefox-developer-edition google-chrome tor-browser
 yay -S visual-studio-code-bin visual-studio-code-insiders android-studio netbeans intellij-idea-ultimate-edition 
 
 # Dev Programs
-yay -S reactotron devdocs-desktop insomnia postman 
+yay -S devdocs-desktop insomnia postman 
 
 # Dev misc
-yay -S opam-git nvm-git deno-git yarn 
+yay -S opam-git nvm-git deno-git yarn vsce 
 
 # LAMP Config
 yay -S apache mysql php php-apache phpmyadmin
