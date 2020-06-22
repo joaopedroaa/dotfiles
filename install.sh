@@ -1,4 +1,3 @@
-ln -sv ~/dotfiles/.aliases ~/ 
 ln -sv ~/dotfiles/.gitconfig ~/ 
 ln -sv ~/dotfiles/.profile ~/ 
 ln -sv ~/dotfiles/.zshenv ~/ 
@@ -19,7 +18,10 @@ yay -S visual-studio-code-bin visual-studio-code-insiders android-studio netbean
 yay -S devdocs-desktop insomnia postman 
 
 # Dev misc
-yay -S opam-git nvm-git deno-git yarn vsce 
+yay -S opam-git nvm-git deno-git yarn vsce spaceship-prompt-git 
+
+# Fonts
+yay -S ttf-fira-code ttf-ibm-plex
 
 # LAMP Config
 yay -S apache mysql php php-apache phpmyadmin
