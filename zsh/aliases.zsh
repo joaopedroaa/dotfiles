@@ -38,6 +38,7 @@ alias dotfiles="code ~/dotfiles"
 alias cde="cd /run/media/joaopedro/External"
 alias cdf="cde && cd Manjaro/folder"
 alias cdp="cde && cd Manjaro/projects"
+alias cdd="cd ~/Desktop"
 
 # Docker
 alias dc="docker-compose"
