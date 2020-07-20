@@ -3,11 +3,14 @@
 	email = joaopedroaats@pm.me
 [core]
 	editor = code --wait
+[push]
+	followTags = true
 [alias]
 	s = status -s
 	co = checkout
-	cm = checkout master
+	com = checkout master
+	rollback = reset --soft HEAD~1
+	count = !git shortlog -s --grep
 	c = !git add --all && git commit --m
 	l = log --pretty=format:'%C(blue)%h%C(reset) %C(green)%C(bold)%cr%C(reset) %s' --max-count=30
 	ld = log --pretty=format:'%C(blue)%h%C(reset) %C(green)%C(bold)%cr%C(reset) %C(magenta)<%an>%C(reset) %s' --max-count=30
-	rollback = reset --soft HEAD~1

@@ -25,13 +25,16 @@ yay -S devdocs-desktop insomnia postman
 yay -S visual-studio-code-bin visual-studio-code-insiders android-studio netbeans8
 
 # MISC
-yay -S vsce spaceship-prompt-git
+yay -S vsce exercism spaceship-prompt-git 
 
 # MISC / FixBugs
 yay -S gnome-keyring
 
 # MISC / JavaScript
 yay -S nvm-git deno-git yarn
+
+# MISC / Java
+yay -S glassfish5 java-8-jdk
 
 # MISC / PHP
 yay -S apache mysql php php-apache phpmyadmin
@@ -46,7 +49,7 @@ yay -S elixir erlang-git inotify-tools
 yay -S stack elm-bin
 
 # NPM Dependencies
-yarn global add gatsby-cli bs-platform typescript
+yarn global add gatsby-cli expo-cli ignite-cli bs-platform typescript
 
 # ------------------------------------------------------------------------------
 # Verify Updates
