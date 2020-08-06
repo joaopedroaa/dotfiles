@@ -30,6 +30,7 @@ alias targz='tar -zxvf'
 alias tarbz2='tar -jxvf' 
 
 # Code
+alias code="code-insiders"
 alias zshrc="code ~/dotfiles/.zshrc"
 alias hosts="code /etc/hosts"
 alias dotfiles="code ~/dotfiles"
