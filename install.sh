@@ -1,8 +1,8 @@
-ln -sv ~/dotfiles/.gitconfig ~/ 
-ln -sv ~/dotfiles/.profile ~/ 
-ln -sv ~/dotfiles/.zshenv ~/ 
-ln -sv ~/dotfiles/.zshrc ~/ 
-ln -sv ~/dotfiles/hosts /etc 
+ln -sv ~/dotfiles/.gitconfig ~/
+ln -sv ~/dotfiles/.profile ~/
+ln -sv ~/dotfiles/.zshenv ~/
+ln -sv ~/dotfiles/.zshrc ~/
+ln -sv ~/dotfiles/hosts /etc
 mkdir ~/.config/redshift & ln -sv ~/dotfiles/redshift.conf ~/.config/redshift
 
 # Normal ------------------------------------------------------------------------------
@@ -19,19 +19,19 @@ yay -S ttf-fira-code ttf-ibm-plex
 # Dev ------------------------------------------------------------------------------
 
 # Apps
-yay -S devdocs-desktop insomnia postman 
+yay -S devdocs-desktop insomnia postman
 
 # Apps / Editors
 yay -S visual-studio-code-bin visual-studio-code-insiders android-studio netbeans8
 
 # MISC
-yay -S vsce exercism spaceship-prompt-git 
+yay -S vsce exercism spaceship-prompt-git  jdk8-openjdk
 
 # MISC / FixBugs
 yay -S gnome-keyring
 
 # MISC / JavaScript
-yay -S nvm-git deno-git yarn
+yay -S nvm-git deno-bin yarn
 
 # MISC / Java
 yay -S glassfish5 java-8-jdk
@@ -43,7 +43,8 @@ yay -S apache mysql php php-apache phpmyadmin
 yay -S opam-git
 
 # MISC / Elixi
-yay -S elixir erlang-git inotify-tools
+# elixir erlang-git
+yay -S inotify-tools
 
 # MISC / FP
 yay -S stack elm-bin

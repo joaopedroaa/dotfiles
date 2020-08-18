@@ -23,6 +23,5 @@ export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
 
 # Etc
 export PATH="$PATH:$HOME/anaconda3/bin"
-export PATH="$PATH:$HOME/.rvm/bin" 
+export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.cabal/bin"
-
