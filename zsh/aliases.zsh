@@ -39,8 +39,7 @@ alias cfghosts="code /etc/hosts"
 
 # Shortcuts
 alias cde="cd /run/media/joaopedro/External"
-alias cdf="cde && cd Linux/folder"
-alias cdp="cde && cd Linux/projects"
+alias cdp="cd /home/joaopedro/projects/"
 alias cdd="cd ~/Desktop"
 
 # Docker
@@ -48,15 +47,20 @@ alias dc="docker-compose"
 alias dcup="docker-compose up"
 alias dcupd="docker-compose up -d"
 
-# Elixir
+# Elixir / mix phx
 alias mpn="mix phx.new"
 alias mps="mix phx.server"
+
+# Elixir / mix deps
 alias mdg="mix deps.get"
+
+# Elixir / mix ecto
 alias mec="mix ecto.create "
 alias mes="mix ecto.setup"
 alias mem="mix ecto.migrate"
-alias megm="mix ecto.gen.migration"
 
+# Elixir / mix ecto.gen
+alias megm="mix ecto.gen.migration"
 
 # ls
 alias l="ls -lF ${colorflag}"

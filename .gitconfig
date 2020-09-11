@@ -13,9 +13,11 @@
 
 	co = checkout
 	com = checkout master
-	
+
+	addo = remote add origin
+
 	c = !git add --all && git commit --m
 	cm = commit --m
-	
+
 	l = log --pretty=format:'%C(blue)%h%C(reset) %C(green)%C(bold)%cr%C(reset) %s' --max-count=30
 	ld = log --pretty=format:'%C(blue)%h%C(reset) %C(green)%C(bold)%cr%C(reset) %C(magenta)<%an>%C(reset) %s' --max-count=30
