@@ -9,6 +9,9 @@ yay -S firefox-nightly firefox-developer-edition google-chrome tor-browser
 # Fonts
 yay -S ttf-fira-code ttf-ibm-plex
 
+# zsh
+curl -L git.io/antigen > ~/antigen.zsh
+
 # Dev ------------------------------------------------------------------------------
 
 # Apps
@@ -18,7 +21,7 @@ yay -S devdocs-desktop insomnia postman
 yay -S visual-studio-code-insiders android-studio netbeans8
 
 # MISC
-yay -S vsce exercism spaceship-prompt-git asdf-vm
+yay -S vsce exercism spaceship-prompt-git asdf-vm wakatime
 
 # MISC / Emacs
 yay -S fd ripgrep

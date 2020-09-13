@@ -25,7 +25,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'rebecca)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -53,7 +53,27 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; TODO: Fix font size
+;; (set-face-attribute 'default nil :height 100)
+
 ;; TODO: fix icons haha
 ;; Neo theme icons with
 ;; https://github.com/domtronn/all-the-icons.el
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+
+;; Global keys
+(global-set-key [f8] 'neotree-toggle)
+(global-set-key (kbd "C-<tab>") 'other-window)
+(global-set-key (kbd "M-<down>") 'enlarge-window)
+(global-set-key (kbd "M-<up>") 'shrink-window)
+(global-set-key (kbd "M-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "M-<left>") 'shrink-window-horizontally)
+
+;; Nyan mode
+(setq nyan-animate-nyancat t)
+(nyan-mode)
+
+;; Waka time
+(global-wakatime-mode)
+

@@ -49,3 +49,21 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)cwc
 ;(unpin! t)www
+
+(package! auto-complete )
+(package! which-key )
+(package! magit )
+(package! all-the-icons)
+(package! neotree )
+
+(package! rebecca-theme)
+
+(package! flycheck-credo )
+(package! mix )
+
+(package! elixir-mode)
+(package! wakatime-mode)
+(package! nyan-mode)
+
+
+
