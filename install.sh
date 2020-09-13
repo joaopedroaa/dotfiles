@@ -20,6 +20,9 @@ yay -S visual-studio-code-insiders android-studio netbeans8
 # MISC
 yay -S vsce exercism spaceship-prompt-git asdf-vm
 
+# MISC / Emacs
+yay -S fd ripgrep
+
 # MISC / JavaScript
 yay -S nvm-git yarn
 
