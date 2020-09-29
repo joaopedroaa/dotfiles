@@ -1,0 +1,20 @@
+[Appearance]
+Skin=materia-dark
+SkinInstalledWithKns=true
+TerminalHighlightOnManualActivation=true
+Translucency=true
+Blur=true
+
+[DownloadDialog Settings]
+Height 1080=800
+Width 1920=958
+Window-Maximized 1080x1920=true
+
+[Favorite Profiles]
+Favorites=
+
+[Window]
+Height=60
+KeepOpen=true
+Position=100
+Width=40

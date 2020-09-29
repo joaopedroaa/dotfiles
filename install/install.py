@@ -1,55 +1,49 @@
-aur = {
-    "apps":        ["discord", "spotify", "spotify-adblock-linux", "zoom", "plank", "krita", "qbittorrent", "vlc"],
-    "browsers":    ["google-chrome", "tor-browser", "firefox-developer-edition"],
-    "font":        ["ttf-fira-code", "ttf-ibm-plex"],
-
-    "dev/apps":    ["devdocs-desktop", "insomnia", "postman"],
-    "dev/misc":    ["vsce", "exercism", "spaceship-prompt-git", "wakatime"],
-    "dev/editors": ["visual-studio-code-insiders", "android-studio", "netbeans8"],
-    "dev/emacs":   ["fd", "ripgrep"],
-    "dev/zsh":     ["antigen-git"],
-
-    "lang/js":     ["nvm-git", "yarn"],
-    "lang/java":   ["glassfish5", "java-8-jdk"],
-    "lang/php":    ["apache", "mysql", "php", "php-apache", "phpmyadmin"],
-    "lang/elixi":  ["inotify-tools"],
-
-    "fix-bugs":    ["gnome-keyring"]
-}
-
-yarn = [
-    "gatsby-cli", "expo-cli", "ignite-cli", "bs-platform", "typescript", "spaceship-prompt"
-]
-
-other_apps = [
-    "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)\""
-]
-
+from apps import aur, yarn
 
 
 def save_file(DATA, finelname):
     with open(finelname, 'w') as file:
         file.write(DATA)
 
+
 code = {
-    "simple": "yay -S ",
-    "part": ""
+    "aur_oneline": "yay -S ",
+    "aur_caregory": "",
+    "yarn": "yarn global add "
 }
 
-yarn = "yarn global add "
+
+def create_aur_code():
+    for categories, apps in aur.items():
+        join_apps = ""
+        title = ""
+
+        for app in apps:
+            join_apps += f"{app} "
+
+        for word in categories.split("/"):
+            title += f" {word.capitalize()} /"
+
+        code["aur_oneline"] += join_apps
+
+        code["aur_caregory"] += f"echo \"{'=' * 42}{title[:-1]} {'=' * 21}\"\n"
+        code["aur_caregory"] += f"yay -S {join_apps}\n\n"
 
 
-for categories, apps in aur.items():
-    join_apps = ""
-
-    for app in apps:
-        join_apps += f"{app} "
-
-    code["simple"] += join_apps
-
-    code["part"] += f"echo \"{categories}\"\n"
-    code["part"] += f"yay -S {join_apps}\n\n"
+def create_yarn_code():
+    for package in yarn:
+        code["yarn"] += f"{package} "
 
 
-# save_file(code["part"], "install-part.sh")
-save_file(code["simple"], "install-aur.sh")
+def main():
+    create_yarn_code()
+    create_aur_code()
+
+    code["aur_oneline"] += f"\n{code['yarn']}"
+    code["aur_caregory"] += f"\n{code['yarn']}"
+
+    # save_file(code["aur_oneline"], "install-oneline.sh")
+    save_file(code["aur_caregory"], "install-categories.sh")
+
+
+main()
