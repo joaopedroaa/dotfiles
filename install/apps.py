@@ -1,8 +1,13 @@
 aur = {
-    "apps":                 ["discord", "zoom", "plank", "krita", "qbittorrent", "vlc", "gparted-git"],
+    "apps":                 ["discord", "zoom", "plank", "krita", "qbittorrent", "vlc"],
     "browsers":             ["google-chrome", "tor-browser", "firefox-developer-edition"],
     "fonts":                ["ttf-fira-code", "ttf-ibm-plex"],
     "kvantum":              ["kvantum-manjaro", "kvantum-theme-layan-git"],
+
+    "hardware":             ["gwe"],
+    "hardware/cpu":         ["cpu-x-git", "s-tui", "stress"],
+    "hardware/hd":          ["gparted-git", "gsmartcontrol"],
+    "hardware/boot":        ["woeusb"],
 
     "konsole":              ["gotop-bin", "xclip", "neofetch"],
     "konsole/zsh":          ["antigen-git", "spaceship-prompt-git"],
@@ -10,10 +15,12 @@ aur = {
     "spotify":              ["spotify", "spotify-adblock-linux"],
     "spotify/spicetify":    ["spicetify-cli", "spicetify-themes-git"],
 
-    # DEV
+
+    # Developer
 
     "cli":                  ["vsce", "exercism", "wakatime"],
-    "apidev":               ["insomnia", "postman"],
+    "vm":                   ["docker", "virtualbox-ext-oracle"],
+    "api":                  ["insomnia-bin", "postman-bin"],
 
     "editors":              ["visual-studio-code-insiders", "android-studio", "netbeans8"],
     "editors/emacs":        ["emacs", "emacs-doom-themes-git", "fd", "ripgrep"],

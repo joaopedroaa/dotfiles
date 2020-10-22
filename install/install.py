@@ -43,7 +43,7 @@ def main():
     code["aur_caregory"] += f"\n{code['yarn']}"
 
     save_file(code["aur_oneline"], "install-oneline.sh")
-    # save_file(code["aur_caregory"], "install-categories.sh")
+    save_file(code["aur_caregory"], "install-categories.sh")
 
 
 main()
