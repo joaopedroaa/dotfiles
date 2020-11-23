@@ -68,3 +68,6 @@ alias l="ls -lF ${colorflag}"
 alias la="ls -lAF ${colorflag}"
 alias ls="command ls ${colorflag}"
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+
+alias sizes="sudo du -sh ~/.* | sort -rh | head -10"

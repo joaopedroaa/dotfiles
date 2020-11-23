@@ -19,10 +19,14 @@ export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
 
+# Emacs
+export PATH="$PATH:$HOME/.emacs.d/bin"
+
+# Composer
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
 # Etc
 export PATH="$PATH:$HOME/anaconda3/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.cabal/bin"
 
-# Emacs
-export PATH="$PATH:$HOME/.emacs.d/bin"

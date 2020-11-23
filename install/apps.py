@@ -26,7 +26,7 @@ aur = {
     "editors/emacs":        ["emacs", "emacs-doom-themes-git", "fd", "ripgrep"],
 
     "lang/js":              ["nvm-git", "yarn"],
-    "lang/java":            ["glassfish5", "java-8-jdk"],
+    "lang/java":            ["java-8-jdk", "glassfish5"],
     "lang/php":             ["apache", "mysql", "php", "php-apache", "phpmyadmin"],
     "lang/elixi":           ["inotify-tools"],
 

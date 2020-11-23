@@ -2,7 +2,7 @@
 	name = João Pedro Alvarenga
 	email = joaopedroaats@pm.me
 [core]
-	editor = code --wait
+
 [push]
 	followTags = true
 [alias]
