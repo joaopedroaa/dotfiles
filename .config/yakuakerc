@@ -6,6 +6,8 @@ Translucency=true
 Blur=true
 
 [DownloadDialog Settings]
+HDMI-0 Height 1080=458
+HDMI-0 Width 1920=700
 Height 1080=800
 Width 1920=958
 Window-Maximized 1080x1920=true
@@ -14,7 +16,7 @@ Window-Maximized 1080x1920=true
 Favorites=
 
 [Window]
-Height=60
+Height=64
 KeepOpen=true
 Position=100
 Width=40

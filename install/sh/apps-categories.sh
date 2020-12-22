@@ -1,5 +1,11 @@
 echo "========================================== Apps  ====================="
-yay -S discord zoom plank krita qbittorrent vlc 
+yay -S discord zoom plank krita vlc 
+
+echo "========================================== Password  ====================="
+yay -S bitwarden 
+
+echo "========================================== Torrent  ====================="
+yay -S qbittorrent stremio 
 
 echo "========================================== Browsers  ====================="
 yay -S google-chrome tor-browser firefox-developer-edition 
@@ -11,7 +17,7 @@ echo "========================================== Kvantum  ====================="
 yay -S kvantum-manjaro kvantum-theme-layan-git 
 
 echo "========================================== Hardware  ====================="
-yay -S gwe 
+yay -S gwe cuda-10.2 
 
 echo "========================================== Hardware / Cpu  ====================="
 yay -S cpu-x-git s-tui stress 
@@ -59,7 +65,7 @@ echo "========================================== Lang / Php  ===================
 yay -S apache mysql php php-apache phpmyadmin 
 
 echo "========================================== Lang / Elixi  ====================="
-yay -S inotify-tools 
+yay -S elixir inotify-tools 
 
 echo "========================================== Fix-bugs  ====================="
 yay -S gnome-keyring 

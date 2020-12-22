@@ -1,10 +1,12 @@
 aur = {
-    "apps":                 ["discord", "zoom", "plank", "krita", "qbittorrent", "vlc"],
+    "apps":                 ["discord", "zoom", "plank", "krita", "vlc"],
+    "password":             ["bitwarden"],
+    "torrent":              ["qbittorrent", "stremio"],
     "browsers":             ["google-chrome", "tor-browser", "firefox-developer-edition"],
     "fonts":                ["ttf-fira-code", "ttf-ibm-plex"],
     "kvantum":              ["kvantum-manjaro", "kvantum-theme-layan-git"],
 
-    "hardware":             ["gwe"],
+    "hardware":             ["gwe", "cuda-10.2"],
     "hardware/cpu":         ["cpu-x-git", "s-tui", "stress"],
     "hardware/hd":          ["gparted-git", "gsmartcontrol"],
     "hardware/boot":        ["woeusb"],
@@ -14,7 +16,6 @@ aur = {
 
     "spotify":              ["spotify", "spotify-adblock-linux"],
     "spotify/spicetify":    ["spicetify-cli", "spicetify-themes-git"],
-
 
     # Developer
 
@@ -28,7 +29,9 @@ aur = {
     "lang/js":              ["nvm-git", "yarn"],
     "lang/java":            ["java-8-jdk", "glassfish5"],
     "lang/php":             ["apache", "mysql", "php", "php-apache", "phpmyadmin"],
-    "lang/elixi":           ["inotify-tools"],
+    "lang/elixi":           ["elixir","inotify-tools"],
+
+    # Bugs
 
     "fix-bugs":             ["gnome-keyring"]
 }

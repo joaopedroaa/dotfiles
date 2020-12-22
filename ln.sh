@@ -9,3 +9,13 @@ ln -sv ~/dotfiles/.zshrc ~/
 
 # ~/.config
 mkdir ~/.config/redshift & ln -sv ~/dotfiles/.config/redshift.conf ~/.config/redshift
+
+
+# - .config/
+#   - neofetch/
+#   - redshift.conf
+#   - yakuakerc
+# - .doom.d/
+# - .gitconfig
+# - .zshenv
+# - .zshrc

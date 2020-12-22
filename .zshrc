@@ -3,9 +3,3 @@ source ~/dotfiles/zsh/aliases.zsh   # 2
 source ~/dotfiles/zsh/spaceship.zsh # 3
 source ~/dotfiles/zsh/zinit.zsh     # 4
 source ~/dotfiles/zsh/antigen.zsh   # 4
-fpath=($fpath "/home/joaopedro/.zfunctions")
-
-  # Set Spaceship ZSH as a prompt
-  autoload -U promptinit; promptinit
-  prompt spaceship
-fpath=($fpath "/home/joaopedro/.zfunctions")
