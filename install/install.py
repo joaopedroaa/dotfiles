@@ -1,8 +1,8 @@
 from apps import aur, yarn
 
 
-def save_file(DATA, finelname):
-    with open(finelname, 'w') as file:
+def save_file(DATA, filename):
+    with open(filename, 'w') as file:
         file.write(DATA)
 
 

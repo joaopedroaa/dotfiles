@@ -1,19 +1,23 @@
-echo "========================================== Antigen  ====================="
-curl -L git.io/antigen > ~/antigen.zsh
+echo "========================================== ZSH / ohmyzsh  ====================="
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# zinit
-echo "========================================== zinit  ====================="
+
+echo "========================================== ZSH / zinit  ====================="
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
-# asdf
-echo "========================================== asdf  ====================="
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+
+echo "========================================== ZSH / Antigen  ====================="
+curl -L git.io/antigen > ~/antigen.zsh
 
 
-echo "========================================== Spicetify  =====================" # https://github.com/khanhas/spicetify-cli/wiki/Basic-Usage
+echo "========================================== Spotify / Spicetify  =====================" # https://github.com/khanhas/spicetify-cli/wiki/Basic-Usage
 sudo chmod a+wr /opt/spotify && sudo chmod a+wr /opt/spotify/Apps -R
 spicetify config current_theme Bittersweet
 spicetify apply
+
+
+echo "========================================== asdf  ====================="
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
 
 
 echo "========================================== System limit for number of file watchers reached  ====================="

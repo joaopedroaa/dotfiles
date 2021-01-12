@@ -20,9 +20,6 @@ compinit
 #
 plugins=(wakatime)
 
-
-
-
 fpath=($fpath "/home/joaopedro/.zfunctions")
 
   # Set Spaceship ZSH as a prompt

@@ -23,10 +23,3 @@ echo "========================================== Systemctl  ====================
 create_systemctl docker
 create_systemctl httpd
 create_systemctl mysqld
-
-
-echo "========================================== Update mirrors list  ====================="
-sudo pacman-mirrors --continent
-
-
-

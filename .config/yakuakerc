@@ -1,9 +1,15 @@
 [Appearance]
+Blur=true
 Skin=materia-dark
 SkinInstalledWithKns=true
 TerminalHighlightOnManualActivation=true
 Translucency=true
-Blur=true
+
+[Desktop Entry]
+DefaultProfile=Profile 2.profile
+
+[Dialogs]
+FirstRun=false
 
 [DownloadDialog Settings]
 HDMI-0 Height 1080=458
@@ -14,6 +20,9 @@ Window-Maximized 1080x1920=true
 
 [Favorite Profiles]
 Favorites=
+
+[KFileDialog Settings]
+detailViewIconSize=16
 
 [Window]
 Height=64

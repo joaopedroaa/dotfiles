@@ -1,18 +1,21 @@
 aur = {
-    "apps":                 ["discord", "zoom", "plank", "krita", "vlc"],
+    "apps":                 ["discord", "zoom", "krita", "vlc"],
+    "style":                ["plank"],
     "password":             ["bitwarden"],
     "torrent":              ["qbittorrent", "stremio"],
     "browsers":             ["google-chrome", "tor-browser", "firefox-developer-edition"],
-    "fonts":                ["ttf-fira-code", "ttf-ibm-plex"],
-    "kvantum":              ["kvantum-manjaro", "kvantum-theme-layan-git"],
+    "fonts":                ["ttf-fira-code", "ttf-ibm-plex", "ttf-liberation"],
+    "kvantum":              ["kvantum-qt5-git", "kvantum-theme-layan-git"],
 
-    "hardware":             ["gwe", "cuda-10.2"],
     "hardware/cpu":         ["cpu-x-git", "s-tui", "stress"],
+    "hardware/gpu":         ["nvidia-settings","gwe", "cuda-10.2"],
     "hardware/hd":          ["gparted-git", "gsmartcontrol"],
+    "hardware/hd/fix":      ["ntfs-3g"],
     "hardware/boot":        ["woeusb"],
 
     "konsole":              ["gotop-bin", "xclip", "neofetch"],
-    "konsole/zsh":          ["antigen-git", "spaceship-prompt-git"],
+    "konsole/zsh":          ["zsh", "oh-my-zsh-git"],
+    "konsole/zsh/config":   ["antigen-git", "spaceship-prompt-git"],
 
     "spotify":              ["spotify", "spotify-adblock-linux"],
     "spotify/spicetify":    ["spicetify-cli", "spicetify-themes-git"],
@@ -23,7 +26,7 @@ aur = {
     "vm":                   ["docker", "virtualbox-ext-oracle"],
     "api":                  ["insomnia-bin", "postman-bin"],
 
-    "editors":              ["visual-studio-code-insiders", "android-studio", "netbeans8"],
+    "editors":              ["visual-studio-code-insiders-bin", "android-studio"],
     "editors/emacs":        ["emacs", "emacs-doom-themes-git", "fd", "ripgrep"],
 
     "lang/js":              ["nvm-git", "yarn"],
@@ -33,9 +36,9 @@ aur = {
 
     # Bugs
 
-    "fix-bugs":             ["gnome-keyring"]
+    "fix-bugs":             ["gnome-keyring", "sshfs"]
 }
 
 yarn = [
-    "gatsby-cli", "expo-cli", "ignite-cli", "bs-platform", "typescript"
+    "gatsby-cli", "bs-platform", "typescript", "spaceship-prompt"
 ]

@@ -41,5 +41,3 @@ SPACESHIP_GIT_PREFIX=''
 autoload -U promptinit
 promptinit
 # prompt spaceship
-
-
