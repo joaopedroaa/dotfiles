@@ -1,11 +1,12 @@
 aur = {
     "apps":                 ["discord", "zoom", "krita", "vlc"],
-    "style":                ["plank"],
+    "desktop":              ["plank", "superpaper"],
     "password":             ["bitwarden"],
     "torrent":              ["qbittorrent", "stremio"],
     "browsers":             ["google-chrome", "tor-browser", "firefox-developer-edition"],
     "fonts":                ["ttf-fira-code", "ttf-ibm-plex", "ttf-liberation"],
     "kvantum":              ["kvantum-qt5-git", "kvantum-theme-layan-git"],
+    "video":                ["davinci-resolve", "obs-studio"],
 
     "hardware/cpu":         ["cpu-x-git", "s-tui", "stress"],
     "hardware/gpu":         ["nvidia-settings","gwe", "cuda-10.2"],

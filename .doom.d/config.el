@@ -72,8 +72,8 @@
 (global-set-key (kbd "M-<left>") 'shrink-window-horizontally)
 
 ;; Nyan mode
-(setq nyan-animate-nyancat t)
-(nyan-mode)
+;;(setq nyan-animate-nyancat t)
+;;(nyan-mode)
 
 ;; Waka time
 (global-wakatime-mode)

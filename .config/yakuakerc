@@ -12,6 +12,8 @@ DefaultProfile=Profile 2.profile
 FirstRun=false
 
 [DownloadDialog Settings]
+DP-4 HDMI-0 Height 1080=458
+DP-4 HDMI-0 Width 1920=700
 HDMI-0 Height 1080=458
 HDMI-0 Width 1920=700
 Height 1080=800

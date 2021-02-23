@@ -6,6 +6,7 @@ alias c.="code ." alias C.="c."
 alias c..="code . && exit" alias C..="c.."
 
 # yay
+alias up="yay -Syyu"
 alias yaconf='yay -Pg'
 alias yains='yay -U'
 alias yare='yay -R'
@@ -40,7 +41,7 @@ alias cfghosts="code /etc/hosts"
 
 # Shortcuts
 alias cde="cd /run/media/joaopedro/External"
-alias cdp="cd /home/joaopedro/projects/"
+alias cdp="cd /run/media/joaopedro/22E03A13183DAEAE/Project/"
 alias cdd="cd ~/Desktop"
 
 # Docker
@@ -71,4 +72,6 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 
 # MISC
 alias sizes="sudo du -sh ~/.* | sort -rh | head -10"
-alias up="yay -Syyu"
+alias commandshistory="history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10"
+alias nvxine="grep -i xine /var/log/Xorg.0.log"
+alias clearhd="sudo ntfsfix -b /dev/sdb1"
