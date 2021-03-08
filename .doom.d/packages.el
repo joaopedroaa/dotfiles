@@ -55,15 +55,19 @@
 (package! magit )
 (package! all-the-icons)
 (package! neotree )
+(package! elcord)
 
 (package! rebecca-theme)
 
-(package! flycheck-credo )
-(package! mix )
-
-(package! elixir-mode)
 (package! wakatime-mode)
 (package! nyan-mode)
 
+
+;; Elixir
+(package! exunit)
+(package! flycheck-credo)
+(package! elixir-mode)
+(package! alchemist)
+(package! mix )
 
 

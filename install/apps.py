@@ -1,19 +1,19 @@
 aur = {
-    "apps":                 ["discord", "zoom", "krita", "vlc"],
+    "apps":                 ["discord", "zoom"],
     "desktop":              ["plank", "superpaper"],
     "password":             ["bitwarden"],
     "torrent":              ["qbittorrent", "stremio"],
     "browsers":             ["google-chrome", "tor-browser", "firefox-developer-edition"],
-    "fonts":                ["ttf-fira-code", "ttf-ibm-plex", "ttf-liberation"],
+    "fonts":                ["nerd-fonts-hack", "ttf-fira-code", "ttf-ibm-plex", "ttf-liberation"],
     "kvantum":              ["kvantum-qt5-git", "kvantum-theme-layan-git"],
-    "video":                ["davinci-resolve", "obs-studio"],
+
+    "media/image":          ["krita", "kvantum-theme-layan-git"],
+    "media/video":          ["vlc", "davinci-resolve", "obs-studio"],
 
     "hardware/cpu":         ["cpu-x-git", "s-tui", "stress"],
     "hardware/gpu":         ["nvidia-settings","gwe", "cuda-10.2"],
     "hardware/hd":          ["gparted-git", "gsmartcontrol"],
-    "hardware/hd/fix":      ["ntfs-3g"],
     "hardware/boot":        ["woeusb"],
-
     "konsole":              ["gotop-bin", "xclip", "neofetch"],
     "konsole/zsh":          ["zsh", "oh-my-zsh-git"],
     "konsole/zsh/config":   ["antigen-git", "spaceship-prompt-git"],
@@ -37,7 +37,7 @@ aur = {
 
     # Bugs
 
-    "fix-bugs":             ["gnome-keyring", "sshfs"]
+    "fix-bugs":             ["gnome-keyring", "sshfs", "ntfs-3g"]
 }
 
 yarn = [

@@ -25,9 +25,9 @@ echo "========================================== System limit for number of file
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 
-echo "========================================== Fix netbeans 8 font  ====================="
+# echo "========================================== Fix netbeans 8 font  ====================="
 # echo "netbeans_default_options=\"-J-client -J-Xss2m -J-Xms32m -J-XX:PermSize=32m -J-Dapple.laf.useScreenMenuBar=true -J-Dapple.awt.graphics.UseQuartz=true -J-Dsun.java2d.noddraw=true -J-Dsun.java2d.dpiaware=true -J-Dsun.zip.disableMemoryMapping=true -J-Dswing.aatext=true -J-Dawt.useSystemAAFontSettings=on\"" >> /usr/share/netbeans/etc/netbeans.conf
 
 
 echo "========================================== Install Phoenix  ====================="
-mix archive.install hex phx_new 1.5.3
+mix archive.install hex phx_new
