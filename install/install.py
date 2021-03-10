@@ -1,4 +1,4 @@
-from apps import aur, yarn
+from apps import aur, i3, yarn
 
 
 def save_file(DATA, filename):
@@ -6,15 +6,32 @@ def save_file(DATA, filename):
         file.write(DATA)
 
 
-code = {
-    "aur_oneline": "yay -S ",
-    "aur_caregory": "",
-    "yarn": "yarn global add "
-}
+def save_all_files(DATA):
+    for filename in DATA:
+        save_file(DATA[filename], f"./sh/aur/{filename}.sh")
 
 
-def create_aur_code():
-    for categories, apps in aur.items():
+def create_shell_install(DATA, NEWDATA, filename, shell_directory):
+    filedata = ""
+
+    for names in DATA.keys():
+        NEWDATA[names] += f"echo \"{'=' * 13} {names.capitalize()} {'=' * 13}\"\n"
+        NEWDATA[names] += f"sh {shell_directory}/{names}.sh\n\n"
+
+    for names in NEWDATA.values():
+        filedata += names
+
+    save_file(filedata, filename)
+
+
+def create_oneline(DATA, dic, start_line, name):
+    DATA[name] += f"{start_line} "
+    for package in dic:
+        DATA[name] += f"{package} "
+
+
+def create_multiline(DATA, dic, start_line, name):
+    for categories, apps in dic.items():
         join_apps = ""
         title = ""
 
@@ -24,26 +41,27 @@ def create_aur_code():
         for word in categories.split("/"):
             title += f" {word.capitalize()} /"
 
-        code["aur_oneline"] += join_apps
-
-        code["aur_caregory"] += f"echo \"{'=' * 42}{title[:-1]} {'=' * 21}\"\n"
-        code["aur_caregory"] += f"yay -S {join_apps}\n\n"
+        DATA[name] += f"echo \"{'=' * 42}{title[:-1]} {'=' * 21}\"\n"
+        DATA[name] += f"{start_line} {join_apps}\n\n"
 
 
-def create_yarn_code():
-    for package in yarn:
-        code["yarn"] += f"{package} "
+base = {
+    "aur": "",
+    "i3": "",
+    "yarn": ""
+}
+
+code = base.copy()
+shell = base.copy()
 
 
 def main():
-    create_yarn_code()
-    create_aur_code()
+    create_oneline(code, yarn, "yarn global add", "yarn")
+    create_multiline(code, aur, "yay -S", "aur")
+    create_multiline(code, i3,  "yay -S", "i3")
 
-    code["aur_oneline"] += f"\n{code['yarn']}"
-    code["aur_caregory"] += f"\n{code['yarn']}"
-
-    save_file(code["aur_oneline"], "./sh/apps-oneline.sh")
-    save_file(code["aur_caregory"], "./sh/apps-categories.sh")
+    save_all_files(code)
+    create_shell_install(code, shell, "sh/install.sh",  "./aur")
 
 
 main()

@@ -8,8 +8,7 @@ remove_and_add_sudo (){
   sudo ln -sv ~/dotfiles/$1 $2
 }
 
-# remove_and_add .config/redshift.conf        ~/.config/redshift.conf
-
+remove_and_add .config/redshift.conf          ~/.config/redshift.conf
 remove_and_add .config/yakuakerc              ~/.config/yakuakerc
 remove_and_add .config/neofetch/config.conf   ~/.config/neofetch/config.conf
 
@@ -24,6 +23,5 @@ remove_and_add .zshenv                        ~/.zshenv
 remove_and_add .zshrc                         ~/.zshrc
 
 
-remove_and_add_sudo hosts                     /etc/hosts
-
-
+remove_and_add_sudo etc/hosts                 /etc/hosts
+remove_and_add_sudo etc/pulse/default.pa      /etc/pulse/default.pa
