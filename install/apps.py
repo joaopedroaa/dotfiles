@@ -14,7 +14,7 @@ aur = {
     "hardware/gpu":         ["nvidia-settings", "gwe", "cuda-10.2"],
     "hardware/hd":          ["gparted-git", "gsmartcontrol"],
 
-    "console":              ["gotop-bin", "htop", "xclip", "neofetch", "lolcat"],
+    "console":              ["gotop-bin", "htop", "xclip", "cava", "neofetch", "lolcat"],
     "console/zsh":          ["zsh", "oh-my-zsh-git"],
     "console/zsh/config":   ["antigen-git", "spaceship-prompt-git"],
 
@@ -41,16 +41,17 @@ aur = {
 }
 
 i3 = {
-    "i3":                   ["i3lock", "py3status"],
+    "i3": ["i3lock", "py3status"],
+    "files":                ["xarchiver", "p7zip", "zip", "unzip", "unrar"]
     "desktop":              ["nitrogen", "lxappearance"],
     "os":                   ["thunar"],
     "console":              ["kitty", "xcompmgr"],
 
-    "media/image":          ["feh"],
+    "media/image":          ["feh", "imagemagick", "flameshot-git"],
     "media/video":          ["mplayer"],
 
-    "i3":                   ["xdg-user-dirs"],
-    "audio":                ["pulseaudio", "pavucontrol"],
+    "i3":                   ["xdg-user-dirs", "perl-anyevent-i3"],
+    "audio":                ["pulseaudio", "pavucontrol", "alsa-utils"],
 }
 
 
