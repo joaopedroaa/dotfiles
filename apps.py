@@ -1,10 +1,7 @@
-aur = {
-    "desktop":              ["plank", "superpaper"],
+apps = {
     "torrent":              ["qbittorrent", "stremio"],
     "apps":                 ["discord", "zoom", "bitwarden-bin"],
-    "kvantum":              ["kvantum-qt5-git", "kvantum-theme-layan-git"],
     "browsers":             ["google-chrome", "tor-browser", "firefox-developer-edition"],
-    "fonts":                ["nerd-fonts-hack", "ttf-fira-code", "ttf-ibm-plex", "ttf-liberation"],
 
     "media/image":          ["krita"],
     "media/video":          ["vlc", "davinci-resolve", "obs-studio"],
@@ -22,8 +19,11 @@ aur = {
     "spotify/spicetify":    ["spicetify-cli", "spicetify-themes-git"],
 
 
-    # Developer
+    "fix-bugs":             ["gnome-keyring", "sshfs", "ntfs-3g"]
+}
 
+
+development = {
     "cli":                  ["vsce", "exercism", "wakatime", "openssh"],
     "vm":                   ["docker", "virtualbox-ext-oracle"],
     "api":                  ["insomnia-bin", "postman-bin"],
@@ -36,24 +36,67 @@ aur = {
     "lang/php":             ["apache", "mysql", "php", "php-apache", "phpmyadmin"],
     "lang/elixi":           ["elixir", "inotify-tools"],
     "lang/python":          ["python", "autopep8"],
-
-    "fix-bugs":             ["gnome-keyring", "sshfs", "ntfs-3g"]
 }
 
+
+fonts = {
+    "nerd":             ["nerd-fonts-hack"],
+    "ttf":              ["ttf-fira-code", "ttf-ibm-plex", "ttf-liberation", "ttf-roboto"],
+    "ttf2":             ["ttf-dejavu", "ttf-droid", "ttf-inconsolata", "ttf-liberation"]
+}
+
+
+audio = {
+    "pulseaudio":           ["pulseaudio", "pulseaudio-alsa", "pavucontrol"],
+    "alsa":                 ["alsa-firmware", "alsa-lib", "alsa-plugins", "alsa-utils"],
+    "icon":                 ["volumeicon"]
+}
+
+
+plasma = {
+    "filemanager":          ["dolphin", "dolphin-plugins"],
+    "desktop":              ["plank", "superpaper"],
+    "unpackfiles":          ["ark"],
+    "console":              ["konsole", "yakuake"],
+    "kvantum":              ["kvantum-qt5-git", "kvantum-theme-layan-git"],
+
+    "media/image":          ["gwenview"],
+
+    "phone":                ["kdeconnect"],
+    "pdf":                  ["okular"]
+}
+
+
 i3 = {
-    "i3":                   ["i3lock", "py3status"],
-    "files":                ["xarchiver", "p7zip", "zip", "unzip", "unrar"]
+    "wm":                   ["i3blocks", "i3lock", "py3status"],
+    "xcompositor":          ["picom"],
+
+    "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman"],
     "desktop":              ["nitrogen", "lxappearance"],
-    "thunar":               ["thunar","thunar-archive-plugin","thunar-volman"],
+    "unpackfiles":          ["xarchiver", "p7zip", "zip", "unzip", "unrar", "unace"],
     "console":              ["kitty", "xcompmgr"],
 
     "media/image":          ["feh", "imagemagick", "flameshot-git"],
     "media/video":          ["mplayer"],
 
     "i3":                   ["xdg-user-dirs", "perl-anyevent-i3"],
-    "audio":                ["pulseaudio", "pavucontrol", "alsa-utils"],
+
 }
 
+
+xmonad = {
+    "xmonad":               ["xmonad-contrib", "xmonad-utils", "xmonad-log"],
+    "haskell":              ["haskell-dbus"],
+    "xmobar":               ["xmobar"],
+
+    "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman"],
+    "media/image":          ["feh"],
+}
+
+
+################################################################
+##                          oneline                           ##
+################################################################
 
 yarn = [
     "gatsby-cli", "bs-platform", "typescript"

@@ -1,4 +1,4 @@
-from apps import aur, i3, yarn
+from apps import apps, development, fonts, audio, plasma, i3, yarn
 
 
 def save_file(DATA, filename):
@@ -8,7 +8,7 @@ def save_file(DATA, filename):
 
 def save_all_files(DATA):
     for filename in DATA:
-        save_file(DATA[filename], f"./sh/aur/{filename}.sh")
+        save_file(DATA[filename], f"./sh/install/{filename}.sh")
 
 
 def create_shell_install(DATA, NEWDATA, filename, shell_directory):
@@ -46,8 +46,14 @@ def create_multiline(DATA, dic, start_line, name):
 
 
 base = {
-    "aur": "",
+    "apps": "",
+    "development": "",
+    "fonts": "",
+    "audio": "",
+
+    "plasma": "",
     "i3": "",
+
     "yarn": ""
 }
 
@@ -56,12 +62,17 @@ shell = base.copy()
 
 
 def main():
-    create_oneline(code, yarn, "yarn global add", "yarn")
-    create_multiline(code, aur, "yay -S", "aur")
-    create_multiline(code, i3,  "yay -S", "i3")
+    create_oneline(code, yarn,        "yarn global add", "yarn")
+
+    create_multiline(code, apps,        "yay -S", "apps")
+    create_multiline(code, development, "yay -S", "development")
+    create_multiline(code, fonts,       "yay -S", "fonts")
+    create_multiline(code, audio,       "yay -S", "audio")
+    create_multiline(code, plasma,      "yay -S", "plasma")
+    create_multiline(code, i3,          "yay -S", "i3")
 
     save_all_files(code)
-    create_shell_install(code, shell, "sh/install.sh",  "./aur")
+    # create_shell_install(code, shell, "sh/install.sh",  "./aur")
 
 
 main()
