@@ -41,10 +41,10 @@ aur = {
 }
 
 i3 = {
-    "i3": ["i3lock", "py3status"],
+    "i3":                   ["i3lock", "py3status"],
     "files":                ["xarchiver", "p7zip", "zip", "unzip", "unrar"]
     "desktop":              ["nitrogen", "lxappearance"],
-    "os":                   ["thunar"],
+    "thunar":               ["thunar","thunar-archive-plugin","thunar-volman"],
     "console":              ["kitty", "xcompmgr"],
 
     "media/image":          ["feh", "imagemagick", "flameshot-git"],

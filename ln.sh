@@ -26,8 +26,8 @@ remove_and_add .i3/config                       ~/.i3/config
 remove_and_add .i3/.i3blocks.conf               ~/.i3blocks.conf
 remove_and_add .i3/.i3status.conf               ~/.i3status.conf
 
+remove_and_add .xprofile                        ~/.xprofile
 remove_and_add .gitconfig                       ~/.gitconfig
-remove_and_add .profile                         ~/.profile
 remove_and_add .zshenv                          ~/.zshenv
 remove_and_add .zshrc                           ~/.zshrc
 
