@@ -11,7 +11,7 @@ apps = {
     "hardware/gpu":         ["nvidia-settings", "gwe", "cuda-10.2"],
     "hardware/hd":          ["gparted-git", "gsmartcontrol"],
 
-    "console":              ["gotop-bin", "htop", "xclip", "cava", "neofetch", "lolcat"],
+    "console":              ["gotop-bin", "htop", "xclip", "cava", "cbonsai","neofetch", "lolcat"],
     "console/zsh":          ["zsh", "oh-my-zsh-git"],
     "console/zsh/config":   ["antigen-git", "spaceship-prompt-git"],
 
@@ -34,8 +34,9 @@ development = {
     "lang/js":              ["nvm-git", "yarn"],
     "lang/java":            ["java-8-jdk", "glassfish5"],
     "lang/php":             ["apache", "mysql", "php", "php-apache", "phpmyadmin"],
-    "lang/elixi":           ["elixir", "inotify-tools"],
     "lang/python":          ["python", "autopep8"],
+    "lang/elixir":          ["elixir", "inotify-tools"],
+    "lang/haskell":         ["ghc", "cabal-install-bin", "stack"],
 }
 
 

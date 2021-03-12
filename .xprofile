@@ -1,7 +1,10 @@
 #!/bin/sh
 
+
+# Wallpaper
 nitrogen --restore &
-picom &
+picom -f &
+google-chrome-stable &
 
+#exec xmonad
 exec i3
-

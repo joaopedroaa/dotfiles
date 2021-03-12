@@ -26,7 +26,7 @@ echo "========================================== Hardware / Hd  ================
 yay -S gparted-git gsmartcontrol 
 
 echo "========================================== Console  ====================="
-yay -S gotop-bin htop xclip cava neofetch lolcat 
+yay -S gotop-bin htop xclip cava cbonsai neofetch lolcat 
 
 echo "========================================== Console / Zsh  ====================="
 yay -S zsh oh-my-zsh-git 

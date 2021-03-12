@@ -75,3 +75,6 @@ alias sizes="sudo du -sh ~/.* | sort -rh | head -10"
 alias commandshistory="history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10"
 alias nvxine="grep -i xine /var/log/Xorg.0.log"
 alias clearhd="sudo ntfsfix -b /dev/sdb1"
+
+alias findd="sudo find / -iname "
+alias xmonadr="xmonad --recompile"

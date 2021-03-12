@@ -1,4 +1,4 @@
-from apps import apps, development, fonts, audio, plasma, i3, yarn
+from apps import apps, development, fonts, audio, plasma, i3, xmonad, yarn
 
 
 def save_file(DATA, filename):
@@ -53,6 +53,7 @@ base = {
 
     "plasma": "",
     "i3": "",
+    "xmonad": "",
 
     "yarn": ""
 }
@@ -70,6 +71,7 @@ def main():
     create_multiline(code, audio,       "yay -S", "audio")
     create_multiline(code, plasma,      "yay -S", "plasma")
     create_multiline(code, i3,          "yay -S", "i3")
+    create_multiline(code, xmonad,      "yay -S", "xmonad")
 
     save_all_files(code)
     # create_shell_install(code, shell, "sh/install.sh",  "./aur")
