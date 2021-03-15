@@ -24,7 +24,7 @@ myClickJustFocuses = False
 
 -- Width of the window border in pixels.
 --
-myBorderWidth   = 2
+myBorderWidth   = 3
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -242,6 +242,7 @@ myStartupHook = do
         spawnOnce "nitrogen --restore &"
         spawnOnce "picom -f &"
         spawnOnce "google-chrome-stable &"
+        spawnOnce "kitty &"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -250,7 +251,7 @@ myStartupHook = do
 --
 main = do
   xmproc <- spawnPipe "xmobar -x 0 ~/.config/xmobar/xmobarrc"
-  xmonad $ docks def
+  xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will

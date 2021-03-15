@@ -1,8 +1,8 @@
 remove_and_add (){
   if [ -f "$2" ]; then
-      rm $2
-      ln -sv ~/dotfiles/$1 $2 &> /dev/null
-      echo "successful - $2"
+    rm $2
+    ln -sv ~/dotfiles/$1 $2 &> /dev/null
+    echo "successful - $2"
 
   else
     echo "X - $2"
@@ -10,12 +10,14 @@ remove_and_add (){
 }
 
 remove_and_add_sudo (){
-    if [ -f "$2" ]; then
-      sudo rm $2
-      sudo ln -sv ~/dotfiles/$1 $2 &> /dev/null
-      echo "successful --- $2"
+  destination=$(dirname "/$1")
+
+  if [ -d $destination ]; then
+      sudo cp ~/dotfiles/$1 $destination
+      echo "successful -- /$1"
 
   else
-    echo "X - $2"
+      echo "X - /$1"
   fi
+
 }

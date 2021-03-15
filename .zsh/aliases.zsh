@@ -6,20 +6,20 @@ alias c.="code ." alias C.="c."
 alias c..="code . && exit" alias C..="c.."
 
 # yay
-alias up="yay -Syyu"
+alias yaup="yay -Syyu"
+alias yaupp="yay -Syyuu"
+alias yain='yay -S'
+
 alias yaconf='yay -Pg'
 alias yains='yay -U'
 alias yare='yay -R'
 alias yarem='yay -Rns'
-
 alias yaloc='yay -Qi'
 alias yalocs='yay -Qs'
 alias yalst='yay -Qe'
 alias yaorph='yay -Qtd'
-
 alias yaupg='yay -Syu'
 alias yasu='yay -Syu --noconfirm'
-alias yain='yay -S'
 alias yarep='yay -Si'
 alias yareps='yay -Ss'
 alias yainsd='yay -S --asdeps'
@@ -69,6 +69,18 @@ alias l="ls -lF ${colorflag}"
 alias la="ls -lAF ${colorflag}"
 alias ls="command ls ${colorflag}"
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+# playerctl
+alias plspotify="playerctl -p spotify "
+
+alias plplay="plspotify play-pause"
+alias plnext="plspotify next"
+alias plprev="plspotify previous"
+alias plvolu="plspotify volume"
+
+# Console
+alias :q="exit"
+
 
 # MISC
 alias sizes="sudo du -sh ~/.* | sort -rh | head -10"

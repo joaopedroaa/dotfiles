@@ -4,4 +4,3 @@ source ~/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle sobolevn/wakatime-zsh-plugin
 antigen apply
-

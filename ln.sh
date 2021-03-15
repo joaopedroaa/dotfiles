@@ -18,5 +18,6 @@ remove_and_add .zshenv                          ~/.zshenv
 remove_and_add .zshrc                           ~/.zshrc
 
 separate_echo "/"
-remove_and_add_sudo etc/pulse/default.pa      /etc/pulse/default.pa
-remove_and_add_sudo etc/hosts                 /etc/hosts
+remove_and_add_sudo etc/lightdm/lightdm-webkit2-greeter.conf
+remove_and_add_sudo etc/pulse/default.pa
+remove_and_add_sudo etc/hosts

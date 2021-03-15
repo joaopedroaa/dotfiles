@@ -107,6 +107,8 @@ bindsym $mod+F2 exec thunar
 bindsym $mod+F3 exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
 
+bindsym $mod+Shift+o exec i3lock-fancy-dualmonitor -p
+
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down

@@ -50,7 +50,8 @@ fonts = {
 audio = {
     "pulseaudio":           ["pulseaudio", "pulseaudio-alsa", "pavucontrol"],
     "alsa":                 ["alsa-firmware", "alsa-lib", "alsa-plugins", "alsa-utils"],
-    "icon":                 ["volumeicon"]
+    "icon":                 ["volumeicon"],
+    "cli":                  ["playerctl"],
 }
 
 
@@ -69,8 +70,10 @@ plasma = {
 
 
 i3 = {
-    "wm":                   ["i3blocks", "i3lock", "py3status"],
+    "wm":                   ["i3blocks",  "py3status"],
+    "lock":                 ["i3lock", "i3lock-fancy-dualmonitor"]
     "xcompositor":          ["picom"],
+    "lightdm":              ["lightdm-webkit2-greeter"],
 
     "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman"],
     "desktop":              ["nitrogen", "lxappearance"],

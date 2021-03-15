@@ -1,4 +1,4 @@
-Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+Config { font = "xft:URWGothic-Book:pixelsize=18:antialias=true:hinting=true"
        , additionalFonts = []
        , borderColor = "black"
        , border = TopB

@@ -4,7 +4,7 @@
 # Wallpaper
 nitrogen --restore &
 picom -f &
-google-chrome-stable &
+nvidia-settings --load-config-only
 
-#exec xmonad
+# exec xmonad
 exec i3

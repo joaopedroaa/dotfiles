@@ -62,11 +62,14 @@
 (package! wakatime-mode)
 (package! nyan-mode)
 
+;; Haskell
+(package! haskell-mode)
+
 
 ;; Elixir
+(package! elixir-mode)
 (package! exunit)
 (package! flycheck-credo)
-(package! elixir-mode)
 (package! alchemist)
 (package! mix )
 
