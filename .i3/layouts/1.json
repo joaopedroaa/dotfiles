@@ -1,0 +1,22 @@
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 998,
+       "width": 1312,
+       "x": 19,
+       "y": 41
+    },
+    "marks": [],
+    "name": "Using preset layouts in i3 :: Gideon Wolfe - Google Chrome",
+    "percent": 1,
+    "swallows": [
+       {
+       "class": "^Google\\-chrome$",
+       "instance": "^google\\-chrome$"
+       }
+    ],
+    "type": "con"
+}
+

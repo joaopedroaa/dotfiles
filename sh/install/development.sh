@@ -22,9 +22,12 @@ yay -S java-8-jdk glassfish5
 echo "========================================== Lang / Php  ====================="
 yay -S apache mysql php php-apache phpmyadmin 
 
-echo "========================================== Lang / Elixi  ====================="
-yay -S elixir inotify-tools 
-
 echo "========================================== Lang / Python  ====================="
 yay -S python autopep8 
+
+echo "========================================== Lang / Elixir  ====================="
+yay -S elixir inotify-tools 
+
+echo "========================================== Lang / Haskell  ====================="
+yay -S ghc cabal-install-bin stack 
 

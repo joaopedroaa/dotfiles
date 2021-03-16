@@ -1,9 +1,10 @@
 #!/bin/sh
 
 
-# Wallpaper
-nitrogen --restore &
-picom -f &
+nitrogen --restore &  # wallpaper
+picom -f &            # compositor
+flameshot &           # screenshot
+
 nvidia-settings --load-config-only
 
 # exec xmonad

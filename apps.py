@@ -41,10 +41,12 @@ development = {
 
 
 fonts = {
-    "nerd":             ["nerd-fonts-hack"],
-    "ttf":              ["ttf-fira-code", "ttf-ibm-plex", "ttf-liberation", "ttf-roboto"],
-    "ttf2":             ["ttf-dejavu", "ttf-droid", "ttf-inconsolata", "ttf-liberation"]
+    "nerd":             ["nerd-fonts-complete"],
+    "ttf":              ["ttf-fira-code", "ttf-ibm-plex-mono-git","ttf-liberation", "ttf-roboto"],
+    "ttf2":             ["ttf-dejavu", "ttf-droid", "ttf-inconsolata", "ttf-liberation", "ttf-unifont"],
+    "otf":              ["otf-font-awesome-5-free"]
 }
+
 
 
 audio = {
@@ -70,15 +72,19 @@ plasma = {
 
 
 i3 = {
-    "wm":                   ["i3blocks",  "py3status"],
-    "lock":                 ["i3lock", "i3lock-fancy-dualmonitor"]
-    "xcompositor":          ["picom"],
+    "bar":                  ["i3blocks",  "py3status", "polybar"],
+    "lock":                 ["i3lock", "i3lock-fancy-dualmonitor"],
+    "compositor":           ["picom"],
     "lightdm":              ["lightdm-webkit2-greeter"],
 
     "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman"],
     "desktop":              ["nitrogen", "lxappearance"],
     "unpackfiles":          ["xarchiver", "p7zip", "zip", "unzip", "unrar", "unace"],
-    "console":              ["kitty", "xcompmgr"],
+    "console":              ["kitty", "alacritty-git","xcompmgr"],
+
+    "themes":               ["ant-dracula-gtk-theme"],
+    "themes/icons":         ["tela-icon-theme-git", "flatery-icon-theme-git"],
+    "themes/cursors":       ["capitaine-cursors"],
 
     "media/image":          ["feh", "imagemagick", "flameshot-git"],
     "media/video":          ["mplayer"],

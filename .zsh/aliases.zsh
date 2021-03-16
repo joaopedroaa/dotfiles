@@ -90,3 +90,6 @@ alias clearhd="sudo ntfsfix -b /dev/sdb1"
 
 alias findd="sudo find / -iname "
 alias xmonadr="xmonad --recompile"
+
+
+alias gccc="sh ~/dotfiles/sh/utils/langs/c.sh"

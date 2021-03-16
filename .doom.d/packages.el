@@ -50,21 +50,23 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)cwc
 ;(unpin! t)www
 
+;; (package! elcord)
 (package! auto-complete )
 (package! which-key )
 (package! magit )
-(package! all-the-icons)
-(package! neotree )
-(package! elcord)
-
-(package! rebecca-theme)
-
 (package! wakatime-mode)
 (package! nyan-mode)
+(package! emojify)
+
+;; Neotree
+(package! neotree )
+(package! all-the-icons)
+
+;; Theme
+(package! rebecca-theme)
 
 ;; Haskell
 (package! haskell-mode)
-
 
 ;; Elixir
 (package! elixir-mode)

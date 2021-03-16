@@ -200,13 +200,30 @@ client.background       #ffffff
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
-bar {
-        status_command py3status -c ~/.i3status.conf
-}
-bar {
-        position top
-        status_command i3blocks
-}
+# bar {
+#         position top
+#         status_command i3blocks
+# }
+
+# bar {
+#         status_command py3status -c ~/.i3status.conf
+
+# }
+
+
+# Desktop / i3-save-tree --workspace N > ~/dotfiles/.i3/layouts/N.json
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.i3/layouts/1.json'"
+exec  google-chrome-stable
+
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.i3/layouts/2.json'"
+exec  kitty
+exec  kitty
+exec  LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
+
+
+# Polybar launch
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 
 
 
