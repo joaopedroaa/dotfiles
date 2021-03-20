@@ -79,7 +79,7 @@ alias plprev="plspotify previous"
 alias plvolu="plspotify volume"
 
 # Console
-alias :q="exit"
+alias :q="exit" alias :Q=":q"
 
 
 # MISC
@@ -92,4 +92,10 @@ alias findd="sudo find / -iname "
 alias xmonadr="xmonad --recompile"
 
 
-alias gccc="sh ~/dotfiles/sh/utils/langs/c.sh"
+alias xev="xev -event keyboard  | egrep -o 'keycode.*\)'"
+
+# dotfiles
+alias dsync="sh ~/dotfiles/sync.sh"
+alias ccl="sh ~/dotfiles/sh/utils/langs/c.sh"
+
+alias config='/usr/bin/git --git-dir=$HOME/dotsgit/ --work-tree=$HOME'

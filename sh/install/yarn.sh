@@ -1,1 +1,0 @@
-yarn global add gatsby-cli bs-platform typescript 

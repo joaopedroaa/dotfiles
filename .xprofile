@@ -8,4 +8,4 @@ flameshot &           # screenshot
 nvidia-settings --load-config-only
 
 # exec xmonad
-exec i3
+# exec i3

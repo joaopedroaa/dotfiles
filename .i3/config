@@ -94,9 +94,25 @@ bindsym $mod+a focus parent
 bindsym $mod+space focus mode_toggle
 
 
-##########
-#  APPS  #
-##########
+#######################
+#        Audio        #
+#######################
+
+# spotify
+bindsym $mod+Insert exec playerctl -p spotify  play-pause
+bindsym $mod+Home exec playerctl -p spotify  next
+bindsym $mod+End exec playerctl -p spotify  previous
+
+
+ # Volume ctl
+ bindsym $mod+Prior exec --no-startup-id pactl set-sink-volume 1 +5%
+ bindsym $mod+Next exec --no-startup-id pactl set-sink-volume 1 -5%
+
+
+
+######################
+#        APPS        #
+######################
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -107,7 +123,7 @@ bindsym $mod+F2 exec thunar
 bindsym $mod+F3 exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
 
-bindsym $mod+Shift+o exec i3lock-fancy-dualmonitor -p
+bindsym $mod+Shift+o exec i3lock -c 000000
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -184,49 +200,6 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 
-# I3 Gaps
-for_window [class="^.*"] border pixel 3
-gaps inner 20
-gaps outer -4
-
-
-# class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #6464FF
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-client.background       #ffffff
-
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# bar {
-#         position top
-#         status_command i3blocks
-# }
-
-# bar {
-#         status_command py3status -c ~/.i3status.conf
-
-# }
-
-
-# Desktop / i3-save-tree --workspace N > ~/dotfiles/.i3/layouts/N.json
-exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.i3/layouts/1.json'"
-exec  google-chrome-stable
-
-exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.i3/layouts/2.json'"
-exec  kitty
-exec  kitty
-exec  LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
-
-
-# Polybar launch
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-
-
-
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -251,3 +224,51 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
+
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #6464FF
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.background       #ffffff
+
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# bar {
+#         position top
+#         status_command i3blocks
+# }
+
+# bar {
+#         status_command py3status -c ~/.i3status.conf
+
+# }
+
+
+# I3 Gaps
+for_window [class="^.*"] border pixel 3
+gaps inner 30
+gaps outer -4
+
+# Desktop / i3-save-tree --workspace N > ~/dotfiles/.i3/layouts/N.json
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.i3/layouts/1.json'"
+exec  google-chrome-stable
+
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.i3/layouts/2.json'"
+exec  kitty
+exec  kitty
+exec  LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
+
+
+# Polybar launch
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+
+# Kde Connect
+exec --no-startup-id /usr/lib/kdeconnectd
+exec --no-startup-id kdeconnect-indicator
+
+# Autotiling https://github.com/nwg-piotr/autotiling
+exec autotiling

@@ -1,80 +1,45 @@
-from apps import apps, development, fonts, audio, plasma, i3, xmonad, yarn
+from apps import *
 
 
-def save_file(DATA, filename):
-    with open(filename, 'w') as file:
-        file.write(DATA)
+def save_files(DATA):
+    for category in DATA:
+        with open(f"./sh/install/{category}.sh", 'w') as file:
+            file.write(DATA[category])
 
 
-def save_all_files(DATA):
-    for filename in DATA:
-        save_file(DATA[filename], f"./sh/install/{filename}.sh")
-
-
-def create_shell_install(DATA, NEWDATA, filename, shell_directory):
-    filedata = ""
-
-    for names in DATA.keys():
-        NEWDATA[names] += f"echo \"{'=' * 13} {names.capitalize()} {'=' * 13}\"\n"
-        NEWDATA[names] += f"sh {shell_directory}/{names}.sh\n\n"
-
-    for names in NEWDATA.values():
-        filedata += names
-
-    save_file(filedata, filename)
-
-
-def create_oneline(DATA, dic, start_line, name):
-    DATA[name] += f"{start_line} "
-    for package in dic:
-        DATA[name] += f"{package} "
-
-
-def create_multiline(DATA, dic, start_line, name):
+def create_multiline(DATA, name, start_line, dic):
     for categories, apps in dic.items():
-        join_apps = ""
-        title = ""
+        join_apps, title, count = "", "", 0
 
         for app in apps:
             join_apps += f"{app} "
+            count += 1
 
         for word in categories.split("/"):
             title += f" {word.capitalize()} /"
 
-        DATA[name] += f"echo \"{'=' * 42}{title[:-1]} {'=' * 21}\"\n"
-        DATA[name] += f"{start_line} {join_apps}\n\n"
+        DATA[name] += f"echo \"{'=' * 42}{title[:-1]}({count}) {'=' * 21}\"\n"
+        DATA[name] += f"{start_line} {join_apps}--noconfirm\n\n"
 
 
 base = {
     "apps": "",
-    "development": "",
-    "fonts": "",
-    "audio": "",
-
-    "plasma": "",
-    "i3": "",
-    "xmonad": "",
-
-    "yarn": ""
+    "apps_dev": "",
+    "de_plasma": "",
+    "de_xfce": "",
+    "wm_i3": "",
+    "wm_xmonad": "",
 }
-
-code = base.copy()
-shell = base.copy()
 
 
 def main():
-    create_oneline(code, yarn,        "yarn global add", "yarn")
-
-    create_multiline(code, apps,        "yay -S", "apps")
-    create_multiline(code, development, "yay -S", "development")
-    create_multiline(code, fonts,       "yay -S", "fonts")
-    create_multiline(code, audio,       "yay -S", "audio")
-    create_multiline(code, plasma,      "yay -S", "plasma")
-    create_multiline(code, i3,          "yay -S", "i3")
-    create_multiline(code, xmonad,      "yay -S", "xmonad")
-
-    save_all_files(code)
-    # create_shell_install(code, shell, "sh/install.sh",  "./aur")
+    create_multiline(base, "apps",      "yay -S", apps)
+    create_multiline(base, "apps_dev",  "yay -S", development)
+    create_multiline(base, "de_plasma", "yay -S", plasma)
+    create_multiline(base, "de_xfce",   "yay -S", xfce)
+    create_multiline(base, "wm_i3",     "yay -S", i3)
+    create_multiline(base, "wm_xmonad", "yay -S", xmonad)
+    save_files(base)
 
 
 main()

@@ -1,4 +1,4 @@
-remove_and_add (){
+dotln (){
   if [ -f "$2" ]; then
     rm $2
     ln -sv ~/dotfiles/$1 $2 &> /dev/null
@@ -9,7 +9,7 @@ remove_and_add (){
   fi
 }
 
-remove_and_add_sudo (){
+dotcp (){
   destination=$(dirname "/$1")
 
   if [ -d $destination ]; then

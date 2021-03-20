@@ -1,45 +1,60 @@
-echo "========================================== Torrent  ====================="
-yay -S qbittorrent stremio 
+echo "========================================== Torrent (2) ====================="
+yay -S qbittorrent stremio --noconfirm
 
-echo "========================================== Apps  ====================="
-yay -S discord zoom bitwarden-bin 
+echo "========================================== Apps (3) ====================="
+yay -S discord zoom bitwarden-bin --noconfirm
 
-echo "========================================== Browsers  ====================="
-yay -S google-chrome tor-browser firefox-developer-edition 
+echo "========================================== Browsers (3) ====================="
+yay -S google-chrome tor-browser firefox-developer-edition --noconfirm
 
-echo "========================================== Media / Image  ====================="
-yay -S krita 
+echo "========================================== Phone (1) ====================="
+yay -S kdeconnect --noconfirm
 
-echo "========================================== Media / Video  ====================="
-yay -S vlc davinci-resolve obs-studio 
+echo "========================================== Media / Image (1) ====================="
+yay -S krita --noconfirm
 
-echo "========================================== Hardware / Boot  ====================="
-yay -S os-prober grub-customizer woeusb 
+echo "========================================== Media / Video (2) ====================="
+yay -S vlc obs-studio --noconfirm
 
-echo "========================================== Hardware / Cpu  ====================="
-yay -S cpu-x-git s-tui stress 
+echo "========================================== Hardware / Boot (3) ====================="
+yay -S os-prober grub-customizer woeusb --noconfirm
 
-echo "========================================== Hardware / Gpu  ====================="
-yay -S nvidia-settings gwe cuda-10.2 
+echo "========================================== Hardware / Cpu (3) ====================="
+yay -S cpu-x-git s-tui stress --noconfirm
 
-echo "========================================== Hardware / Hd  ====================="
-yay -S gparted-git gsmartcontrol 
+echo "========================================== Hardware / Gpu (2) ====================="
+yay -S nvidia-settings gwe --noconfirm
 
-echo "========================================== Console  ====================="
-yay -S gotop-bin htop xclip cava cbonsai neofetch lolcat 
+echo "========================================== Hardware / Hd (2) ====================="
+yay -S gparted-git gsmartcontrol --noconfirm
 
-echo "========================================== Console / Zsh  ====================="
-yay -S zsh oh-my-zsh-git 
+echo "========================================== Console (3) ====================="
+yay -S gotop-bin htop xclip --noconfirm
 
-echo "========================================== Console / Zsh / Config  ====================="
-yay -S antigen-git spaceship-prompt-git 
+echo "========================================== Console / Fun (4) ====================="
+yay -S cava cbonsai neofetch lolcat --noconfirm
 
-echo "========================================== Spotify  ====================="
-yay -S spotify-snap spotify-adblock-linux 
+echo "========================================== Console / Zsh (2) ====================="
+yay -S zsh oh-my-zsh-git --noconfirm
 
-echo "========================================== Spotify / Spicetify  ====================="
-yay -S spicetify-cli spicetify-themes-git 
+echo "========================================== Console / Zsh / Config (2) ====================="
+yay -S antigen-git spaceship-prompt-git --noconfirm
 
-echo "========================================== Fix-bugs  ====================="
-yay -S gnome-keyring sshfs ntfs-3g 
+echo "========================================== Spotify (2) ====================="
+yay -S spotify-snap spotify-adblock-linux --noconfirm
+
+echo "========================================== Spotify / Spicetify (2) ====================="
+yay -S spicetify-cli spicetify-themes-git --noconfirm
+
+echo "========================================== Fonts / Nerd (1) ====================="
+yay -S nerd-fonts-complete --noconfirm
+
+echo "========================================== Fonts / Ttf (9) ====================="
+yay -S ttf-fira-code ttf-ibm-plex-mono-git ttf-liberation ttf-roboto ttf-dejavu ttf-droid ttf-inconsolata ttf-liberation ttf-unifont --noconfirm
+
+echo "========================================== Fonts / Otf (1) ====================="
+yay -S otf-font-awesome-5-free --noconfirm
+
+echo "========================================== Fix-bugs (3) ====================="
+yay -S gnome-keyring sshfs ntfs-3g --noconfirm
 
