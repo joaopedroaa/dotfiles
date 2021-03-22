@@ -9,8 +9,10 @@ apps = {
 
     "hardware/boot":        ["os-prober", "grub-customizer", "woeusb"],
     "hardware/cpu":         ["cpu-x-git", "s-tui", "stress"],
-    "hardware/gpu":         ["nvidia-settings", "gwe"],
+    "hardware/gpu":         ["gwe"],
     "hardware/hd":          ["gparted-git", "gsmartcontrol"],
+
+    "driver/gpu":           ["nvidia", "nvidia-utils", "nvidia-settings","mesa-demos"],
 
     "console":              ["gotop-bin", "htop", "xclip"],
     "console/fun":          ["cava", "cbonsai", "neofetch", "lolcat"],
@@ -22,7 +24,7 @@ apps = {
 
     "fonts/nerd":           ["nerd-fonts-complete"],
     "fonts/ttf":            ["ttf-fira-code", "ttf-ibm-plex-mono-git", "ttf-liberation", "ttf-roboto", "ttf-dejavu", "ttf-droid", "ttf-inconsolata", "ttf-liberation", "ttf-unifont"],
-    "fonts/otf":            ["otf-font-awesome-5-free"],
+    "fonts/misc":           ["awesome-terminal-fonts"],
 
     "fix-bugs":             ["gnome-keyring", "sshfs", "ntfs-3g"]
 }
@@ -63,10 +65,10 @@ xfce = {
     "xfce":                 ["xfce4-settings"],
     "compositor":           ["picom"],
     "documents":            ["evince"],
-    "menu":                 ["dmenu"],
+    "menu":                 ["dmenu", "rofi", "rofi-calc"],
     "lightdm":              ["lightdm", "lightdm-gtk-greeter", "lightdm-gtk-greeter-settings", "lightdm-webkit2-greeter"],
 
-    "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman", "tumbler", "gvfs"],
+    "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman", "tumbler", "gvfs", "ranger-git"],
     "desktop":              ["nitrogen", "lxappearance"],
     "unpackfiles":          ["xarchiver", "p7zip", "zip", "unzip", "unrar", "unace"],
     "console":              ["kitty", "alacritty-git", "xcompmgr"],
@@ -75,7 +77,7 @@ xfce = {
     "themes/icons":         ["tela-icon-theme-git", "flatery-icon-theme-git"],
     "themes/cursors":       ["capitaine-cursors"],
 
-    "media/image":          ["feh", "imagemagick", "flameshot-git"],
+    "media/image":          ["feh", "imagemagick", "flameshot-git", "gcolor2"],
     "media/video":          ["mplayer"],
 
     "audio/pulseaudio":     ["pulseaudio", "pulseaudio-alsa", "pavucontrol"],

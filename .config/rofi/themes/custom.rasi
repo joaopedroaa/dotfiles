@@ -1,0 +1,138 @@
+* {
+    /* Custom colours */
+    dark-grey:             #282a36;
+    light-grey:            #44475a;
+    white:                 #f8f8f2;
+    blue-grey:             #6464FF;
+    cyan:                  #8be9fd;
+    green:                 #50fa7b;
+    orange:                #ffb86c;
+    pink:                  #ff79c6;
+    purple:                #bd93f9;
+    red:                   #ff5555;
+    yellow:                #f1fa8c;
+
+    background-color: rgba      (0,0,0, 0%);
+}
+
+#window {
+    background-color: @dark-grey;
+    border:           0px 0 0;
+    border-color:     @light-grey;
+    padding:          0px;
+}
+
+#mainbox {
+    border:  0;
+    padding: 0;
+    background-color: @dark-grey;
+    border-color: @light-grey;
+}
+
+#message {
+    border:       0;
+    border-color: @light-grey;
+    padding:      1px ;
+}
+
+#textbox {
+    text-color:   @white;
+}
+
+#listview {
+    fixed-height: 0;
+    border:       0px solid 0px 0px;
+    border-color: @pink;
+    scrollbar:    false;
+    padding:      2px 0px 0px;
+}
+
+#element {
+    border: 0;
+    padding: 2px;
+
+}
+
+#element.normal.normal {
+    text-color:       @white;
+}
+
+#element.normal.urgent {
+    background-color: @red;
+    text-color:       @white;
+}
+
+#element.normal.active {
+    background-color: @blue-grey;
+    text-color:       @white;
+}
+
+#element.selected.normal {
+    background-color: @pink;
+    text-color:       @dark-grey;
+}
+
+#element.selected.urgent {
+    background-color: @orange;
+    text-color:       @dark-grey;
+}
+
+#element.selected.active {
+    background-color: @purple;
+    text-color:       @dark-grey;
+}
+
+#element.alternate.normal {
+    text-color:       @white;
+}
+
+#element.alternate.urgent {
+    background-color: @orange;
+    text-color:       @dark-grey;
+}
+
+#element alternate.active {
+    background-color: @cyan;
+    text-color:       @dark-grey;
+}
+
+#sidebar {
+    border:       0px solid 0px 0px;
+    border-color: @dark-grey;
+    spacing:    10;
+}
+
+#button {
+    spacing: 0;
+    background-color: @yellow;
+    text-color:       @dark-grey;
+}
+
+#button.selected {
+    background-color: @orange;
+    text-color:       @dark-grey;
+}
+
+#inputbar {
+    spacing:    10;
+    padding:    9px;
+    text-color: @white;
+    background-color: @dark-grey;
+}
+
+#inputbar {
+    spacing:    10;
+    padding:    5px;
+    text-color: @white;
+    children:   [ prompt,entry ];
+}
+
+#prompt {
+    spacing:    0;
+    text-color: @white;
+}
+
+#entry {
+    spacing:    0;
+    text-color: @white;
+}

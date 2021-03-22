@@ -7,14 +7,14 @@ yay -S picom --noconfirm
 echo "========================================== Documents (1) ====================="
 yay -S evince --noconfirm
 
-echo "========================================== Menu (1) ====================="
-yay -S dmenu --noconfirm
+echo "========================================== Menu (3) ====================="
+yay -S dmenu rofi rofi-calc --noconfirm
 
 echo "========================================== Lightdm (4) ====================="
 yay -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greeter --noconfirm
 
-echo "========================================== Filemanager (5) ====================="
-yay -S thunar thunar-archive-plugin thunar-volman tumbler gvfs --noconfirm
+echo "========================================== Filemanager (6) ====================="
+yay -S thunar thunar-archive-plugin thunar-volman tumbler gvfs ranger-git --noconfirm
 
 echo "========================================== Desktop (2) ====================="
 yay -S nitrogen lxappearance --noconfirm
@@ -34,8 +34,8 @@ yay -S tela-icon-theme-git flatery-icon-theme-git --noconfirm
 echo "========================================== Themes / Cursors (1) ====================="
 yay -S capitaine-cursors --noconfirm
 
-echo "========================================== Media / Image (3) ====================="
-yay -S feh imagemagick flameshot-git --noconfirm
+echo "========================================== Media / Image (4) ====================="
+yay -S feh imagemagick flameshot-git gcolor2 --noconfirm
 
 echo "========================================== Media / Video (1) ====================="
 yay -S mplayer --noconfirm

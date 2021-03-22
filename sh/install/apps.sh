@@ -22,11 +22,14 @@ yay -S os-prober grub-customizer woeusb --noconfirm
 echo "========================================== Hardware / Cpu (3) ====================="
 yay -S cpu-x-git s-tui stress --noconfirm
 
-echo "========================================== Hardware / Gpu (2) ====================="
-yay -S nvidia-settings gwe --noconfirm
+echo "========================================== Hardware / Gpu (1) ====================="
+yay -S gwe --noconfirm
 
 echo "========================================== Hardware / Hd (2) ====================="
 yay -S gparted-git gsmartcontrol --noconfirm
+
+echo "========================================== Driver / Gpu (4) ====================="
+yay -S nvidia nvidia-utils nvidia-settings mesa-demos --noconfirm
 
 echo "========================================== Console (3) ====================="
 yay -S gotop-bin htop xclip --noconfirm
@@ -52,8 +55,8 @@ yay -S nerd-fonts-complete --noconfirm
 echo "========================================== Fonts / Ttf (9) ====================="
 yay -S ttf-fira-code ttf-ibm-plex-mono-git ttf-liberation ttf-roboto ttf-dejavu ttf-droid ttf-inconsolata ttf-liberation ttf-unifont --noconfirm
 
-echo "========================================== Fonts / Otf (1) ====================="
-yay -S otf-font-awesome-5-free --noconfirm
+echo "========================================== Fonts / Misc (1) ====================="
+yay -S awesome-terminal-fonts --noconfirm
 
 echo "========================================== Fix-bugs (3) ====================="
 yay -S gnome-keyring sshfs ntfs-3g --noconfirm

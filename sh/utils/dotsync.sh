@@ -1,4 +1,9 @@
 dotln (){
+  destination=$(dirname "$2")
+
+  [ ! -d "$destination" ] && mkdir $destination &> /dev/null
+  [ ! -f "$2" ] && touch $2
+
   if [ -f "$2" ]; then
     rm $2
     ln -sv ~/dotfiles/$1 $2 &> /dev/null

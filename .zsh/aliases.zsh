@@ -81,21 +81,19 @@ alias plvolu="plspotify volume"
 # Console
 alias :q="exit" alias :Q=":q"
 
+# dotfiles
+alias syncd="sh ~/dotfiles/sync.sh"
+alias ccl="sh ~/dotfiles/sh/utils/langs/c.sh"
+
 
 # MISC
-alias sizes="sudo du -sh ~/.* | sort -rh | head -10"
-alias commandshistory="history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10"
-alias nvxine="grep -i xine /var/log/Xorg.0.log"
-alias clearhd="sudo ntfsfix -b /dev/sdb1"
-
 alias findd="sudo find / -iname "
 alias xmonadr="xmonad --recompile"
 
 
+# Save
+alias clearhd="sudo ntfsfix -b /dev/sdb1"
+alias sizes="sudo du -sh ~/.* | sort -rh | head -10"
+alias commandshistory="history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10"
+alias nvxine="grep -i xine /var/log/Xorg.0.log"
 alias xev="xev -event keyboard  | egrep -o 'keycode.*\)'"
-
-# dotfiles
-alias dsync="sh ~/dotfiles/sync.sh"
-alias ccl="sh ~/dotfiles/sh/utils/langs/c.sh"
-
-alias config='/usr/bin/git --git-dir=$HOME/dotsgit/ --work-tree=$HOME'

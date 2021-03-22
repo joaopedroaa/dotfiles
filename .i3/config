@@ -53,6 +53,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 bindsym Print  exec flameshot gui -p ~/Pictures/Screenshots
+bindsym $mod+Print  exec gcolor2
 
 
 ##############################################################
@@ -60,7 +61,8 @@ bindsym Print  exec flameshot gui -p ~/Pictures/Screenshots
 ##############################################################
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+Shift+d exec --no-startup-id rofi -show calc -modi calc -no-show-match -no-sort
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec rofi -modi drun,run -show drun
@@ -249,20 +251,21 @@ client.background       #ffffff
 
 # I3 Gaps
 for_window [class="^.*"] border pixel 3
-gaps inner 30
+gaps inner 13
 gaps outer -4
 
-# Desktop / i3-save-tree --workspace N > ~/dotfiles/.i3/layouts/N.json
+# Desktop
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.i3/layouts/1.json'"
-exec  google-chrome-stable
-
 exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.i3/layouts/2.json'"
+exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/dotfiles/.i3/layouts/3.json'"
+
+exec  google-chrome-stable
 exec  kitty
 exec  kitty
 exec  LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
 
-# Polybar launch
+# Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 
@@ -271,4 +274,4 @@ exec --no-startup-id /usr/lib/kdeconnectd
 exec --no-startup-id kdeconnect-indicator
 
 # Autotiling https://github.com/nwg-piotr/autotiling
-exec autotiling
+exec_always --no-startup-id autotiling

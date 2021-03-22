@@ -15,14 +15,15 @@ if [ "$1" == "wm" ]; then
 
   else
     separate_echo "Default /home"
+    dotln .config/polybar/launch.sh        ~/.config/polybar/launch.sh
+    dotln .config/polybar/config           ~/.config/polybar/config
+    dotln .config/rofi/config.rasi         ~/.config/rofi/config.rasi
+
     dotln .config/flameshot/flameshot.ini  ~/.config/flameshot/flameshot.ini
     dotln .config/neofetch/config.conf     ~/.config/neofetch/config.conf
     dotln .config/redshift.conf            ~/.config/redshift.conf
     dotln .config/picom.conf               ~/.config/picom.conf
     dotln .config/yakuakerc                ~/.config/yakuakerc
-
-    dotln .config/polybar/config           ~/.config/polybar/config
-    dotln .config/polybar/launch.sh        ~/.config/polybar/launch.sh
 
     dotln .doom.d/config.el                ~/.doom.d/config.el
     dotln .doom.d/custom.el                ~/.doom.d/custom.el
@@ -30,7 +31,7 @@ if [ "$1" == "wm" ]; then
     dotln .doom.d/packages.el              ~/.doom.d/packages.el
 
     dotln .gitconfig                       ~/.gitconfig
-    dotln .zshenv                          ~/.zshenv
+    dotln .zprofile                        ~/.zprofile
     dotln .zshrc                           ~/.zshrc
 
 
