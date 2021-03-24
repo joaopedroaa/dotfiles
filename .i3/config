@@ -202,6 +202,24 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 
+# Plasma compatibility improvements
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
+for_window [class="yakuake"] floating enable
+for_window [class="systemsettings"] floating enable
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] border none, move right 700px, move down 450px
+no_focus [class="plasmashell" window_type="notification"]
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -254,11 +272,11 @@ for_window [class="^.*"] border pixel 3
 gaps inner 13
 gaps outer -4
 
+
 # Desktop
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.i3/layouts/1.json'"
 exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.i3/layouts/2.json'"
 exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/dotfiles/.i3/layouts/3.json'"
-
 exec  google-chrome-stable
 exec  kitty
 exec  kitty
@@ -267,7 +285,6 @@ exec  LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 
 # Kde Connect
 exec --no-startup-id /usr/lib/kdeconnectd

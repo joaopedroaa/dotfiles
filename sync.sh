@@ -15,15 +15,16 @@ if [ "$1" == "wm" ]; then
 
   else
     separate_echo "Default /home"
-    dotln .config/polybar/launch.sh        ~/.config/polybar/launch.sh
     dotln .config/polybar/config           ~/.config/polybar/config
+    dotln .config/polybar/launch.sh        ~/.config/polybar/launch.sh
     dotln .config/rofi/config.rasi         ~/.config/rofi/config.rasi
 
     dotln .config/flameshot/flameshot.ini  ~/.config/flameshot/flameshot.ini
     dotln .config/neofetch/config.conf     ~/.config/neofetch/config.conf
-    dotln .config/redshift.conf            ~/.config/redshift.conf
-    dotln .config/picom.conf               ~/.config/picom.conf
-    dotln .config/yakuakerc                ~/.config/yakuakerc
+    dotln .config/kitty/kitty.conf         ~/.config/kitty/kitty.conf
+    dotln .config/redshift/redshift.conf   ~/.config/redshift.conf
+    dotln .config/picom/picom.conf         ~/.config/picom.conf
+    dotln .config/yakuake/yakuakerc        ~/.config/yakuakerc
 
     dotln .doom.d/config.el                ~/.doom.d/config.el
     dotln .doom.d/custom.el                ~/.doom.d/custom.el

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #source https://github.com/x70b1/polybar-scripts
 
 

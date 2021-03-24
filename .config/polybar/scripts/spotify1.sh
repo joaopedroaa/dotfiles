@@ -1,7 +1,5 @@
 #!/bin/sh
-
-# credits
-# https://github.com/NicholasFeldman/dotfiles/blob/master/polybar/.config/polybar/spotify.sh
+# credits https://github.com/NicholasFeldman/dotfiles/blob/master/polybar/.config/polybar/spotify.sh
 
 main() {
   if ! pgrep -x spotify >/dev/null; then

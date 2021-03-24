@@ -27,15 +27,20 @@ case $desktop in
     else
     polybar --reload i3 -c ~/.config/polybar/config &
     fi
+    ;;
 
-    # second polybar at bottom
-    # if type "xrandr" > /dev/null; then
-    #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    #     MONITOR=$m polybar --reload i3-extra -c ~/.config/polybar/config &
-    #   done
-    # else
-    # polybar --reload i3-extra -c ~/.config/polybar/config &
-    # fi
+
+    plasma-i3|/usr/share/xsessions/plasma-i3)
+    if type "xrandr" > /dev/null; then
+      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+      echo $m
+        MONITOR=$m polybar --reload i3 -c ~/.config/polybar/config &
+      done
+    else
+    polybar --reload i3 -c ~/.config/polybar/config &
+    fi
+    ;;
+
 
     # xmonad|/usr/share/xsessions/xmonad)
     # if [ $count = 1 ]; then
