@@ -1,11 +1,8 @@
-# Oh My Zsh
 export ZSH="/home/joaopedro/.oh-my-zsh"
-
-# Nvm
 export NVM_DIR="$HOME/.nvm"
-
-# Android Studio
 export ANDROID_HOME="$HOME/Android/Sdk"
+
+# Path
 export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
@@ -18,7 +15,8 @@ export PATH="$PATH:$HOME/.emacs.d/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.cabal/bin"
 
-export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
+export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/anaconda3/bin"
+

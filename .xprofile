@@ -1,9 +1,11 @@
 #!/bin/sh
 
+sudo mount /dev/sdb1 /home/joaopedro/hd1
 
-nitrogen --restore &  # wallpaper
-picom -f &            # compositor
-flameshot &           # screenshot
+nitrogen --restore &  # Wallpaper
+picom -f &            # Compositor
+flameshot &           # Screenshot
+dunst &	              # Notifications
 
 nvidia-settings --load-config-only
 

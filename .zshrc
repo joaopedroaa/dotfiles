@@ -1,5 +1,5 @@
-source ~/dotfiles/.zsh/config.zsh    # 1
-source ~/dotfiles/.zsh/aliases.zsh   # 2
-source ~/dotfiles/.zsh/spaceship.zsh # 3
-source ~/dotfiles/.zsh/zinit.zsh     # 4
-source ~/dotfiles/.zsh/antigen.zsh   # 4
+source ~/dotfiles/.config/zsh/config.zsh    # 1
+source ~/dotfiles/.config/zsh/aliases.zsh   # 2
+source ~/dotfiles/.config/zsh/spaceship.zsh # 3
+source ~/dotfiles/.config/zsh/plugins.zsh   # 4
+

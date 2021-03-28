@@ -6,24 +6,27 @@ alias c.="code ." alias C.="c."
 alias c..="code . && exit" alias C..="c.."
 
 # yay
+alias yas='yay -S'
 alias yaup="yay -Syyu"
 alias yaupp="yay -Syyuu"
-alias yain='yay -S'
+alias yacache='yay -Sc'
 
-alias yaconf='yay -Pg'
-alias yains='yay -U'
-alias yare='yay -R'
-alias yarem='yay -Rns'
-alias yaloc='yay -Qi'
-alias yalocs='yay -Qs'
-alias yalst='yay -Qe'
-alias yaorph='yay -Qtd'
 alias yaupg='yay -Syu'
 alias yasu='yay -Syu --noconfirm'
 alias yarep='yay -Si'
 alias yareps='yay -Ss'
 alias yainsd='yay -S --asdeps'
 alias yamir='yay -Syy'
+
+alias yaconf='yay -Pg'
+alias yains='yay -U'
+alias yare='yay -R'
+alias yarem='yay -Rns'
+
+alias yaloc='yay -Qi'
+alias yalocs='yay -Qs'
+alias yalst='yay -Qe'
+alias yaorph='yay -Qtd'
 
 # tar
 alias tarzip='unzip'
@@ -90,6 +93,9 @@ alias ccl="sh ~/dotfiles/sh/utils/langs/c.sh"
 alias findd="sudo find / -iname "
 alias xmonadr="xmonad --recompile"
 
+# Agedu
+alias ageduw="sudo agedu -w --auth none"
+alias agedus="sudo agedu -s /home/joaopedro"
 
 # Save
 alias clearhd="sudo ntfsfix -b /dev/sdb1"

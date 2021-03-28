@@ -13,9 +13,9 @@ yay -S konsole yakuake --noconfirm
 echo "========================================== Kvantum (2) ====================="
 yay -S kvantum-qt5-git kvantum-theme-layan-git --noconfirm
 
-echo "========================================== Pdf (1) ====================="
-yay -S okular --noconfirm
-
 echo "========================================== Media / Image (1) ====================="
 yay -S gwenview --noconfirm
+
+echo "========================================== Media / Docs (1) ====================="
+yay -S okular --noconfirm
 

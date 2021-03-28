@@ -8,8 +8,6 @@ SPACESHIP_PROMPT_ORDER=(
   hg        # Mercurial section (hg_branch  + hg_status)
   exec_time # Execution time
   line_sep  # Line break
-  battery   # Battery level and status
-  vi_mode   # Vi-mode indicator
   jobs      # Background jobs indicator
   exit_code # Exit code section
   char      # Prompt character
@@ -22,7 +20,7 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_SEPARATE_LINE=true
 
-# Char Config
+# Char Config "λ"
 SPACESHIP_CHAR_SYMBOL="λ"
 SPACESHIP_CHAR_SUFFIX=" "
 
@@ -36,8 +34,3 @@ SPACESHIP_TIME_FORMAT=%T
 
 # Git Config
 SPACESHIP_GIT_PREFIX=''
-
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit
-promptinit
-# prompt spaceship

@@ -17,12 +17,12 @@
                "y": 41
             },
             "marks": [],
-            "name": "Google Chrome",
+            "name": "Chromium",
             "percent": null,
             "swallows": [
                {
-                "class": "^Google\\-chrome$",
-                "instance": "^google\\-chrome$"
+                "class": "^Chromium$",
+                "instance": "^chromium$"
                }
             ],
             "type": "con"

@@ -18,8 +18,9 @@ dotcp (){
   destination=$(dirname "/$1")
 
   if [ -d $destination ]; then
+      sudo rm /$1
       sudo cp ~/dotfiles/$1 $destination
-      echo "successful -- /$1"
+      echo "successful - cp - /$1"
 
   else
       echo "X - /$1"

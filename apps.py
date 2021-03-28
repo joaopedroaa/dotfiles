@@ -10,11 +10,11 @@ apps = {
     "hardware/boot":        ["os-prober", "grub-customizer", "woeusb"],
     "hardware/cpu":         ["cpu-x-git", "s-tui", "stress"],
     "hardware/gpu":         ["gwe"],
-    "hardware/hd":          ["gparted-git", "gsmartcontrol"],
+    "hardware/hd":          ["gparted-git", "gsmartcontrol", "agedu"],
 
     "driver/gpu":           ["nvidia", "nvidia-utils", "nvidia-settings","mesa-demos"],
 
-    "console":              ["gotop-bin", "htop", "xclip"],
+    "console":              ["gotop-bin", "htop", "xclip", "inxi"],
     "console/fun":          ["cava", "cbonsai", "neofetch", "lolcat"],
     "console/zsh":          ["zsh", "oh-my-zsh-git"],
     "console/zsh/config":   ["antigen-git", "spaceship-prompt-git"],
@@ -35,11 +35,11 @@ development = {
     "vm":                   ["docker", "virtualbox-ext-oracle"],
     "api":                  ["insomnia-bin", "postman-bin"],
 
-    "editors":              ["visual-studio-code-insiders-bin"],
+    "editors":              ["visual-studio-code-insiders-bin", "intellij-idea-community-edition"],
     "editors/emacs":        ["emacs", "emacs-doom-themes-git", "fd", "ripgrep"],
 
     "lang/js":              ["nvm-git", "yarn"],
-    "lang/java":            ["java-8-jdk", "glassfish5"],
+    "lang/java":            ["jdk", "glassfish5", "processing"],
     "lang/php":             ["apache", "mysql", "php", "php-apache", "phpmyadmin"],
     "lang/python":          ["python", "autopep8"],
     "lang/elixir":          ["elixir", "inotify-tools"],
@@ -47,7 +47,7 @@ development = {
 }
 
 
-################################################################
+# -------------------------------------------------------------------------------------- #
 
 
 plasma = {
@@ -65,12 +65,14 @@ xfce = {
     "xfce":                 ["xfce4-settings"],
     "compositor":           ["picom"],
     "menu":                 ["dmenu", "rofi", "rofi-calc"],
-    "lightdm":              ["lightdm", "lightdm-gtk-greeter", "lightdm-gtk-greeter-settings", "lightdm-webkit2-greeter"],
 
     "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman", "tumbler", "gvfs", "ranger-git"],
-    "desktop":              ["nitrogen", "lxappearance"],
+    "desktop":              ["nitrogen", "lxappearance", "dunst-git"],
     "unpackfiles":          ["xarchiver", "p7zip", "zip", "unzip", "unrar", "unace"],
     "console":              ["kitty", "alacritty-git", "xcompmgr"],
+
+    "dm/xorg":              ["xorg", "xorg-xinit-git"],
+    "dm/lightdm":           ["lightdm", "lightdm-gtk-greeter", "lightdm-gtk-greeter-settings", "lightdm-webkit2-greeter"],
 
     "themes":               ["ant-dracula-gtk-theme"],
     "themes/icons":         ["tela-icon-theme-git", "flatery-icon-theme-git"],

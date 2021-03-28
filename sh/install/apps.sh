@@ -25,14 +25,14 @@ yay -S cpu-x-git s-tui stress --noconfirm
 echo "========================================== Hardware / Gpu (1) ====================="
 yay -S gwe --noconfirm
 
-echo "========================================== Hardware / Hd (2) ====================="
-yay -S gparted-git gsmartcontrol --noconfirm
+echo "========================================== Hardware / Hd (3) ====================="
+yay -S gparted-git gsmartcontrol agedu --noconfirm
 
 echo "========================================== Driver / Gpu (4) ====================="
 yay -S nvidia nvidia-utils nvidia-settings mesa-demos --noconfirm
 
-echo "========================================== Console (3) ====================="
-yay -S gotop-bin htop xclip --noconfirm
+echo "========================================== Console (4) ====================="
+yay -S gotop-bin htop xclip inxi --noconfirm
 
 echo "========================================== Console / Fun (4) ====================="
 yay -S cava cbonsai neofetch lolcat --noconfirm

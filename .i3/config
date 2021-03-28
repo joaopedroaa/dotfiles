@@ -52,8 +52,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym Print  exec flameshot gui -p ~/Pictures/Screenshots
-bindsym $mod+Print  exec gcolor2
+bindsym $mod+Print exec flameshot gui
+bindsym $mod+Shift+Print exec gcolor2
 
 
 ##############################################################
@@ -120,7 +120,7 @@ bindsym $mod+End exec playerctl -p spotify  previous
 bindsym $mod+Return exec kitty
 
 # Short
-bindsym $mod+F1 exec google-chrome-stable
+bindsym $mod+F1 exec chromium
 bindsym $mod+F2 exec thunar
 bindsym $mod+F3 exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
@@ -269,15 +269,15 @@ client.background       #ffffff
 
 # I3 Gaps
 for_window [class="^.*"] border pixel 3
-gaps inner 13
-gaps outer -4
+gaps inner 12
+gaps outer 0
 
 
 # Desktop
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.i3/layouts/1.json'"
 exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.i3/layouts/2.json'"
 exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/dotfiles/.i3/layouts/3.json'"
-exec  google-chrome-stable
+exec  chromium
 exec  kitty
 exec  kitty
 exec  LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
