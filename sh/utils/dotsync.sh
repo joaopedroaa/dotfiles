@@ -1,29 +1,33 @@
-dotln (){
-  destination=$(dirname "$2")
+dotln(){
+  dotsPath=$1
+  finalPath=$HOME/$1
+  [ $2 ] && finalPath=$HOME/$2
+  destinationPath=$(dirname "$finalPath")
 
-  [ ! -d "$destination" ] && mkdir $destination &> /dev/null
-  [ ! -f "$2" ] && touch $2
 
-  if [ -f "$2" ]; then
-    rm $2
-    ln -sv ~/dotfiles/$1 $2 &> /dev/null
-    echo "successful - $2"
+  [ ! -d "$destinationPath" ] && mkdir $destinationPath &> /dev/null
 
+  if [ -d "$destinationPath" ]; then
+    [ -f "$finalPath" ] && rm $finalPath
+    ln -sv $HOME/dotfiles/$dotsPath $finalPath &> /dev/null
+    echo "successful - $finalPath"
   else
-    echo "X - $2"
+    echo "X - $finalPath"
   fi
 }
 
-dotcp (){
-  destination=$(dirname "/$1")
 
-  if [ -d $destination ]; then
-      sudo rm /$1
-      sudo cp ~/dotfiles/$1 $destination
-      echo "successful - cp - /$1"
+dotcp (){
+  finalPath=/$1
+  destinationPath=$(dirname "$finalPath")
+
+  if [ -d $destinationPath ]; then
+      sudo rm $finalPath
+      sudo cp $HOME/dotfiles/$1 $destinationPath
+      echo "successful - cp - $finalPath"
 
   else
-      echo "X - /$1"
+      echo "X - /$finalPath"
   fi
 
 }
