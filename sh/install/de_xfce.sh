@@ -7,23 +7,23 @@ yay -S picom --noconfirm
 echo "========================================== Menu (3) ====================="
 yay -S dmenu rofi rofi-calc --noconfirm
 
-echo "========================================== Dm / Xorg (2) ====================="
-yay -S xorg xorg-xinit-git --noconfirm
-
-echo "========================================== Dm / Lightdm (4) ====================="
-yay -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greeter --noconfirm
-
 echo "========================================== Filemanager (6) ====================="
-yay -S thunar thunar-archive-plugin thunar-volman tumbler gvfs ranger-git --noconfirm
+yay -S thunar thunar-archive-plugin thunar-volman tumbler gvfs lf --noconfirm
 
-echo "========================================== Desktop (2) ====================="
-yay -S nitrogen lxappearance --noconfirm
+echo "========================================== Desktop (3) ====================="
+yay -S nitrogen lxappearance dunst-git --noconfirm
 
 echo "========================================== Unpackfiles (6) ====================="
 yay -S xarchiver p7zip zip unzip unrar unace --noconfirm
 
 echo "========================================== Console (3) ====================="
 yay -S kitty alacritty-git xcompmgr --noconfirm
+
+echo "========================================== Dm / Xorg (2) ====================="
+yay -S xorg xorg-xinit-git --noconfirm
+
+echo "========================================== Dm / Lightdm (4) ====================="
+yay -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greeter --noconfirm
 
 echo "========================================== Themes (1) ====================="
 yay -S ant-dracula-gtk-theme --noconfirm

@@ -1,5 +1,5 @@
-echo "========================================== Xmonad (3) ====================="
-yay -S xmonad-contrib xmonad-utils xmonad-log --noconfirm
+echo "========================================== Xmonad (4) ====================="
+yay -S xmonad xmonad-contrib xmonad-utils xmonad-log --noconfirm
 
 echo "========================================== Haskell (1) ====================="
 yay -S haskell-dbus --noconfirm

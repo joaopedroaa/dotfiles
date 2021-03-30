@@ -63,6 +63,7 @@ bindsym $mod+Shift+Print exec gcolor2
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+Shift+d exec --no-startup-id rofi -show calc -modi calc -no-show-match -no-sort
+# bindsym $mod+Shift+Ctrl+d exec --no-startup-id
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec rofi -modi drun,run -show drun
@@ -274,9 +275,9 @@ gaps outer 0
 
 
 # Desktop
-exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.i3/layouts/1.json'"
-exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.i3/layouts/2.json'"
-exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/dotfiles/.i3/layouts/3.json'"
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.config/i3/layouts/1.json'"
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.config/i3/layouts/2.json'"
+exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/dotfiles/.config/i3/layouts/3.json'"
 exec  chromium
 exec  kitty
 exec  kitty

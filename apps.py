@@ -1,7 +1,7 @@
 apps = {
     "torrent":              ["qbittorrent", "stremio"],
-    "apps":                 ["discord", "zoom", "bitwarden-bin"],
-    "browsers":             ["google-chrome", "tor-browser", "firefox-developer-edition"],
+    "apps":                 ["discord", "zoom", "bitwarden-bin", "redshift"],
+    "browsers":             ["chromium", "tor-browser", "firefox-developer-edition"],
     "phone":                ["kdeconnect"],
 
     "media/image":          ["krita"],
@@ -66,7 +66,7 @@ xfce = {
     "compositor":           ["picom"],
     "menu":                 ["dmenu", "rofi", "rofi-calc"],
 
-    "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman", "tumbler", "gvfs", "ranger-git"],
+    "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman", "tumbler", "gvfs", "lf"],
     "desktop":              ["nitrogen", "lxappearance", "dunst-git"],
     "unpackfiles":          ["xarchiver", "p7zip", "zip", "unzip", "unrar", "unace"],
     "console":              ["kitty", "alacritty-git", "xcompmgr"],
@@ -100,7 +100,7 @@ i3 = {
 
 
 xmonad = {
-    "xmonad":               ["xmonad-contrib", "xmonad-utils", "xmonad-log"],
+    "xmonad":               ["xmonad", "xmonad-contrib", "xmonad-utils", "xmonad-log"],
     "haskell":              ["haskell-dbus"],
     "bar":                  ["xmobar"],
 }

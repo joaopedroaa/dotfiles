@@ -6,6 +6,7 @@ nitrogen --restore &  # Wallpaper
 picom -f &            # Compositor
 flameshot &           # Screenshot
 dunst &	              # Notifications
+redshift &	          # Adjusts the color
 
 nvidia-settings --load-config-only
 

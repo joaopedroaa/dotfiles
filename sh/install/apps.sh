@@ -5,7 +5,7 @@ echo "========================================== Apps (3) ====================="
 yay -S discord zoom bitwarden-bin --noconfirm
 
 echo "========================================== Browsers (3) ====================="
-yay -S google-chrome tor-browser firefox-developer-edition --noconfirm
+yay -S chromium tor-browser firefox-developer-edition --noconfirm
 
 echo "========================================== Phone (1) ====================="
 yay -S kdeconnect --noconfirm
