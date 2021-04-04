@@ -1,4 +1,4 @@
-source ~/dotfiles/sh/utils/separate_echo.sh
+source ~/dotfiles/sh/scripts/separate_echo.sh
 
 
 separate_echo "ZSH / ohmyzsh"

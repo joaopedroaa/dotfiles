@@ -19,21 +19,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 
-# Path
-export PATH="$PATH:$HOME/Android/Sdk/tools"
-export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
-export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-export PATH="$PATH:$HOME/.config/rofi/bin"
-export PATH="$PATH:$HOME/.deno/bin"
-export PATH="$PATH:$HOME/.emacs.d/bin"
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$PATH:$HOME/.cabal/bin"
-export PATH="$PATH:$HOME/flutter/bin"
-export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
-export PATH="$PATH:$HOME/go/bin"
-export PATH="$PATH:$HOME/anaconda3/bin"
-
-
 export LF_ICONS="\
 tw=:\
 st=:\

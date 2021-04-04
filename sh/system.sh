@@ -1,6 +1,17 @@
-source ~/dotfiles/sh/utils/separate_echo.sh
-source ./utils/create_systemctl.sh
-source ./utils/import_gpt.sh
+source ~/dotfiles/sh/scripts/separate_echo.sh
+
+create_systemctl () {
+  clear
+  echo "========================================  $1  ========================================"
+  sudo systemctl enable $1
+  sudo systemctl restart $1
+  sudo systemctl status $1
+}
+
+import_gpt (){
+  gpg --keyserver pool.sks-keyservers.net --recv-keys $1
+}
+
 
 separate_echo "GPT keys"
 import_gpt 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90 # Spotify Public Repository

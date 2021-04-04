@@ -40,7 +40,9 @@ development = {
 
     "lang/js":              ["nvm-git", "yarn"],
     "lang/java":            ["jdk", "glassfish5", "processing"],
+    "lang/json":            ["jq"],
     "lang/php":             ["apache", "mysql", "php", "php-apache", "phpmyadmin"],
+    "lang/shell":           ["shellcheck"],
     "lang/python":          ["python", "autopep8"],
     "lang/elixir":          ["elixir", "inotify-tools"],
     "lang/haskell":         ["ghc", "cabal-install-bin", "stack"],

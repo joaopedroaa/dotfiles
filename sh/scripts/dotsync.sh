@@ -4,7 +4,6 @@ dotln(){
   [ $2 ] && finalPath=$HOME/$2
   destinationPath=$(dirname "$finalPath")
 
-
   [ ! -d "$destinationPath" ] && mkdir $destinationPath &> /dev/null
 
   if [ -d "$destinationPath" ]; then
