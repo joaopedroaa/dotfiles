@@ -19,8 +19,14 @@ yay -S nvm-git yarn --noconfirm
 echo "========================================== Lang / Java (3) ====================="
 yay -S jdk glassfish5 processing --noconfirm
 
+echo "========================================== Lang / Json (1) ====================="
+yay -S jq --noconfirm
+
 echo "========================================== Lang / Php (5) ====================="
 yay -S apache mysql php php-apache phpmyadmin --noconfirm
+
+echo "========================================== Lang / Shell (1) ====================="
+yay -S shellcheck --noconfirm
 
 echo "========================================== Lang / Python (2) ====================="
 yay -S python autopep8 --noconfirm
@@ -30,4 +36,7 @@ yay -S elixir inotify-tools --noconfirm
 
 echo "========================================== Lang / Haskell (3) ====================="
 yay -S ghc cabal-install-bin stack --noconfirm
+
+echo "========================================== Lang / Db (1) ====================="
+yay -S postgresql --noconfirm
 

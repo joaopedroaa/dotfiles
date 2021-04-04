@@ -1,8 +1,8 @@
 echo "========================================== Torrent (2) ====================="
 yay -S qbittorrent stremio --noconfirm
 
-echo "========================================== Apps (3) ====================="
-yay -S discord zoom bitwarden-bin --noconfirm
+echo "========================================== Apps (4) ====================="
+yay -S discord zoom bitwarden-bin redshift --noconfirm
 
 echo "========================================== Browsers (3) ====================="
 yay -S chromium tor-browser firefox-developer-edition --noconfirm

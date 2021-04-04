@@ -44,6 +44,15 @@ separate_echo "Kitty theme install" # https://github.com/connorholyday/kitty-sna
 curl -o ~/.config/kitty/ktheme.conf https://raw.githubusercontent.com/connorholyday/kitty-snazzy/master/snazzy.conf
 
 
+separate_echo "MariaDB"
+sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+
+separate_echo "MariaDB"
+sudo rm /srv/http/test.php
+sudo touch /srv/http/test.php
+sudo chmod 777 /srv/http/test.php
+sudo echo -e "<?php\n  phpinfo();\n?>" >> /srv/http/test.php
+
 
 # separate_echo "Fix netbeans 8 font"
 # echo "netbeans_default_options=\"-J-client -J-Xss2m -J-Xms32m -J-XX:PermSize=32m -J-Dapple.laf.useScreenMenuBar=true -J-Dapple.awt.graphics.UseQuartz=true -J-Dsun.java2d.noddraw=true -J-Dsun.java2d.dpiaware=true -J-Dsun.zip.disableMemoryMapping=true -J-Dswing.aatext=true -J-Dawt.useSystemAAFontSettings=on\"" >> /usr/share/netbeans/etc/netbeans.conf

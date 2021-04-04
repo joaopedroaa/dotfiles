@@ -1,11 +1,5 @@
-function_update () {
-  yay -Syyu
-  doom upgrade
-  cabal update
-}
-
 # ---- System ----------------------------
-alias up=function_update
+alias up="yay -Syyu && doom upgrade && cabal update"
 alias :q="exit" alias :Q=":q"
 alias ctl="systemctl"
 alias xev="xev -event keyboard  | egrep -o 'keycode.*\)'"
@@ -25,11 +19,10 @@ alias targz='tar -zxvf'
 alias tarbz2='tar -jxvf'
 
 # Shortcuts
-pathExternal="/home/joaopedro/hd1/Linux"
-alias cde="cd ${pathExternal}"
-alias cdl="cd ${pathExternal}/Projects/Local"
-alias cdh="cd ${pathExternal}/Projects/Github"
-alias cdd="cd ~/Desktop"
+alias cdd="cd $HOME/Desktop"
+alias cde="cd $XDG_HD_DIR"
+alias cdl="cd $XDG_HD_DIR/Projects/Local"
+alias cdh="cd $XDG_HD_DIR/Projects/Github"
 
 # ls
 alias l="ls -lF ${colorflag}"
@@ -60,24 +53,26 @@ alias yaorph='yay -Qtd'
 
 # Code
 alias code="code-insiders"
+alias dotfiles="code $XDG_DOTFILES_DIR"
 
-# Code / Config
-alias dotfiles="code ~/dotfiles"
-alias cfghttpd="code /etc/httpd/conf/httpd.conf"
+# Scripts
+alias syncd="sh $XDG_DOTFILES_DIR/sync.sh"
+alias ccl="sh $XDG_DOTFILES_DIR/sh/scripts/alias_gcc.sh"
+alias grem="sh $XDG_DOTFILES_DIR/sh/scripts/alias_git_remote.sh"
 
 # Docker
 alias dc="docker-compose"
 alias dcup="docker-compose up"
 alias dcupd="docker-compose up -d"
 
-# Elixir / mix
+# Elixir
 alias mdg="mix deps.get"
 alias mec="mix ecto.create "
 alias mes="mix ecto.setup"
 alias mem="mix ecto.migrate"
 alias megm="mix ecto.gen.migration"
 
-# Elixir / mix / phoenix
+# Phoenix
 alias mpn="mix phx.new"
 alias mps="mix phx.server"
 
@@ -88,22 +83,11 @@ alias plnext="plspotify next"
 alias plprev="plspotify previous"
 alias plvolu="plspotify volume"
 
-
-# dotfiles
-alias syncd="sh ~/dotfiles/sync.sh"
-
-# dotfiles / Scripts
-pathScripts="~/dotfiles/sh/scripts"
-alias ccl="sh ${pathScripts}/alias_gcc.sh"
-alias gitrm="sh ${pathScripts}/alias_git_remote.sh"
-
+# Du / Agedu
+alias agdw="sudo agedu -w --auth none"
+alias agds="sudo agedu -s /home/joaopedro"
+alias sizes="sudo du -sh ~/.* | sort -rh | head -10"
 
 # MISC
 alias findd="sudo find / -iname "
 alias xmonadr="xmonad --recompile"
-
-# Du / Agedu
-alias agdw="sudo agedu -w --auth none"
-alias agds="sudo agedu -s /home/joaopedro"
-
-alias sizes="sudo du -sh ~/.* | sort -rh | head -10"

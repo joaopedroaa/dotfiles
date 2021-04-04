@@ -46,6 +46,7 @@ development = {
     "lang/python":          ["python", "autopep8"],
     "lang/elixir":          ["elixir", "inotify-tools"],
     "lang/haskell":         ["ghc", "cabal-install-bin", "stack"],
+    "lang/db":              ["postgresql"],
 }
 
 

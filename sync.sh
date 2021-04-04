@@ -36,7 +36,6 @@ dotln .i3/config
 dotln .xmonad/xmonad.hs
 
 dotln .gitconfig
-dotln .zprofile
 dotln .zshenv
 dotln .zshrc
 
@@ -45,6 +44,9 @@ separate_echo "/"
 dotcp etc/lightdm/lightdm-webkit2-greeter.conf
 dotcp etc/pulse/default.pa
 dotcp etc/hosts
+dotcp etc/php/php.ini
+dotcp etc/httpd/conf/httpd.conf
+dotcp etc/httpd/conf/extra/phpmyadmin.conf
 
 
 echo -e "\n"
