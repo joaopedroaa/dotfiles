@@ -1,0 +1,14 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:joaopedroaats/dotfiles.git",
+  "author": "João Pedro Alvarenga <joaopedroaats@pm.me>",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0"
+  }
+}
