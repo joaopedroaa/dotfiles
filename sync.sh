@@ -1,5 +1,5 @@
-source ~/dotfiles/sh/scripts/dotsync.sh
-source ~/dotfiles/sh/scripts/separate_echo.sh
+source ~/dotfiles/.scripts/dotsync.sh
+source ~/dotfiles/.scripts/separate_echo.sh
 
 if [ "$1" == "x" ]; then
     separate_echo "X11"
@@ -43,11 +43,15 @@ dotln .zshrc
 
 separate_echo "/etc"
 dotcp etc/lightdm/lightdm-webkit2-greeter.conf
-dotcp etc/pulse/default.pa
-dotcp etc/hosts
-dotcp etc/php/php.ini
+dotcp etc/lightdm/lightdm.conf
 dotcp etc/httpd/conf/httpd.conf
 dotcp etc/httpd/conf/extra/phpmyadmin.conf
+dotcp etc/pulse/default.pa
+dotcp etc/php/php.ini
+
+dotcp etc/hosts
+dotcp etc/locale.gen
+dotcp etc/sysctl.conf
 
 separate_echo "/usr"
 dotcp usr/lib/NetworkManager/conf.d/20-connectivity.conf

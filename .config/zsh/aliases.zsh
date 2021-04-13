@@ -57,8 +57,8 @@ alias dotfiles="code $XDG_DOTFILES_DIR"
 
 # Scripts
 alias syncd="sh $XDG_DOTFILES_DIR/sync.sh"
-alias ccl="sh $XDG_DOTFILES_DIR/sh/scripts/alias_gcc.sh"
-alias grem="sh $XDG_DOTFILES_DIR/sh/scripts/alias_git_remote.sh"
+alias ccl="sh $XDG_DOTFILES_DIR/.scripts/alias_gcc.sh"
+alias gremote="sh $XDG_DOTFILES_DIR/.scripts/alias_git_remote.sh"
 
 # Docker
 alias dc="docker-compose"

@@ -1,5 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-python install.py
-git add $XDG_DOTFILES_DIR/sh/install/*
