@@ -19,7 +19,7 @@ alias targz='tar -zxvf'
 alias tarbz2='tar -jxvf'
 
 # Shortcuts
-alias cdd="cd $HOME/Desktop"
+alias cdd="cd $XDG_HD_DIR/Desktop/"
 alias cde="cd $XDG_HD_DIR"
 alias cdl="cd $XDG_HD_DIR/Projects/Local"
 alias cdh="cd $XDG_HD_DIR/Projects/Github"
@@ -91,3 +91,4 @@ alias sizes="sudo du -sh ~/.* | sort -rh | head -10"
 # MISC
 alias findd="sudo find / -iname "
 alias xmonadr="xmonad --recompile"
+alias selfestival="xsel | festival --tts"

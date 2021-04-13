@@ -1,5 +1,5 @@
-echo "========================================== I3 (2) ====================="
-yay -S i3-gaps autotiling-git --noconfirm
+echo "========================================== I3 (3) ====================="
+yay -S i3-gaps autotiling-git perl-anyevent-i3 --noconfirm
 
 echo "========================================== Lock (1) ====================="
 yay -S i3lock --noconfirm

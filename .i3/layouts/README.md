@@ -11,8 +11,5 @@
 
 
 ## 3
+- Mailspring
 - Spotify
-
-
-## 4
-- Stremio

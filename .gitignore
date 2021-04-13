@@ -2,3 +2,4 @@ antigen.zsh.zwc
 __pycache__
 .vscode
 node_modules
+plugged

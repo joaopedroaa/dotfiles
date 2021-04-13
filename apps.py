@@ -1,8 +1,13 @@
 apps = {
-    "torrent":              ["qbittorrent", "stremio"],
-    "apps":                 ["discord", "zoom", "bitwarden-bin", "redshift"],
-    "browsers":             ["chromium", "tor-browser", "firefox-developer-edition"],
-    "phone":                ["kdeconnect"],
+    "arch":                 ["paru"],
+    "apps":                 ["bitwarden-bin", "redshift", "mailspring"],
+    "bluetooth":            ["bluez", "bluez-libs", "bluez-utils", "blueberry"],
+    "android":              ["android-sdk", "android-tools", "kdeconnect"],
+    "key":                  ["gnome-keyring"],
+
+    "apps/torrent":         ["qbittorrent", "stremio"],
+    "apps/browsers":        ["chromium", "tor-browser", "firefox-developer-edition"],
+    "apps/communication":   ["discord_arch_electron", "zoom"],
 
     "media/image":          ["krita"],
     "media/video":          ["vlc", "obs-studio"],
@@ -12,21 +17,23 @@ apps = {
     "hardware/gpu":         ["gwe"],
     "hardware/hd":          ["gparted-git", "gsmartcontrol", "agedu"],
 
-    "driver/gpu":           ["nvidia", "nvidia-utils", "nvidia-settings","mesa-demos"],
+    "driver/gpu":           ["nvidia", "nvidia-utils", "nvidia-settings", "mesa-demos"],
 
-    "console":              ["gotop-bin", "htop", "xclip", "inxi"],
-    "console/fun":          ["cava", "cbonsai", "neofetch", "lolcat"],
+    "console":              ["xclip", "xsel", "youtube-dl"],
+    "console/fun":          ["cava", "cbonsai", "lolcat"],
     "console/zsh":          ["zsh", "oh-my-zsh-git"],
     "console/zsh/config":   ["antigen-git", "spaceship-prompt-git"],
+
+    "console/ui":           ["lazygit-bin", "lazydocker-bin"],
+    "console/ui/activity":  ["gotop-bin", "htop"],
+    "console/ui/sysinfo":   ["neofetch", "inxi"],
 
     "spotify":              ["spotify-snap", "spotify-adblock-linux"],
     "spotify/spicetify":    ["spicetify-cli", "spicetify-themes-git"],
 
     "fonts/nerd":           ["nerd-fonts-complete"],
-    "fonts/ttf":            ["ttf-fira-code", "ttf-ibm-plex-mono-git", "ttf-liberation", "ttf-roboto", "ttf-dejavu", "ttf-droid", "ttf-inconsolata", "ttf-liberation", "ttf-unifont"],
-    "fonts/misc":           ["awesome-terminal-fonts"],
-
-    "fix-bugs":             ["gnome-keyring", "sshfs", "ntfs-3g"]
+    "fonts/ttf":            ["ttf-fira-code", "ttf-ibm-plex-mono-git", "ttf-liberation", "ttf-roboto", "ttf-dejavu", "ttf-droid", "ttf-inconsolata", "ttf-liberation", "ttf-unifont", "ttf-ms-fonts", "ttf-font-icons"],
+    "fonts/misc":           ["awesome-terminal-fonts"]
 }
 
 
@@ -35,18 +42,19 @@ development = {
     "vm":                   ["docker", "virtualbox-ext-oracle"],
     "api":                  ["insomnia-bin", "postman-bin"],
 
-    "editors":              ["visual-studio-code-insiders-bin", "intellij-idea-community-edition"],
+    "editors":              ["visual-studio-code-insiders-bin", "intellij-idea-community-edition", "neovim"],
     "editors/emacs":        ["emacs", "emacs-doom-themes-git", "fd", "ripgrep"],
 
     "lang/js":              ["nvm-git", "yarn"],
+    "lang/php":             ["apache", "mysql", "php", "php-apache", "phpmyadmin"],
     "lang/java":            ["jdk", "glassfish5", "processing"],
     "lang/json":            ["jq"],
-    "lang/php":             ["apache", "mysql", "php", "php-apache", "phpmyadmin"],
     "lang/shell":           ["shellcheck"],
+    "lang/ocaml":           ["opam"],
     "lang/python":          ["python", "autopep8"],
     "lang/elixir":          ["elixir", "inotify-tools"],
     "lang/haskell":         ["ghc", "cabal-install-bin", "stack"],
-    "lang/db":              ["postgresql"],
+    "lang/mark":            ["pandoc-bin"]
 }
 
 
@@ -69,10 +77,17 @@ xfce = {
     "compositor":           ["picom"],
     "menu":                 ["dmenu", "rofi", "rofi-calc"],
 
-    "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman", "tumbler", "gvfs", "lf"],
     "desktop":              ["nitrogen", "lxappearance", "dunst-git"],
-    "unpackfiles":          ["xarchiver", "p7zip", "zip", "unzip", "unrar", "unace"],
+    "unpackfiles":          ["xarchiver", "rar", "unrar", "zip", "unzip", "p7zip"],
     "console":              ["kitty", "alacritty-git", "xcompmgr"],
+
+    "filesystem":           ["sshfs", "ntfs-3g"],
+    "filesystem/mtp":       ["mtpfs", "jmtpfs"],
+    "filesystem/gvfs":      ["gvfs", "gvfs-mtp", "gvfs-gphoto2"],
+
+    "filemanager":          ["thunar", "thunar-archive-plugin", "thunar-volman"],
+    "filemanager/tumbler":  ["tumbler", "ffmpegthumbnailer"],
+    "filemanager/console":  ["lf", "ranger"],
 
     "dm/xorg":              ["xorg", "xorg-xinit-git"],
     "dm/lightdm":           ["lightdm", "lightdm-gtk-greeter", "lightdm-gtk-greeter-settings", "lightdm-webkit2-greeter"],
@@ -85,10 +100,11 @@ xfce = {
     "media/video":          ["mplayer"],
     "media/docs":           ["evince", "zathura", "zathura-pdf-poppler"],
 
-    "audio/pulseaudio":     ["pulseaudio", "pulseaudio-alsa", "pavucontrol"],
+    "audio/pulseaudio":     ["pulseaudio", "pulseaudio-alsa", "pulseeffects-legacy", "pavucontrol"],
     "audio/alsa":           ["alsa-firmware", "alsa-lib", "alsa-plugins", "alsa-utils"],
     "audio/icon":           ["volumeicon"],
     "audio/cli":            ["playerctl"],
+    "audio/synthesis":      ["festival", "festival-us"],
 }
 
 
@@ -96,9 +112,9 @@ xfce = {
 
 
 i3 = {
-    "i3":                   ["i3-gaps", "autotiling-git"],
+    "i3":                   ["i3-gaps", "autotiling-git", "perl-anyevent-i3"],
     "lock":                 ["i3lock"],
-    "bar":                  ["i3blocks",  "py3status", "polybar"],
+    "bar":                  ["i3blocks", "py3status", "polybar"],
 }
 
 

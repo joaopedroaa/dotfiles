@@ -1,22 +1,65 @@
 {
-    "border": "pixel",
-    "current_border_width": 3,
+    "border": "normal",
     "floating": "auto_off",
-    "geometry": {
-       "height": 600,
-       "width": 800,
-       "x": 0,
-       "y": 0
-    },
+    "layout": "splitv",
     "marks": [],
-    "name": "Spotify",
-    "percent": 1,
-    "swallows": [
-       {
-       "class": "^Spotify$",
-       "instance": "^spotify$"
-       }
-    ],
-    "type": "con"
+    "percent": 0.54,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1030,
+               "width": 1890,
+               "x": 1932,
+               "y": 32
+            },
+            "marks": [],
+            "name": "Mailspring",
+            "percent": 1,
+            "swallows": [
+               {
+               "class": "^Mailspring$",
+               "instance": "^mailspring$",
+               "title": "^Mailspring$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.46,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "Spotify",
+            "percent": null,
+            "swallows": [
+               {
+               "class": "^Spotify$",
+               "instance": "^spotify$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
 }
 

@@ -26,7 +26,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type `relative)
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -64,8 +64,8 @@
 
 
 ;; Nyan mode
-;;(setq nyan-animate-nyancat t)
-;;(nyan-mode)
+;; (setq nyan-animate-nyancat t)
+;; (nyan-mode)
 
 ;; Waka time
 (global-wakatime-mode)

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo mount /dev/sdb1 /home/joaopedro/hd1
+sudo mount /dev/sdb1 /home/joaopedro/HD
 
 nitrogen --restore &  # Wallpaper
 picom -f &            # Compositor

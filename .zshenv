@@ -12,12 +12,12 @@ export LC_CTYPE="en_US.UTF-8"
 
 
 # XDG
-export XDG_DESKTOP_DIR="$HOME/Desktop"
-export XDG_DOWNLOAD_DIR="$HOME/Desktop"
-export XDG_DOCUMENTS_DIR="$HOME/Documents"
-export XDG_MUSIC_DIR="$HOME/Music"
-export XDG_PICTURES_DIR="$HOME/Pictures"
-export XDG_VIDEOS_DIR="$HOME/Videos"
+export XDG_DESKTOP_DIR="$HOME/HD/Linux/Desktop/"
+export XDG_DOWNLOAD_DIR="$HOME/HD/Linux/Downloads"
+export XDG_DOCUMENTS_DIR="$HOME/HD/Linux/Documents"
+export XDG_PICTURES_DIR="$HOME/HD/Linux/Pictures"
+export XDG_MUSIC_DIR="$HOME/HD/Linux/Media"
+export XDG_VIDEOS_DIR="$HOME/HD/Linux/Media"
 
 # XDG / dots
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -25,7 +25,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 # XDG / misc
-export XDG_HD_DIR="$HOME/hd1/Linux"
+export XDG_HD_DIR="$HOME/HD/Linux"
 export XDG_DOTFILES_DIR="$HOME/dotfiles"
 
 

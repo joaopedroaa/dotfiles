@@ -7,6 +7,6 @@ SAVEHIST=10000000
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # asdf
-. $HOME/.asdf/asdf.sh
-fpath=(${ASDF_DIR}/completions $fpath)
+# . $HOME/.asdf/asdf.sh
+# fpath=(${ASDF_DIR}/completions $fpath)
 

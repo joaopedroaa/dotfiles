@@ -1,32 +1,50 @@
+okMess="|:ok |"
+errorMess="|   :error   |"
+
 dotln(){
-  dotsPath=$1
-  finalPath=$HOME/$1
-  [ $2 ] && finalPath=$HOME/$2
-  destinationPath=$(dirname "$finalPath")
+  dotsFilePath=$HOME/dotfiles/$1
+  homeFilePath=$HOME/$1
+  [ $2 ] && homeFilePath=$HOME/$2
+  homeDirPath=$(dirname "$homeFilePath")
 
-  [ ! -d "$destinationPath" ] && mkdir $destinationPath &> /dev/null
+  [ ! -d "$homeDirPath" ] && mkdir $homeDirPath &> /dev/null
+  [ -f "$homeFilePath" ] && rm $homeFilePath
 
-  if [ -d "$destinationPath" ]; then
-    [ -f "$finalPath" ] && rm $finalPath
-    ln -sv $HOME/dotfiles/$dotsPath $finalPath &> /dev/null
-    echo "successful - $finalPath"
+  if [ -d "$homeDirPath" ]; then
+    ln -sv $dotsFilePath $homeFilePath &> /dev/null
+    echo "$okMess ln - file | $1 "
   else
-    echo "X - $finalPath"
+    echo "$errorMess  $homeFilePath"
   fi
+}
+
+dotlnd(){
+  dotsDirPath=$HOME/dotfiles/$1
+  homeDirPath=$HOME/$1
+  [ $2 ] && homeDirPath=$HOME/$2
+
+  [ ! -d "$homeDirPath" ] && mkdir $homeDirPath &> /dev/null
+
+  if [ -d "$homeDirPath" ]; then
+    ln -sv $dotsDirPath/* $homeDirPath &> /dev/null
+    echo "$okMess ln - dir  | $1"
+  else
+    echo "$errorMess $homeDirPath"
+  fi
+
 }
 
 
 dotcp (){
-  finalPath=/$1
-  destinationPath=$(dirname "$finalPath")
+  dotsFilePath=$HOME/dotfiles/$1
+  destFilePath=/$1
+  destDirPath=$(dirname "$destFilePath")
 
-  if [ -d $destinationPath ]; then
-      sudo rm $finalPath
-      sudo cp $HOME/dotfiles/$1 $destinationPath
-      echo "successful - cp - $finalPath"
-
+  if [ -d $destDirPath ]; then
+      sudo cp $dotsFilePath $destDirPath
+      echo "$okMess cp | $destFilePath"
   else
-      echo "X - /$finalPath"
+      echo "$errorMess /$destFilePath"
   fi
 
 }

@@ -5,48 +5,56 @@ if [ "$1" == "x" ]; then
     separate_echo "X11"
     dotln .xinitrc
     dotln .xprofile
+
+    dotcp etc/X11/xorg.conf.d/50-mouse-acceleration.conf
     dotcp etc/X11/xorg.conf
 fi
 
 
-separate_echo "Default /home"
+separate_echo "/home"
 dotln .config/dolphin/dolphinrc               .config/dolphinrc
-dotln .config/dunst/dunstrc
-dotln .config/flameshot/flameshot.ini
-dotln .config/i3blocks/config
-dotln .config/kitty/kitty.conf
-dotln .config/lf/lfrc
-dotln .config/neofetch/config.conf
 dotln .config/pavucontrol/pavucontrol.ini     .config/pavucontrol.ini
 dotln .config/picom/picom.conf                .config/picom.conf
-dotln .config/polybar/config
-dotln .config/polybar/launch.sh
-dotln .config/redshift/redshift.conf
-dotln .config/rofi/config.rasi
-dotln .config/xmobar/xmobarrc
-dotln .config/yakuake/yakuakerc               .config/yakuakerc
+dotln .config/yakuake/yakuadkerc               .config/yakuakerc
 dotln .config/user-dirs.dirs
 
-dotln .doom.d/config.el
-dotln .doom.d/custom.el
-dotln .doom.d/init.el
-dotln .doom.d/packages.el
+dotlnd .config/cava
+dotlnd .config/dunst
+dotlnd .config/flameshot
+dotlnd .config/i3blocks
+dotlnd .config/kitty
+dotlnd .config/lf
+dotlnd .config/nvim
+dotlnd .config/neofetch
+dotlnd .config/polybar
+dotlnd .config/redshift
+dotlnd .config/rofi
+dotlnd .config/xmobar
 
-dotln .i3/config
-dotln .xmonad/xmonad.hs
+dotlnd .doom.d
+dotlnd .i3
+dotlnd .xmonad
+
 
 dotln .gitconfig
 dotln .zshenv
 dotln .zshrc
 
 
-separate_echo "/"
+separate_echo "/etc"
 dotcp etc/lightdm/lightdm-webkit2-greeter.conf
 dotcp etc/pulse/default.pa
 dotcp etc/hosts
 dotcp etc/php/php.ini
 dotcp etc/httpd/conf/httpd.conf
 dotcp etc/httpd/conf/extra/phpmyadmin.conf
+
+separate_echo "/usr"
+dotcp usr/lib/NetworkManager/conf.d/20-connectivity.conf
+
+separate_echo "/srv"
+dotcp srv/http/test.php
+
 
 
 echo -e "\n"

@@ -3,4 +3,3 @@
 
 python install.py
 git add $XDG_DOTFILES_DIR/sh/install/*
-echo "add install files"
