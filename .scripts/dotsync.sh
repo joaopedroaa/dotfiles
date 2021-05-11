@@ -48,3 +48,15 @@ dotcp (){
   fi
 
 }
+
+
+hdln(){
+  hdFilePath=$1
+  homeFilePath=$2
+
+  if [ ! -d "$homeFilePath" ]; then
+    ln -sv $hdFilePath $homeFilePath &> /dev/null
+    # echo "$okMess ln - dir | $1 "
+    # echo "$errorMess  $homeFilePath"
+  fi
+}

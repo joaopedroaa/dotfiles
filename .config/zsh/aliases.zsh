@@ -1,9 +1,12 @@
 # ---- System ----------------------------
-alias up="yay -Syyu && doom upgrade && cabal update"
+alias up="yay -Syyu ; doom upgrade ; cabal update"
 alias :q="exit" alias :Q=":q"
 alias ctl="systemctl"
 alias xev="xev -event keyboard  | egrep -o 'keycode.*\)'"
 alias t="touch"
+
+alias bye="shutdown 0"
+alias soon="systemctl suspend"
 
 # Navigation
 alias ..="cd .."
@@ -54,6 +57,7 @@ alias yaorph='yay -Qtd'
 # Code
 alias code="code-insiders"
 alias dotfiles="code $XDG_DOTFILES_DIR"
+alias update-code="cd ~/.cache/yay/visual-studio-code-insiders-bin && makepkg -si"
 
 # Scripts
 alias syncd="sh $XDG_DOTFILES_DIR/sync.sh"
@@ -61,18 +65,30 @@ alias ccl="sh $XDG_DOTFILES_DIR/.scripts/alias_gcc.sh"
 alias gremote="sh $XDG_DOTFILES_DIR/.scripts/alias_git_remote.sh"
 
 # Docker
+alias dr="docker run"
+alias ds="docker start"
+alias dst="docker stop"
+alias di="docker image"
+alias dv="docker volume"
+
+alias dls="docker ps -a"
+alias drmall="docker rm $(docker ps -a -q)"
+
 alias dc="docker-compose"
 alias dcup="docker-compose up"
 alias dcupd="docker-compose up -d"
 
 # Elixir
+alias mcr="mix credo"
+alias mco="mix compile"
+alias mf="mix format"
+
 alias mdg="mix deps.get"
 alias mec="mix ecto.create "
 alias mes="mix ecto.setup"
 alias mem="mix ecto.migrate"
 alias megm="mix ecto.gen.migration"
 
-# Phoenix
 alias mpn="mix phx.new"
 alias mps="mix phx.server"
 

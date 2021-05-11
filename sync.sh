@@ -1,6 +1,14 @@
 source ~/dotfiles/.scripts/dotsync.sh
 source ~/dotfiles/.scripts/separate_echo.sh
 
+hdln ~/HD/Linux/Books         ~/Books
+hdln ~/HD/Linux/Desktop       ~/Desktop
+hdln ~/HD/Linux/Documents     ~/Documents
+hdln ~/HD/Linux/Downloads     ~/Downloads
+hdln ~/HD/Linux/Media         ~/Media
+hdln ~/HD/Linux/Pictures      ~/Pictures
+hdln ~/HD/Linux/Projects      ~/Projects
+
 if [ "$1" == "x" ]; then
     separate_echo "X11"
     dotln .xinitrc
@@ -15,9 +23,10 @@ separate_echo "/home"
 dotln .config/dolphin/dolphinrc               .config/dolphinrc
 dotln .config/pavucontrol/pavucontrol.ini     .config/pavucontrol.ini
 dotln .config/picom/picom.conf                .config/picom.conf
-dotln .config/yakuake/yakuadkerc               .config/yakuakerc
+dotln .config/yakuake/yakuakerc               .config/yakuakerc
 dotln .config/user-dirs.dirs
 
+dotlnd .config/alacritty
 dotlnd .config/cava
 dotlnd .config/dunst
 dotlnd .config/flameshot
@@ -60,8 +69,6 @@ separate_echo "/srv"
 dotcp srv/http/test.php
 
 
-
 echo -e "\n"
-
 
 

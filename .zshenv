@@ -12,7 +12,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 
 # XDG
-export XDG_DESKTOP_DIR="$HOME/HD/Linux/Desktop/"
+export XDG_DESKTOP_DIR="$HOME/HD/Linux/Desktop"
 export XDG_DOWNLOAD_DIR="$HOME/HD/Linux/Downloads"
 export XDG_DOCUMENTS_DIR="$HOME/HD/Linux/Documents"
 export XDG_PICTURES_DIR="$HOME/HD/Linux/Pictures"
