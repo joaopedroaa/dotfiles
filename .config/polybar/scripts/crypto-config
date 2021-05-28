@@ -1,0 +1,9 @@
+[general]
+base_currency = USD
+display = price
+
+[bitcoin]
+icon = BTC
+
+[cardano]
+icon = ADA
