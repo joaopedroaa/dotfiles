@@ -121,7 +121,7 @@ bindsym $mod+End exec playerctl -p spotify  previous
 bindsym $mod+Return exec kitty
 
 # Short
-bindsym $mod+F1 exec chromium
+bindsym $mod+F1 exec firefox-nightly
 bindsym $mod+F2 exec thunar
 bindsym $mod+F3 exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
@@ -269,22 +269,27 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# Desktop
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.config/i3/layouts/1.json'"
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.config/i3/layouts/2.json'"
+exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/dotfiles/.config/i3/layouts/3.json'"
+exec --no-startup-id "i3-msg 'workspace 10; append_layout ~/dotfiles/.config/i3/layouts/10.json'"
+
 # Automatically putting workspaces on specific screens
 workspace $ws1 output DP-4
 workspace $ws2 output HDMI-0
 workspace $ws3 output HDMI-0
+workspace $ws10 output HDMI-0
 
-# Desktop
-exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.i3/layouts/1.json'"
-exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.i3/layouts/2.json'"
-exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/dotfiles/.i3/layouts/3.json'"
-
-exec  chromium
+exec  firefox-nightly
 exec  kitty
 exec  kitty
 exec  mailspring
 exec  LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
+# Move between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
 
 # I3 Gaps
 for_window [class="^.*"] border pixel 3

@@ -20,28 +20,30 @@ fi
 
 
 separate_echo "/home"
-dotln .config/dolphin/dolphinrc               .config/dolphinrc
-dotln .config/pavucontrol/pavucontrol.ini     .config/pavucontrol.ini
-dotln .config/picom/picom.conf                .config/picom.conf
-dotln .config/yakuake/yakuakerc               .config/yakuakerc
-dotln .config/user-dirs.dirs
 
 dotlnd .config/alacritty
 dotlnd .config/cava
+dotln  .config/dolphin/dolphinrc               .config/dolphinrc
 dotlnd .config/dunst
 dotlnd .config/flameshot
+dotlnd .config/i3
 dotlnd .config/i3blocks
 dotlnd .config/kitty
 dotlnd .config/lf
 dotlnd .config/nvim
+dotln  .config/pavucontrol/pavucontrol.ini     .config/pavucontrol.ini
+dotln  .config/picom/picom.conf                .config/picom.conf
 dotlnd .config/neofetch
 dotlnd .config/polybar
+dotlnd .config/ranger
 dotlnd .config/redshift
 dotlnd .config/rofi
 dotlnd .config/xmobar
+dotln  .config/yakuake/yakuakerc               .config/yakuakerc
+dotlnd .config/zathura
+dotln  .config/user-dirs.dirs
 
 dotlnd .doom.d
-dotlnd .i3
 dotlnd .xmonad
 
 

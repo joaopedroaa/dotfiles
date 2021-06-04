@@ -1,12 +1,16 @@
+source ~/dotfiles/.scripts/update.sh
+
 # ---- System ----------------------------
-alias up="yay -Syyu ; doom upgrade ; cabal update"
+alias up=update
 alias :q="exit" alias :Q=":q"
 alias ctl="systemctl"
 alias xev="xev -event keyboard  | egrep -o 'keycode.*\)'"
+alias nv="nvim"
 alias t="touch"
+alias r="ranger"
 
 alias bye="shutdown 0"
-alias soon="systemctl suspend"
+alias soon="i3lock -c 000000; systemctl suspend"
 
 # Navigation
 alias ..="cd .."

@@ -3,8 +3,8 @@
 # Default apps
 export TERMINAL="kitty"
 export EDITOR="emacs"
-export BROWSER="chromium"
-export READER="evince"
+export BROWSER="firefox"
+export READER="zathura"
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"

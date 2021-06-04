@@ -1,0 +1,22 @@
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1030,
+       "width": 1890,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "Firefox Nightly",
+    "percent": 1,
+    "swallows": [
+       {
+       "class": "^Nightly$",
+       "instance": "^Navigator$"
+       }
+    ],
+    "type": "con"
+}
+
