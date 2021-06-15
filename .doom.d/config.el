@@ -64,8 +64,9 @@
 
 
 ;; Nyan mode
-;; (setq nyan-animate-nyancat t)
-;; (nyan-mode)
+;;(setq nyan-animate-nyancat t)
+;;(nyan-mode)
+
 
 ;; Waka time
 (global-wakatime-mode)

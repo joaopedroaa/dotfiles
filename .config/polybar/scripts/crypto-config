@@ -1,9 +1,11 @@
 [general]
 base_currency = USD
-display = price
+display = both
+symbol=true
+padding=2
+
+
 
 [bitcoin]
-icon = BTC
-
+[ethereum]
 [cardano]
-icon = ADA

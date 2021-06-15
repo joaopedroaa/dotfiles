@@ -68,7 +68,7 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = i3 xwindow crypto
+modules-left = i3 xwindow
 modules-center = spotify1
 modules-right = xbacklight pulseaudio  memory cpu eth temperature aur-updates date powermenu
 

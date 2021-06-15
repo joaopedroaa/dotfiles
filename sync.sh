@@ -23,31 +23,31 @@ separate_echo "/home"
 
 dotlnd .config/alacritty
 dotlnd .config/cava
-dotln  .config/dolphin/dolphinrc               .config/dolphinrc
+dotln  .config/dolphin/dolphinrc                .config/dolphinrc
 dotlnd .config/dunst
 dotlnd .config/flameshot
+dotln  .config/git/.gitconfig                   .gitconfig
 dotlnd .config/i3
 dotlnd .config/i3blocks
 dotlnd .config/kitty
 dotlnd .config/lf
 dotlnd .config/nvim
-dotln  .config/pavucontrol/pavucontrol.ini     .config/pavucontrol.ini
-dotln  .config/picom/picom.conf                .config/picom.conf
+dotln  .config/pavucontrol/pavucontrol.ini      .config/pavucontrol.ini
+dotln  .config/picom/picom.conf                 .config/picom.conf
 dotlnd .config/neofetch
 dotlnd .config/polybar
 dotlnd .config/ranger
 dotlnd .config/redshift
 dotlnd .config/rofi
+dotln  .config/tmux/.tmux.conf                  .tmux.conf
 dotlnd .config/xmobar
-dotln  .config/yakuake/yakuakerc               .config/yakuakerc
+dotln  .config/yakuake/yakuakerc                .config/yakuakerc
 dotlnd .config/zathura
 dotln  .config/user-dirs.dirs
 
 dotlnd .doom.d
 dotlnd .xmonad
 
-
-dotln .gitconfig
 dotln .zshenv
 dotln .zshrc
 
@@ -72,5 +72,3 @@ dotcp srv/http/test.php
 
 
 echo -e "\n"
-
-

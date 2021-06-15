@@ -5,8 +5,6 @@ git clone git@github.com:joaopedroaats/dotfiles.git ~/dotfiles
 ```
 
 
-
-
 ## Settings for:
 
 - `i3` - window manager

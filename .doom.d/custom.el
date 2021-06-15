@@ -1,13 +1,25 @@
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(fixed-pitch ((t (:font #<font-spec nil nil monospace nil nil nil nil nil 16 nil nil nil nil>))))
- '(variable-pitch ((t (:font #<font-spec nil nil monospace nil nil nil nil nil 16 nil nil nil nil>)))))
+;;; custom.el --- Description -*- lexical-binding: t; -*-
+;;
+;; Copyright  (C) 2021 João Pedro
+;;
+;; Author: João Pedro <https://github.com/joaopedro>
+;; Maintainer: João Pedro <joaopedroaats@pm.me>
+;; Created: June 11, 2021
+;; Modified: June 11, 2021
+;; Version: 0.0.1
+;; Keywords: Symbol’s value as variable is void: finder-known-keywords
+;; Homepage: https://github.com/joaopedro/custom
+;; Package-Requires: ((emacs "24.3"))
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; Commentary:
+;;
+;;  Description
+;;
+;;; Code:
+
+
+
+(provide 'custom)
+;;; custom.el ends here
