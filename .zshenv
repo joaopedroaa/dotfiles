@@ -3,13 +3,8 @@
 # Default apps
 export TERMINAL="kitty"
 export EDITOR="emacs"
-export BROWSER="firefox"
+export BROWSER="firefox-nightly"
 export READER="zathura"
-
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8"
-
 
 # XDG
 export XDG_DESKTOP_DIR="$HOME/HD/Linux/Desktop"
@@ -206,3 +201,8 @@ ex=:\
 *.pdf=:\
 *.nix=:\
 "
+
+
+# /etc/locale.conf & ~/.config/plasma-localerc
+# export LANG="en_US.UTF-8"
+# export LC_ALL="en_US.UTF-8"

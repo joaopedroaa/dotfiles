@@ -1,5 +1,35 @@
+# Layouts
 
-# i3 Layout
+## 1
+- firefox
+
+
+## 2
+- zathura
+- kitty
+
+
+## 3
+- spotify
+- kitty
+
+
+## 4
+- Visual Studio Code
+- kitty
+- kitty
+
+
+## 5
+- emacs
+- kitty
+- kitty
+
+## 10
+- firefox workona
+
+
+---
 
 
 ### Saving the layout

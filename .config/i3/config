@@ -1,10 +1,11 @@
+# -------------------------------------------------------------------------------
 #
-#    Joao Pedro (joaopedroaats)
-#    joaopedroaats@pm.me
+#    Joao Pedro (joaopedroaats) <joaopedroaats@pm.me>
 #    https://github.com/joaopedroaats/dotfiles
 #
-# A customized config for i3-gaps window manager (http://www.i3wm.org)
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#       A customized config for i3-gaps window manager (http://www.i3wm.org)
+#       Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# -------------------------------------------------------------------------------
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
@@ -61,7 +62,7 @@ bindsym $mod+Shift+Print exec gcolor2
 ##############################################################
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+d exec --no-startup-id rofi -show calc -modi calc -no-show-match -no-sort
 # bindsym $mod+Shift+Ctrl+d exec --no-startup-id
 
@@ -128,11 +129,13 @@ bindsym $mod+F3 exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
 bindsym $mod+Shift+o exec i3lock -c 000000
 
+
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
+
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -269,39 +272,35 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# Desktop
-exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/dotfiles/.config/i3/layouts/1.json'"
-exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/.config/i3/layouts/2.json'"
-exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/dotfiles/.config/i3/layouts/3.json'"
-exec --no-startup-id "i3-msg 'workspace 10; append_layout ~/dotfiles/.config/i3/layouts/10.json'"
+set $monitor0  DP-4
+set $monitor1  HDMI-0
 
-# Automatically putting workspaces on specific screens
-workspace $ws1 output DP-4
-workspace $ws2 output HDMI-0
-workspace $ws3 output HDMI-0
-workspace $ws10 output HDMI-0
+workspace $ws1  output $monitor0
+workspace $ws2  output $monitor1
+workspace $ws3  output $monitor1
+workspace $ws4  output $monitor1
+workspace $ws5  output $monitor1
+workspace $ws10 output $monitor1
 
-exec  firefox-nightly
-exec  kitty
-exec  kitty
-exec  mailspring
-exec  LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
+exec --no-startup-id "sh ~/dotfiles/.config/i3/start.sh"
+
 
 # Move between monitors
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
 
-# I3 Gaps
+
+## I3 Gaps #########################
 for_window [class="^.*"] border pixel 3
 gaps inner 12
 gaps outer 0
 
-# Polybar
+## Polybar #########################
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# Kde Connect
+## Kde Connect #########################
 exec --no-startup-id /usr/lib/kdeconnectd
 exec --no-startup-id kdeconnect-indicator
 
-# Autotiling https://github.com/nwg-piotr/autotiling
+## Autotiling ######################### https://github.com/nwg-piotr/autotiling
 exec_always --no-startup-id autotiling
