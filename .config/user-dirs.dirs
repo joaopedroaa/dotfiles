@@ -8,6 +8,6 @@
 XDG_DESKTOP_DIR="$HOME/HD/Linux/Desktop/"
 XDG_DOWNLOAD_DIR="$HOME/HD/Linux/Downloads"
 XDG_DOCUMENTS_DIR="$HOME/HD/Linux/Documents"
-XDG_PICTURES_DIR="$HOME/HD/Linux/Pictures"
+XDG_PICTURES_DIR="$HOME/HD/Linux/Media"
 XDG_MUSIC_DIR="$HOME/HD/Linux/Media"
 XDG_VIDEOS_DIR="$HOME/HD/Linux/Media"

@@ -1,12 +1,17 @@
 
-
 echo_separate (){
-  echo -e "\n==== $1 =============================================="
+  length="$((${#1} - 49))"
+  printf -v spaces '%*s' $length '';
+  echo -e "\n==== $1"  ${spaces// /=}
 }
 
 
 status(){
-  echo_separate "localectl"
+  echo_separate "Clock"
+  sudo hwclock --show
+  timedatectl
+
+  echo_separate "Keyboard"
   localectl status
 }
 
@@ -56,7 +61,7 @@ i3_save_workspace (){
 }
 
 
-i3_test_workspace(){
+i3_load_workspace(){
   filename=$1
   [ $2 ] && filename=$2
 

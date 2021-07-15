@@ -10,7 +10,7 @@ export READER="zathura"
 export XDG_DESKTOP_DIR="$HOME/HD/Linux/Desktop"
 export XDG_DOWNLOAD_DIR="$HOME/HD/Linux/Downloads"
 export XDG_DOCUMENTS_DIR="$HOME/HD/Linux/Documents"
-export XDG_PICTURES_DIR="$HOME/HD/Linux/Pictures"
+export XDG_PICTURES_DIR="$HOME/HD/Linux/Media"
 export XDG_MUSIC_DIR="$HOME/HD/Linux/Media"
 export XDG_VIDEOS_DIR="$HOME/HD/Linux/Media"
 
@@ -22,7 +22,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # XDG / misc
 export XDG_HD_DIR="$HOME/HD/Linux"
 export XDG_DOTFILES_DIR="$HOME/dotfiles"
-
 
 
 # PATH
@@ -38,6 +37,10 @@ export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/anaconda3/bin"
+
+# Man color
+export PAGER="most"
+
 
 export LF_ICONS="\
 tw=:\

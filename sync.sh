@@ -1,78 +1,81 @@
 source ~/dotfiles/.scripts/dotsync.sh
 source ~/dotfiles/.scripts/system.sh
 
-hdln ~/HD/Linux/Books         ~/Books
 hdln ~/HD/Linux/Desktop       ~/Desktop
 hdln ~/HD/Linux/Documents     ~/Documents
 hdln ~/HD/Linux/Downloads     ~/Downloads
+hdln ~/HD/Linux/Books         ~/Books
 hdln ~/HD/Linux/Media         ~/Media
-hdln ~/HD/Linux/Pictures      ~/Pictures
 hdln ~/HD/Linux/Projects      ~/Projects
 
 if [ "$1" == "x" ]; then
     echo_separate "X11"
-    dotln .xinitrc
-    dotln .xprofile
+    dot_ln .xinitrc
+    dot_ln .xprofile
 
-    dotcp etc/X11/xorg.conf.d/00-keyboard.conf
-    dotcp etc/X11/xorg.conf.d/50-mouse-acceleration.conf
-    dotcp etc/X11/xorg.conf
+    dot_cp  etc/X11/xorg.conf.d/00-keyboard.conf
+    dot_cp  etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+    dot_cp  etc/X11/xorg.conf
 fi
 
-
 echo_separate "/home"
+dot_lnd .doom.d
+dot_lnd .xmonad
 
-dotlnd .config/alacritty
-dotlnd .config/cava
-dotln  .config/dolphin/dolphinrc                .config/dolphinrc
-dotlnd .config/dunst
-dotlnd .config/flameshot
-dotln  .config/git/.gitconfig                   .gitconfig
-dotlnd .config/i3
-dotlnd .config/i3blocks
-dotlnd .config/kitty
-dotlnd .config/lf
-dotlnd .config/nvim
-dotln  .config/pavucontrol/pavucontrol.ini      .config/pavucontrol.ini
-dotln  .config/picom/picom.conf                 .config/picom.conf
-dotlnd .config/neofetch
-dotlnd .config/polybar
-dotlnd .config/ranger
-dotlnd .config/redshift
-dotlnd .config/rofi
-dotln  .config/tmux/.tmux.conf                  .tmux.conf
-dotlnd .config/xmobar
-dotln  .config/yakuake/yakuakerc                .config/yakuakerc
-dotlnd .config/zathura
-dotln  .config/user-dirs.dirs
-dotln  .config/plasma-localerc
+dot_ln .zshenv
+dot_ln .zshrc
 
-dotlnd .doom.d
-dotlnd .xmonad
 
-dotln .zshenv
-dotln .zshrc
+echo_separate "/home/.config"
+dot_lnd .config/alacritty
+dot_lnd .config/cava
+dot_lna .config/dunst
+dot_lna .config/flameshot
+dot_lnd .config/i3
+dot_lnd .config/i3blocks
+dot_lnd .config/kitty
+dot_lnd .config/lf
+dot_lnd .config/nvim
+dot_lnd .config/neofetch
+dot_lnd .config/polybar
+dot_lnd .config/ranger
+dot_lnd .config/redshift
+dot_lnd .config/rofi
+dot_lnd .config/xmobar
+dot_lnd .config/zathura
+
+dot_ln  .config/dolphin/dolphinrc                .config/dolphinrc
+dot_ln  .config/git/.gitconfig                   .gitconfig
+dot_ln  .config/pavucontrol/pavucontrol.ini      .config/pavucontrol.ini
+dot_ln  .config/picom/picom.conf                 .config/picom.conf
+dot_ln  .config/.mostrc                          .mostrc
+dot_ln  .config/tmux/.tmux.conf                  .tmux.conf
+dot_ln  .config/yakuake/yakuakerc                .config/yakuakerc
+dot_ln  .config/user-dirs.dirs
+dot_ln  .config/plasma-localerc
 
 
 echo_separate "/etc"
-dotcp etc/lightdm/lightdm-webkit2-greeter.conf
-dotcp etc/lightdm/lightdm.conf
-dotcp etc/httpd/conf/httpd.conf
-dotcp etc/httpd/conf/extra/phpmyadmin.conf
-dotcp etc/pulse/default.pa
-dotcp etc/php/php.ini
+dot_cp etc/hosts
+dot_cp etc/locale.conf
+dot_cp etc/locale.gen
+dot_cp etc/pacman.conf
+dot_cp etc/sysctl.conf
+dot_cp etc/vconsole.conf
 
-dotcp etc/hosts
-dotcp etc/locale.conf
-dotcp etc/locale.gen
-dotcp etc/sysctl.conf
-dotcp etc/vconsole.conf
+dot_cp etc/lightdm/lightdm-webkit2-greeter.conf
+dot_cp etc/lightdm/lightdm.conf
+dot_cp etc/httpd/conf/httpd.conf
+dot_cp etc/httpd/conf/extra/phpmyadmin.conf
+dot_cp etc/pulse/default.pa
+dot_cp etc/php/php.ini
+
 
 echo_separate "/usr"
-dotcp usr/lib/NetworkManager/conf.d/20-connectivity.conf
+dot_cp usr/lib/NetworkManager/conf.d/20-connectivity.conf
 
 echo_separate "/srv"
-dotcp srv/http/test.php
+dot_cp srv/http/test.php
 
 
 echo -e "\n"

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+[[ -f $XDG_DOTFILES_DIR/.config/keyboard/.Xmodmap_dead_greek ]] && xmodmap $XDG_DOTFILES_DIR/.config/keyboard/.Xmodmap_dead_greek
+
 sudo mount /dev/sdb1 /home/joaopedro/HD
 
 nitrogen --restore &  # Wallpaper

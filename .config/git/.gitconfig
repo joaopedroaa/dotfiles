@@ -21,3 +21,5 @@
 
 	l = log --pretty=format:'%C(blue)%h%C(reset) %C(green)%C(bold)%cr%C(reset) %s' --max-count=30
 	ld = log --pretty=format:'%C(blue)%h%C(reset) %C(green)%C(bold)%cr%C(reset) %C(magenta)<%an>%C(reset) %s' --max-count=30
+[init]
+	defaultBranch = master

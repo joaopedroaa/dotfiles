@@ -1,7 +1,32 @@
-okMess="|:ok |"
-errorMess="|   :error   |"
+   messageOk="|:ok |"
+messageError="|:error |"
 
-dotln(){
+ message_ln=" ln  | 📄 |"
+message_lnd=" ln  | 📁 |"
+message_lna=" ln  | 📁 |"
+ message_cp=" cp  | 📄 |"
+
+dot_lnd(){
+  dotsDirPath=$HOME/dotfiles/$1
+  homeDirPath=$HOME/$1
+  [ $2 ] && homeDirPath=$HOME/$2
+
+  [ ! -d "$homeDirPath" ] && mkdir $homeDirPath &> /dev/null
+
+
+
+  if [ -d "$homeDirPath" ]; then
+    ln -sv $dotsDirPath/* $homeDirPath &> /dev/null
+    echo "$messageOk $message_lnd $1"
+  else
+    echo "$messageError $homeDirPath"
+  fi
+
+}
+
+
+
+dot_ln(){
   dotsFilePath=$HOME/dotfiles/$1
   homeFilePath=$HOME/$1
   [ $2 ] && homeFilePath=$HOME/$2
@@ -12,13 +37,14 @@ dotln(){
 
   if [ -d "$homeDirPath" ]; then
     ln -sv $dotsFilePath $homeFilePath &> /dev/null
-    echo "$okMess ln - file | $1 "
+    echo "$messageOk $message_ln $1 "
   else
-    echo "$errorMess  $homeFilePath"
+    echo "$messageError  $homeFilePath"
   fi
 }
 
-dotlnd(){
+
+dot_lna(){
   dotsDirPath=$HOME/dotfiles/$1
   homeDirPath=$HOME/$1
   [ $2 ] && homeDirPath=$HOME/$2
@@ -26,25 +52,39 @@ dotlnd(){
   [ ! -d "$homeDirPath" ] && mkdir $homeDirPath &> /dev/null
 
   if [ -d "$homeDirPath" ]; then
-    ln -sv $dotsDirPath/* $homeDirPath &> /dev/null
-    echo "$okMess ln - dir  | $1"
-  else
-    echo "$errorMess $homeDirPath"
-  fi
+    for dotsFilePath in $(tree -fi $dotsDirPath/*); do
+      homeFilePath="${dotsFilePath/"/joaopedro/dotfiles"/"/joaopedro"}"
 
+      if [ -f "$dotsFilePath" ]; then
+        [ -f "$homeFilePath" ] && rm $homeFilePath
+        ln -sv $dotsFilePath $homeFilePath &> /dev/null
+        # echo "ln $dotsFilePath $homeFilePath"
+      fi
+
+      if [ -d "$dotsFilePath" ]; then
+        mkdir -p $homeFilePath &> /dev/null
+        # echo "mkdir $homeFilePath"
+      fi
+    done;
+
+    echo "$messageOk $message_lna $1"
+  else
+    echo "$messageError $homeDirPath"
+  fi
 }
 
 
-dotcp (){
+
+dot_cp (){
   dotsFilePath=$HOME/dotfiles/$1
   destFilePath=/$1
   destDirPath=$(dirname "$destFilePath")
 
   if [ -d $destDirPath ]; then
       sudo cp $dotsFilePath $destDirPath
-      echo "$okMess cp | $destFilePath"
+      echo "$messageOk $message_cp $destFilePath"
   else
-      echo "$errorMess /$destFilePath"
+      echo "$messageError /$destFilePath"
   fi
 
 }
@@ -56,7 +96,7 @@ hdln(){
 
   if [ ! -d "$homeFilePath" ]; then
     ln -sv $hdFilePath $homeFilePath &> /dev/null
-    # echo "$okMess ln - dir | $1 "
-    # echo "$errorMess  $homeFilePath"
+    # echo "$messageOk ln - dir | $1 "
+    # echo "$messageError  $homeFilePath"
   fi
 }

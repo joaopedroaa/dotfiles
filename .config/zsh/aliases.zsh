@@ -3,7 +3,7 @@ source ~/dotfiles/.scripts/system.sh
 alias up=update
 alias status=status
 alias i3save=i3_save_workspace
-alias i3test=i3_test_workspace
+alias i3load=i3_load_workspace
 
 alias ccl=alias_gcc
 alias gremote=alias_git_remote
@@ -13,6 +13,8 @@ alias :q="exit" alias :Q=":q"
 alias nv="nvim"
 alias t="touch"
 alias r="ranger"
+alias cat="bat"
+alias ca="calcurse"
 
 alias bye="shutdown 0"
 alias soon="i3lock -c 000000; systemctl suspend"

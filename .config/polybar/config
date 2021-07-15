@@ -69,7 +69,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
-modules-center = spotify1
+modules-center = spotify
 modules-right = xbacklight pulseaudio  memory cpu eth temperature aur-updates date powermenu
 
 ; Tray
@@ -153,10 +153,10 @@ format-underline =${colors.underline}
 
 
 ;=========================================================================================
-[module/spotify1]
+[module/spotify]
 ;==================== ;https://github.com/NicholasFeldman/dotfiles/blob/master/polybar/.config/polybar/spotify.sh
 type = custom/script
-exec = ~/dotfiles/.config/polybar/scripts/spotify1.sh
+exec = ~/dotfiles/.config/polybar/scripts/spotify.py
 interval = 1
 
 ;format = <label>

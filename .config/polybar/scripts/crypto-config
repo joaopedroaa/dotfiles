@@ -4,8 +4,6 @@ display = both
 symbol=true
 padding=2
 
-
-
 [bitcoin]
 [ethereum]
 [cardano]
