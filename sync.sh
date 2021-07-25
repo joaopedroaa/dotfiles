@@ -10,8 +10,8 @@ hdln ~/HD/Linux/Projects      ~/Projects
 
 if [ "$1" == "x" ]; then
     echo_separate "X11"
-    dot_ln .xinitrc
-    dot_ln .xprofile
+    dot_ln  home/.xinitrc                           /
+    dot_ln  home/.xprofile                          /
 
     dot_cp  etc/X11/xorg.conf.d/00-keyboard.conf
     dot_cp  etc/X11/xorg.conf.d/50-mouse-acceleration.conf
@@ -20,15 +20,15 @@ fi
 
 echo_separate "/home"
 dot_lnd .doom.d
-dot_lnd .xmonad
 
-dot_ln .Xresources
-dot_ln .zshenv
-dot_ln .zshrc
+dot_ln  home/.Xresources                        /
+dot_ln  home/.zshenv                            /
+dot_ln  home/.zshrc                             /
 
 echo_separate "/home/.config"
 dot_lnd .config/alacritty
 dot_lnd .config/cava
+dot_lna .config/doom
 dot_lna .config/dunst
 dot_lna .config/flameshot
 dot_lnd .config/i3
@@ -42,6 +42,7 @@ dot_lnd .config/ranger
 dot_lnd .config/redshift
 dot_lnd .config/rofi
 dot_lnd .config/xmobar
+dot_lnd .config/xmonad
 dot_lnd .config/zathura
 
 dot_ln  .config/dolphin/dolphinrc                .config/dolphinrc

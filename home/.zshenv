@@ -23,6 +23,11 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_HD_DIR="$HOME/HD/Linux"
 export XDG_DOTFILES_DIR="$HOME/dotfiles"
 
+# .config
+export XMONAD_CONFIG_DIR="$XDG_CONFIG_HOME/xmonad"
+export XMONAD_CACHE_DIR="$XDG_CACHE_HOME/xmonad"
+export XMONAD_DATA_DIR="$XDG_DATA_HOME/xmonad"
+
 
 # PATH
 export PATH="$PATH:$HOME/Android/Sdk/tools"
