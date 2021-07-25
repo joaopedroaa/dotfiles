@@ -109,8 +109,8 @@ bindsym $mod+End exec playerctl -p spotify  previous
 
 
  # Volume ctl
- bindsym $mod+Prior exec --no-startup-id pactl set-sink-volume 1 +5%
- bindsym $mod+Next exec --no-startup-id pactl set-sink-volume 1 -5%
+ bindsym $mod+Prior exec --no-startup-id amixer set Master -q 5%+
+ bindsym $mod+Next exec --no-startup-id amixer set Master -q 5%-
 
 
 

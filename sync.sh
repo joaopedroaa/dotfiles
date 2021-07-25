@@ -22,9 +22,9 @@ echo_separate "/home"
 dot_lnd .doom.d
 dot_lnd .xmonad
 
+dot_ln .Xresources
 dot_ln .zshenv
 dot_ln .zshrc
-
 
 echo_separate "/home/.config"
 dot_lnd .config/alacritty

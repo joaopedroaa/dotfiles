@@ -13,33 +13,22 @@
 ;   go to https://github.com/polybar/polybar
 ;
 ;   The README contains a lot of information
-;   V2                              07/2021
+;   V1                        2020 - 07/2021
 ;==========================================================
 
 
 [colors]
 background = #aa282c34
-foreground = #bdc0c7
+background-alt = #53565c
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #dfdfdf
+secondary = #e60053
+alert = #bd2c40
 
-color0 = ${xrdb:color0}
-color1 = ${xrdb:color1}
-color2 = ${xrdb:color2}
-color3 = ${xrdb:color3}
-color4 = ${xrdb:color4}
-color5 = ${xrdb:color5}
-color6 = ${xrdb:color6}
-color7 = ${xrdb:color7}
-color8 = ${xrdb:color8}
-color9 = ${xrdb:color9}
-color10 = ${xrdb:color10}
-color11 = ${xrdb:color11}
-color12 = ${xrdb:color12}
-color13 = ${xrdb:color13}
-color14 = ${xrdb:color14}
-color15 = ${xrdb:color15}
-
-dark-light = #aa16181c
-active-light = #313435
+textcolor=#e1acff
+underline=#ffffff
+success=#0f0
 
 
 
@@ -51,39 +40,56 @@ override-redirect = false
 
 enable-ipc = true
 
-width =  100%
-height = 26
+width = 100%
+height = 20
 fixed-center = true
+
+;offset-x = 0%
+;offset-y = 0%
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-top-size = 0
-border-bottom-size = 0
-border-top-color = ${colors.background}
-border-bottom-color = ${colors.background}
+radius = 0
+line-size = 1
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
 
 padding-left = 0
-padding-right = 0
+padding-right = 1
 
 module-margin-left = 1
-module-margin-right = 0
+module-margin-right = 1
 
+;https://github.com/jaagr/polybar/wiki/Fonts
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+modules-left = i3 eth xwindow
+modules-center = spotify
+modules-right = xbacklight pulseaudio memory cpu temperature  aur-updates date time powermenu
+
+; Tray
 tray-position = right
+tray-padding = 2
+tray-background = ${colors.background}
 
-line-size = 1
-bottom = false
+;wm-restack = bspwm
+;wm-restack = i3
+;override-redirect = true
 
-modules-left = i3 spotify
-modules-center =
-modules-right = battery wlan xbacklight pulseaudio cpu memory-mb temperature  aur-updates date time
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
 
 
 
-font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=10;3
-font-1 = JetBrainsMono Nerd Font:size=15;5
-font-2 = Material Design Icons:style=Bold:size=10;3
-font-3 = unifont:fontformat=truetype:size=10:antialias=true;
+
 
 
 ;=========================================================================================
@@ -99,16 +105,15 @@ workspace-label = %name%
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
-label-mode-padding =
+label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.color15}
+label-mode-background = ${colors.primary}
 
 
 ; focused = Active workspace on focused monitor
 label-focused = ${self.workspace-label}
-label-focused-foreground = #fff
-label-focused-background = ${colors.color5}
-label-focused-underline= ${colors.color5}
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 
@@ -126,12 +131,26 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = ${self.workspace-label}
-label-urgent-background = ${colors.color15}
+label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 
 ; Separator in between workspaces
 ; label-separator = |
+
+
+
+
+;=========================================================================================
+[module/aur-updates]
+;====================
+type = custom/script
+exec = ~/dotfiles/.config/polybar/scripts/updates-pacman.sh
+interval = 1000
+label = Aur: %output%
+
+format-underline =${colors.underline}
+
 
 
 
@@ -146,59 +165,12 @@ interval = 1
 ;format = <label>
 format-padding = 2
 
-format-background = ${colors.dark-light}
-format-foreground = ${colors.color2}
-format-underline = ${colors.color2}
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-underline  = ${colors.success}
 
 label = %output:0:150%
 
-
-
-;=========================================================================================
-[module/battery]
-;========================
-type = internal/battery
-battery = BAT0
-adapter = AC0
-full-at = 98
-
-format-charging = <animation-charging> <label-charging>
-label-charging = %percentage%%
-
-format-charging-padding = 1
-format-charging-foreground = ${colors.color4}
-
-format-discharging = <ramp-capacity> <label-discharging>
-label-discharging = %percentage%%
-
-format-discharging-foreground = ${colors.foreground}
-
-format-full-prefix = "  "
-
-format-full-prefix-foreground = #A0E8A2
-format-foreground = ${colors.color4}
-format-background = #2b2f37
-
-label-discharging-foreground = ${colors.foreground}
-
-ramp-capacity-foreground =  #A0E8A2
-label-charging-foreground = ${colors.foreground}
-
-ramp-capacity-0 = "  "
-ramp-capacity-1 = "  "
-ramp-capacity-2 = "  "
-ramp-capacity-3 = "  "
-ramp-capacity-4 = "  "
-
-animation-charging-0 = "  "
-animation-charging-1 = "  "
-animation-charging-2 = "  "
-animation-charging-3 = "  "
-animation-charging-4 = "  "
-
-animation-charging-foreground = #DF8890
-animation-charging-framerate = 910
-format-discharging-padding = 1
 
 
 
@@ -212,10 +184,9 @@ label = %title:0:30:...%
 
 format-prefix-underline = #292d3e
 
-format-foreground =${colors.color5}
-format-underline = ${colors.color2}
-format-background = ${colors.dark-light}
-format-padding = 1
+format-foreground =${colors.textcolor}
+format-underline = ${colors.textcolor}
+
 
 
 
@@ -287,23 +258,19 @@ card = intel_backlight
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume>
-
-label-volume =  %percentage%%
+format-volume = <label-volume> <bar-volume>
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
-
-format-background = ${colors.dark-light}
-format-padding = 1
 
 label-muted = 🔇 muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.color2}
-bar-volume-foreground-1 = ${colors.color2}
-bar-volume-foreground-2 = ${colors.color2}
-bar-volume-foreground-3 = ${colors.color2}
-bar-volume-foreground-4 = ${colors.color2}
+bar-volume-foreground-0 = ${colors.success}
+bar-volume-foreground-1 = ${colors.success}
+bar-volume-foreground-2 = ${colors.success}
+bar-volume-foreground-3 = ${colors.success}
+bar-volume-foreground-4 = ${colors.success}
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
@@ -326,13 +293,45 @@ exec = ~/dotfiles/.config/polybar/scripts/crypto.py
 format-prefix-foreground = ${colors.foreground-alt}
 
 
+
+
+
+;=========================================================================================
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+
+format-prefix = "  "
+format = <label>
+
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.underline}
+
+
+label = CPU %percentage%%
+
+
+
+;=========================================================================================
+[module/memory]
+type = internal/memory
+interval = 0.5
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.underline}
+
+label = Mem %percentage_used%%
+
+
+
+
 ;=========================================================================================
 [module/eth]
 type = internal/network
 interface = enp3s0
 interval = 3.0
 
-format-connected-underline = ${colors.color2}
+format-connected-underline = ${colors.success}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -345,54 +344,6 @@ format-disconnected =
 
 
 
-;=========================================================================================
-[module/cpu]
-type = internal/cpu
-interval = 0.5
-
-format-prefix = " "
-format = <label>
-
-
-
-format-underline = ${colors.color15}
-format-background = ${colors.dark-light}
-format-padding = 1
-
-label = CPU %percentage%%
-
-
-;=========================================================================================
-[module/memory-mb]
-type = custom/script
-exec = free -m | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
-interval = 0.5
-
-format = <label>
-format-prefix = "﬙"
-
-format-underline = ${colors.color15}
-format-background = ${colors.dark-light}
-format-padding = 1
-
-label = %output% MB
-label-padding = 1
-
-
-;=========================================================================================
-[module/memory-per]
-type = internal/memory
-interval = 0.5
-
-format-prefix = "﬙ "
-format-prefix-foreground = ${colors.color15}
-format-underline = ${colors.color15}
-format-background = ${colors.dark-light}
-format-padding = 1
-
-label = Mem %percentage_used%%
-
-
 
 
 ;=========================================================================================
@@ -401,34 +352,21 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <label>
+format = <ramp> <label>
+format-underline =  ${colors.underline}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
-
-format-underline =  ${colors.color15}
-format-background = ${colors.dark-light}
-format-padding = 1
 
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 =  "󰜗"
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
 
 
-
-
-;=========================================================================================
-[module/aur-updates]
-;====================
-type = custom/script
-exec = ~/dotfiles/.config/polybar/scripts/updates-pacman.sh
-interval = 1000
-label =  %output% updates
-
-format-underline =${colors.color15}
-format-background = ${colors.dark-light}
-format-padding = 1
 
 
 
@@ -438,14 +376,12 @@ format-padding = 1
 type = internal/date
 interval = 1.0
 
-date = %a %m/%d
-date-alt = "%A %m/%d"
+date = %a %m / %d
+date-alt = " %Y-%m-%d"
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline =  ${colors.color15}
-format-background = ${colors.dark-light}
-format-padding = 1
+format-underline =  ${colors.underline}
 
 label =  %date%
 
@@ -460,8 +396,54 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline =  ${colors.color15}
-format-background = ${colors.dark-light}
-format-padding = 1
+format-underline =  ${colors.underline}
 
 label = %time%
+
+;=========================================================================================
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close =  cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+
+
+
+;=========================================================================================
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini

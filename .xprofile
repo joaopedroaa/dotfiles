@@ -4,11 +4,12 @@
 
 sudo mount /dev/sdb1 /home/joaopedro/HD
 
-nitrogen --restore &  # Wallpaper
-picom -f &            # Compositor
-flameshot &           # Screenshot
-dunst &	              # Notifications
-redshift &	          # Adjusts the color
+nitrogen --restore &
+picom -f &
+flameshot &
+dunst &
+redshift &
+discord --start-minimized &
 
 nvidia-settings --load-config-only
 

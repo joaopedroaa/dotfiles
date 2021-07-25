@@ -1,0 +1,41 @@
+! ############
+! #  COLORS  #
+! ############
+! special
+*.foreground:   #d3d0c8
+*.background:   #2d2d2d
+*.white:        #ffffff
+*.cursorColor:  #d3d0c8
+
+! black
+*.color0:       #2d2d2d
+*.color8:       #747369
+
+! red
+*.color1:       #e5989b
+*.color9:       #e5989b
+
+! green
+*.color2:       #a5e1ad
+*.color10:      #a5e1ad
+
+! yellow
+*.color3:       #ffcc66
+*.color11:      #ffcc66
+
+! blue
+*.color4:       #6699cc
+*.color12:      #6699cc
+
+! magenta
+*.color5:       #bd93f9
+*.color13:      #bd93f9
+
+! cyan
+*.color6:       #66cccc
+*.color14:      #66cccc
+
+! white
+*.color7:       #d3d0c8
+*.color15:      #f2f0ec
+

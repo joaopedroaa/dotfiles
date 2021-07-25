@@ -22,10 +22,10 @@ case $desktop in
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
       echo $m
-        MONITOR=$m polybar --reload i3 -c ~/.config/polybar/config &
+        MONITOR=$m polybar --reload poly -c ~/.config/polybar/config &
       done
     else
-    polybar --reload i3 -c ~/.config/polybar/config &
+    polybar --reload poly -c ~/.config/polybar/config &
     fi
     ;;
 
@@ -34,10 +34,10 @@ case $desktop in
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
       echo $m
-        MONITOR=$m polybar --reload i3 -c ~/.config/polybar/config &
+        MONITOR=$m polybar --reload poly -c ~/.config/polybar/config &
       done
     else
-    polybar --reload i3 -c ~/.config/polybar/config &
+    polybar --reload poly -c ~/.config/polybar/config &
     fi
     ;;
 

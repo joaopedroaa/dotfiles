@@ -22,7 +22,7 @@ def truncate(name, trunclen):
 
 # Default parameters
 output = fix_string(u'{artist} - {song}')
-trunclen = 70
+trunclen = 50
 
 
 try:
