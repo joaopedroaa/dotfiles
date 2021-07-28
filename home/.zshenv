@@ -6,6 +6,9 @@ export EDITOR="emacs"
 export BROWSER="firefox-nightly"
 export READER="zathura"
 
+# ssh error
+export TERM=vt100
+
 # XDG
 export XDG_DESKTOP_DIR="$HOME/HD/Linux/Desktop"
 export XDG_DOWNLOAD_DIR="$HOME/HD/Linux/Downloads"
@@ -27,6 +30,7 @@ export XDG_DOTFILES_DIR="$HOME/dotfiles"
 export XMONAD_CONFIG_DIR="$XDG_CONFIG_HOME/xmonad"
 export XMONAD_CACHE_DIR="$XDG_CACHE_HOME/xmonad"
 export XMONAD_DATA_DIR="$XDG_DATA_HOME/xmonad"
+
 
 
 # PATH

@@ -1,5 +1,8 @@
-antigen.zsh.zwc
 __pycache__
 .vscode
 node_modules
 plugged
+
+# Files
+flameshot.ini
+antigen.zsh.zwc

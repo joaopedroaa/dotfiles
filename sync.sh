@@ -64,12 +64,15 @@ dot_cp etc/pacman.conf
 dot_cp etc/sysctl.conf
 dot_cp etc/vconsole.conf
 
-dot_cp etc/lightdm/lightdm-webkit2-greeter.conf
-dot_cp etc/lightdm/lightdm.conf
+dot_cp etc/php/php.ini
+dot_cp etc/pulse/default.pa
+dot_cp etc/pacman.d/mirrorlist
+dot_cp etc/xdg/reflector/reflector.conf
+
 dot_cp etc/httpd/conf/httpd.conf
 dot_cp etc/httpd/conf/extra/phpmyadmin.conf
-dot_cp etc/pulse/default.pa
-dot_cp etc/php/php.ini
+dot_cp etc/lightdm/lightdm.conf
+dot_cp etc/lightdm/lightdm-webkit2-greeter.conf
 
 
 echo_separate "/usr"
