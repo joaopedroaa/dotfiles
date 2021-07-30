@@ -1,36 +1,52 @@
 #!/bin/zsh
+source ~/dotfiles/.scripts/dotsync.sh
 
 # Default apps
 export TERMINAL="kitty"
 export EDITOR="emacs"
 export BROWSER="firefox-nightly"
 export READER="zathura"
+export TERM="vt100"
 
-# ssh error
-export TERM=vt100
 
-# XDG
-export XDG_DESKTOP_DIR="$HOME/HD/Linux/Desktop"
-export XDG_DOWNLOAD_DIR="$HOME/HD/Linux/Downloads"
-export XDG_DOCUMENTS_DIR="$HOME/HD/Linux/Documents"
-export XDG_PICTURES_DIR="$HOME/HD/Linux/Media"
-export XDG_MUSIC_DIR="$HOME/HD/Linux/Media"
-export XDG_VIDEOS_DIR="$HOME/HD/Linux/Media"
-
-# XDG / dots
+# XDG / Home
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
-
-# XDG / misc
-export XDG_HD_DIR="$HOME/HD/Linux"
 export XDG_DOTFILES_DIR="$HOME/dotfiles"
+export XDG_HD_DIR="$HOME/HD/Linux"
+
+
+# XDG
+if [ -d "$XDG_HD_DIR" ]; then
+  hdln ~/HD/Linux/Desktop       ~/Desktop
+  hdln ~/HD/Linux/Downloads     ~/Downloads
+  hdln ~/HD/Linux/Documents     ~/Documents
+  hdln ~/HD/Linux/Media         ~/Media
+  hdln ~/HD/Linux/Books         ~/Books
+  hdln ~/HD/Linux/Projects      ~/Projects
+
+  export XDG_DESKTOP_DIR="$XDG_HD_DIR/Desktop"
+  export XDG_DOWNLOAD_DIR="$XDG_HD_DIR/Downloads"
+  export XDG_DOCUMENTS_DIR="$XDG_HD_DIR/Documents"
+  export XDG_PICTURES_DIR="$XDG_HD_DIR/Media"
+  export XDG_MUSIC_DIR="$XDG_HD_DIR/Media"
+  export XDG_VIDEOS_DIR="$XDG_HD_DIR/Media"
+else
+  export XDG_DESKTOP_DIR="$HOME/Desktop"
+  export XDG_DOWNLOAD_DIR="$HOME/Downloads"
+  export XDG_DOCUMENTS_DIR="$HOME/Documents"
+  export XDG_PICTURES_DIR="$HOME/Media"
+  export XDG_MUSIC_DIR="$HOME/Media"
+  export XDG_VIDEOS_DIR="$HOME/Media"
+fi
+
+
 
 # .config
 export XMONAD_CONFIG_DIR="$XDG_CONFIG_HOME/xmonad"
 export XMONAD_CACHE_DIR="$XDG_CACHE_HOME/xmonad"
 export XMONAD_DATA_DIR="$XDG_DATA_HOME/xmonad"
-
 
 
 # PATH

@@ -1,12 +1,6 @@
 source ~/dotfiles/.scripts/dotsync.sh
 source ~/dotfiles/.scripts/system.sh
 
-hdln ~/HD/Linux/Desktop       ~/Desktop
-hdln ~/HD/Linux/Documents     ~/Documents
-hdln ~/HD/Linux/Downloads     ~/Downloads
-hdln ~/HD/Linux/Books         ~/Books
-hdln ~/HD/Linux/Media         ~/Media
-hdln ~/HD/Linux/Projects      ~/Projects
 
 if [ "$1" == "x" ]; then
     echo_separate "X11"
