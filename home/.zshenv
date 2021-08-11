@@ -6,7 +6,7 @@ export TERMINAL="kitty"
 export EDITOR="emacs"
 export BROWSER="firefox-nightly"
 export READER="zathura"
-export TERM="vt100"
+# export TERM="vt100"
 
 
 # XDG / Home

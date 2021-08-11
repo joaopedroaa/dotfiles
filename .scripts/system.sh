@@ -17,13 +17,13 @@ status(){
 
 
 update (){
-  echo_separate "yay -Syyuu"
-  yay -Syyuu
+  echo_separate "yay -Syu"
+  yay -Syu
 
   echo_separate "doom upgrade"
   doom -y upgrade
 
-  if [ "$1" = "c" ]; then
+  if [ "$1" = "--all" ]; then
       echo_separate "makepkg vscode insiders"
       cd ~/.cache/yay/visual-studio-code-insiders-bin
       makepkg -si --noconfirm

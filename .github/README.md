@@ -24,5 +24,16 @@ git clone git@github.com:joaopedroaats/dotfiles.git ~/dotfiles
 ## Other settings
 
 - [rEFInd](https://gitlab.com/joaopedroaats/pers-rEFInd)
+```sh
+git clone git@gitlab.com:joaopedroaats/pers-rEFInd.git refind-theme
+sudo cp -r refind-theme /boot/efi/EFI/refind/
+```
 - [Wallpapers](https://gitlab.com/joaopedroaats/wallpapers)
+```sh
+git clone git@gitlab.com:joaopedroaats/wallpapers.git ~/Pictures/Wallpapers/
+```
 - [Packages](https://github.com/joaopedroaats/packages)
+```sh
+git clone git@github.com:joaopedroaats/packages.git ~/packages
+
+```

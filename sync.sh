@@ -58,19 +58,22 @@ dot_cp etc/pacman.conf
 dot_cp etc/sysctl.conf
 dot_cp etc/vconsole.conf
 
-dot_cp etc/php/php.ini
-dot_cp etc/pulse/default.pa
-dot_cp etc/pacman.d/mirrorlist
-dot_cp etc/xdg/reflector/reflector.conf
-
 dot_cp etc/httpd/conf/httpd.conf
 dot_cp etc/httpd/conf/extra/phpmyadmin.conf
 dot_cp etc/lightdm/lightdm.conf
 dot_cp etc/lightdm/lightdm-webkit2-greeter.conf
 
+dot_cp etc/modprobe.d/blacklist.conf
+dot_cp etc/pacman.d/mirrorlist
+dot_cp etc/php/php.ini
+dot_cp etc/pulse/default.pa
+dot_cp etc/systemd/logind.conf
+dot_cp etc/xdg/reflector/reflector.conf
+
 
 echo_separate "/usr"
 dot_cp usr/lib/NetworkManager/conf.d/20-connectivity.conf
+dot_cp usr/share/xsessions/plasma-i3.desktop
 
 echo_separate "/srv"
 dot_cp srv/http/test.php
