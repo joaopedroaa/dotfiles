@@ -14,17 +14,17 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_DOTFILES_DIR="$HOME/dotfiles"
-export XDG_HD_DIR="$HOME/HD/Linux"
+export XDG_HD_DIR="$HOME/HardDrive/Linux"
 
 
 # XDG
 if [ -d "$XDG_HD_DIR" ]; then
-  hdln ~/HD/Linux/Desktop       ~/Desktop
-  hdln ~/HD/Linux/Downloads     ~/Downloads
-  hdln ~/HD/Linux/Documents     ~/Documents
-  hdln ~/HD/Linux/Media         ~/Media
-  hdln ~/HD/Linux/Books         ~/Books
-  hdln ~/HD/Linux/Projects      ~/Projects
+  hdln ~/HardDrive/Linux/Desktop       ~/Desktop
+  hdln ~/HardDrive/Linux/Downloads     ~/Downloads
+  hdln ~/HardDrive/Linux/Documents     ~/Documents
+  hdln ~/HardDrive/Linux/Media         ~/Media
+  hdln ~/HardDrive/Linux/Books         ~/Books
+  hdln ~/HardDrive/Linux/Projects      ~/Projects
 
   export XDG_DESKTOP_DIR="$XDG_HD_DIR/Desktop"
   export XDG_DOWNLOAD_DIR="$XDG_HD_DIR/Downloads"

@@ -2,8 +2,8 @@
 base_currency = USD
 display = both
 symbol=true
-padding=2
+padding=1
 
 [bitcoin]
-[ethereum]
+#[ethereum]
 [cardano]

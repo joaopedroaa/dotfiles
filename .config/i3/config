@@ -285,7 +285,7 @@ workspace $ws4  output $monitor1
 workspace $ws5  output $monitor1
 workspace $ws10 output $monitor1
 
-exec --no-startup-id "sh ~/dotfiles/.config/i3/start.sh"
+exec "sh ~/dotfiles/.config/i3/start.sh"
 
 
 # Move between monitors
@@ -295,7 +295,7 @@ bindsym $mod+Ctrl+less move workspace to output left
 
 ## I3 Gaps #########################
 for_window [class="^.*"] border pixel 3
-gaps inner 12
+gaps inner 8
 gaps outer 0
 
 ## Polybar #########################

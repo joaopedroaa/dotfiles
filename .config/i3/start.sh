@@ -1,32 +1,21 @@
-i3-msg 'workspace 1;  append_layout ~/dotfiles/.config/i3/layouts/1.json'
+i3-msg 'workspace 1;  append_layout ~/dotfiles/.config/i3/layouts/browser.json'
 firefox-nightly &
 
 
-i3-msg 'workspace 2;  append_layout ~/dotfiles/.config/i3/layouts/2.json'
-# zathura
-kitty &
-
-
-i3-msg 'workspace 3;  append_layout ~/dotfiles/.config/i3/layouts/3.json'
-# spotify
-kitty &
-
-
-i3-msg 'workspace 4;  append_layout ~/dotfiles/.config/i3/layouts/4.json'
-# code-insiders
+i3-msg 'workspace 2;  append_layout ~/dotfiles/.config/i3/layouts/editor.json'
 kitty &
 kitty &
 
 
-i3-msg 'workspace 5;  append_layout ~/dotfiles/.config/i3/layouts/5.json'
-emacs &
-kitty &
+i3-msg 'workspace 8;  append_layout ~/dotfiles/.config/i3/layouts/spotify.json'
 kitty &
 
 
-i3-msg 'workspace 10; append_layout ~/dotfiles/.config/i3/layouts/10.json'
-# firefox-nightly workona
+i3-msg 'workspace 9;  append_layout ~/dotfiles/.config/i3/layouts/zathura.json'
+kitty &
 
+
+i3-msg 'workspace 10; append_layout ~/dotfiles/.config/i3/layouts/browser2.json'
 
 # -----------------------------------------------------------------------------
 

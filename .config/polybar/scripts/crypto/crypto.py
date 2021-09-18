@@ -7,7 +7,7 @@ from decimal import Decimal
 from os.path import expanduser
 
 config = configparser.ConfigParser()
-config_file_dir = "~/dotfiles/.config/polybar/scripts/crypto-config"
+config_file_dir = "~/dotfiles/.config/polybar/scripts/crypto/crypto-config"
 with open(expanduser(config_file_dir), 'r', encoding='utf-8') as f:
     config.read_file(f)
 

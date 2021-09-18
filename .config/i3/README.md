@@ -3,27 +3,20 @@
 ## 1
 - firefox
 
-
 ## 2
-- zathura
-- kitty
-
-
-## 3
-- spotify
-- kitty
-
-
-## 4
 - Visual Studio Code
 - kitty
 - kitty
 
 
-## 5
-- emacs
+## 8
+- spotify
 - kitty
+
+## 9
+- zathura
 - kitty
+
 
 ## 10
 - firefox workona

@@ -5,9 +5,9 @@
 # homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
 # absolute path. No other format is supported.
 #
-XDG_DESKTOP_DIR="$HOME/HD/Linux/Desktop/"
-XDG_DOWNLOAD_DIR="$HOME/HD/Linux/Downloads"
-XDG_DOCUMENTS_DIR="$HOME/HD/Linux/Documents"
-XDG_PICTURES_DIR="$HOME/HD/Linux/Media"
-XDG_MUSIC_DIR="$HOME/HD/Linux/Media"
-XDG_VIDEOS_DIR="$HOME/HD/Linux/Media"
+XDG_DESKTOP_DIR="$HOME/HardDrive/Linux/Desktop/"
+XDG_DOWNLOAD_DIR="$HOME/HardDrive/Linux/Downloads"
+XDG_DOCUMENTS_DIR="$HOME/HardDrive/Linux/Documents"
+XDG_PICTURES_DIR="$HOME/HardDrive/Linux/Media"
+XDG_MUSIC_DIR="$HOME/HardDrive/Linux/Media"
+XDG_VIDEOS_DIR="$HOME/HardDrive/Linux/Media"

@@ -5,7 +5,8 @@ alias status=status
 alias i3save=i3_save_workspace
 alias i3load=i3_load_workspace
 
-alias ccl=alias_gcc
+alias ccl=alias_gcc_c
+alias cclp=alias_gcc_cpp
 alias gremote=alias_git_remote
 
 # ---- System ----------------------------

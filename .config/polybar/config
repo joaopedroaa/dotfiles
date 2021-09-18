@@ -74,9 +74,9 @@ tray-position = right
 line-size = 1
 bottom = false
 
-modules-left = i3 spotify
+modules-left = i3 spotify crypto
 modules-center =
-modules-right = battery wlan xbacklight pulseaudio cpu temperature memory-mb weather aur-updates date time
+modules-right = battery wlan xbacklight pulseaudio cpu temperature memory-mb aur-updates date time
 
 
 
@@ -323,7 +323,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 ;====================
 type = custom/script
 interval = 300
-exec = ~/dotfiles/.config/polybar/scripts/crypto.py
+exec = ~/dotfiles/.config/polybar/scripts/crypto/crypto.py
 format-prefix-foreground = ${colors.foreground-alt}
 
 
@@ -360,7 +360,7 @@ format-underline = ${colors.color15}
 format-background = ${colors.dark-light}
 format-padding = 1
 
-label = CPU %percentage%%
+label = %percentage%%
 
 
 ;=========================================================================================
@@ -370,14 +370,13 @@ exec = free -m | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
 interval = 0.5
 
 format = <label>
-format-prefix = "﬙"
+format-prefix = "﬙ "
 
 format-underline = ${colors.color15}
 format-background = ${colors.dark-light}
 format-padding = 1
 
 label = %output% MB
-label-padding = 1
 
 
 ;=========================================================================================
@@ -445,7 +444,7 @@ label = %output%
 type = custom/script
 exec = ~/dotfiles/.config/polybar/scripts/updates-pacman.sh
 interval = 1000
-label =  %output% updates
+label =  %output%
 
 format-underline =${colors.color15}
 format-background = ${colors.dark-light}
@@ -476,7 +475,7 @@ label =  %date%
 type = internal/date
 interval = 1.0
 
-time = %H:%M:%S
+time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 

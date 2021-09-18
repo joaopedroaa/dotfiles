@@ -2,7 +2,7 @@ configuration {
 	modi: "window,drun,run,ssh";
 	width: 42;
 	lines: 15;
-	columns: 1;
+	columns: 2;
 	font: "mono 14";
 	bw: 1;
 	location: 0;
@@ -10,7 +10,8 @@ configuration {
 	show-icons: true;
 	icon-theme: "Papirus";
 	combi-modi: "run,window";
-	theme: "~/dotfiles/.config/rofi/themes/custom.rasi";
+	theme: "~/dotfiles/.config/rofi/themes/apricot.rasi";
+}
 
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -114,4 +115,12 @@ configuration {
 /*	kb-toggle-case-sensitivity: "grave,dead_grave";*/
 /*	kb-toggle-sort: "Alt+grave";*/
 
-}
+
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+//@theme "/home/joaopedro/.config/rofi/themes/custom.rasi"
+//@theme "/home/joaopedro/.config/rofi/themes/custom.rasi"
+//@theme "/home/joaopedro/.config/rofi/themes/azeny.rasi"
+//@theme "/home/joaopedro/.config/rofi/themes/custom.rasi"
+//@theme "/home/joaopedro/.config/rofi/themes/apluma.rasi"
+//@theme "/home/joaopedro/.config/rofi/themes/apluma-sidebar.rasi"
+@theme "/home/joaopedro/.config/rofi/themes/apricot.rasi"

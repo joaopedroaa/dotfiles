@@ -7,12 +7,35 @@ echo_separate (){
 
 
 status(){
-  echo_separate "Clock"
-  sudo hwclock --show
-  timedatectl
 
-  echo_separate "Keyboard"
-  localectl status
+  if [ "$1" = "--net" ]; then
+    echo_separate "lspci -v"
+    lspci -vv | grep -A11 "Ethernet controller"
+
+    echo_separate "cat /etc/modprobe.d/blacklist.conf"
+    cat /etc/modprobe.d/blacklist.conf
+
+    echo_separate "cat /usr/lib/modprobe.d/r8168.conf"
+    cat /usr/lib/modprobe.d/r8168.conf
+
+    echo_separate "dmesg | grep r8169"
+    sudo dmesg | grep r8169
+
+    echo_separate "dmesg | grep r8168"
+    sudo dmesg | grep r8168
+
+    echo_separate "dig google.com "
+    dig google.com
+  else
+    echo_separate "Clock"
+    sudo hwclock --show
+    timedatectl
+
+    echo_separate "Keyboard"
+    localectl status
+
+
+  fi
 }
 
 
@@ -37,8 +60,12 @@ update (){
 }
 
 
-alias_gcc(){
+alias_gcc_c(){
   gcc $1.c -o $1 && ./$1
+}
+
+alias_gcc_cpp(){
+  gcc $1.cpp -o $1 -lstdc++ && ./$1
 }
 
 

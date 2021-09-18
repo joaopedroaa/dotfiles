@@ -51,10 +51,12 @@ dot_ln  .config/plasma-localerc
 
 
 echo_separate "/etc"
+dot_cp etc/dhcpcd.conf
 dot_cp etc/hosts
 dot_cp etc/locale.conf
 dot_cp etc/locale.gen
 dot_cp etc/pacman.conf
+dot_cp etc/resolv.conf
 dot_cp etc/sysctl.conf
 dot_cp etc/vconsole.conf
 

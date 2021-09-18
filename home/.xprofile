@@ -2,10 +2,11 @@
 
 [[ -f $XDG_DOTFILES_DIR/.config/keyboard/.Xmodmap_dead_greek ]] && xmodmap $XDG_DOTFILES_DIR/.config/keyboard/.Xmodmap_dead_greek
 
-sudo mount /dev/sdb1 /home/joaopedro/HD
+# sudo mount /dev/sdc1 /home/joaopedro/HD
+# sudo modprobe r8169
 
 nitrogen --restore &
-picom -f &
+picom --experimental-backends --backend glx --xrender-sync-fence &
 flameshot &
 dunst &
 redshift &

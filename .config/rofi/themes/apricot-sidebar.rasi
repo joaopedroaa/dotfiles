@@ -1,0 +1,151 @@
+/************************************************
+ * ROFI Color theme
+ * User: JoaoPedro
+ ***********************************************/
+
+
+* {
+    /* Custom colours */
+    darkgrey:              #44475a;
+    lightgrey:             #44475a;
+    bluegrey:              #6464FF;
+    white:                 #f8f8f2;
+    cyan:                  #8be9fd;
+    green:                 #50fa7b;
+    orange:                #ffb86c;
+    purple:                #e5989b;
+    pink:                  #ff79c6;
+    red:                   #ff5555;
+    yellow:                #f1fa8c;
+
+    text-color:  @white;
+    background-color: rgba(0,0,0, 0%);
+}
+
+window {
+    text-color: @white;
+    background-color: @darkgrey;
+    border:           0px 0 0;
+    border-color:     @lightgrey;
+    padding:          2px;
+
+    width: 26em;
+    height:   100%;
+    location: west;
+    anchor:   west;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+    background-color: @darkgrey;
+    border-color: @lightgrey;
+}
+
+message {
+    border:       0;
+    border-color: @lightgrey;
+    padding:      1px ;
+}
+
+textbox {
+    text-color: @white;
+}
+
+listview {
+    fixed-height: 0;
+    border:       0px solid 0px 0px;
+    border-color: @purple;
+    scrollbar:    false;
+    padding:      2px 0px 0px;
+}
+
+element {
+    border: 0;
+    padding: 2px;
+
+}
+
+element.normal.normal {
+    text-color:       @white;
+}
+
+element.normal.urgent {
+    background-color: @red;
+    text-color:       @white;
+}
+
+element.normal.active {
+    background-color: @bluegrey;
+    text-color:       @white;
+}
+
+element.selected.normal {
+    background-color: @purple;
+    text-color:       @darkgrey;
+}
+
+element.selected.urgent {
+    background-color: @orange;
+    text-color:       @darkgrey;
+}
+
+element.selected.active {
+    background-color: @pink;
+    text-color:       @darkgrey;
+}
+
+element.alternate.normal {
+    text-color:       @white;
+}
+
+element.alternate.urgent {
+    background-color: @orange;
+    text-color:       @darkgrey;
+}
+
+element alternate.active {
+    background-color: @cyan;
+    text-color:       @darkgrey;
+}
+
+sidebar {
+    border:       0px solid 0px 0px;
+    border-color: @darkgrey;
+    spacing:    10;
+}
+
+button {
+    spacing: 0;
+    background-color: @yellow;
+    text-color:       @darkgrey;
+}
+
+button.selected {
+    background-color: @orange;
+    text-color:       @darkgrey;
+}
+
+inputbar {
+    spacing:    10;
+    padding:    9px;
+    text-color: @white;
+    background-color: @darkgrey;
+}
+
+inputbar {
+    spacing:    10;
+    padding:    5px;
+    text-color: @white;
+    children:   [ prompt,entry ];
+}
+
+prompt {
+    spacing:    0;
+    text-color: @white;
+}
+
+entry {
+    spacing:    0;
+    text-color: @white;
+}

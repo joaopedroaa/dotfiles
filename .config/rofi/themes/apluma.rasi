@@ -1,45 +1,53 @@
+/************************************************
+ * ROFI Color theme
+ * User: JoaoPedro
+ ***********************************************/
+
+
 * {
     /* Custom colours */
-    dark-grey:             #282a36;
-    light-grey:            #44475a;
+    darkgrey:              #44475a;
+    lightgrey:             #44475a;
+    bluegrey:              #6464FF;
     white:                 #f8f8f2;
-    blue-grey:             #6464FF;
     cyan:                  #8be9fd;
     green:                 #50fa7b;
     orange:                #ffb86c;
-    purple:                #bd93f9;
+    purple:                #b9b3ff;
     pink:                  #ff79c6;
     red:                   #ff5555;
     yellow:                #f1fa8c;
 
-    background-color: rgba      (0,0,0, 0%);
+    text-color:  @white;
+    background-color: rgba(0,0,0, 0%);
 }
 
-#window {
-    background-color: @dark-grey;
+window {
+    text-color: @white;
+    background-color: @darkgrey;
     border:           0px 0 0;
-    border-color:     @light-grey;
-    padding:          0px;
+    border-color:     @lightgrey;
+    padding:          2px;
 }
 
-#mainbox {
+mainbox {
     border:  0;
     padding: 0;
-    background-color: @dark-grey;
-    border-color: @light-grey;
+    background-color: @darkgrey;
+    border-color: @lightgrey;
 }
 
-#message {
+message {
     border:       0;
-    border-color: @light-grey;
+    border-color: @lightgrey;
     padding:      1px ;
 }
 
-#textbox {
-    text-color:   @white;
+textbox {
+    text-color: @white;
 }
 
-#listview {
+listview {
     fixed-height: 0;
     border:       0px solid 0px 0px;
     border-color: @purple;
@@ -47,92 +55,92 @@
     padding:      2px 0px 0px;
 }
 
-#element {
+element {
     border: 0;
     padding: 2px;
 
 }
 
-#element.normal.normal {
+element.normal.normal {
     text-color:       @white;
 }
 
-#element.normal.urgent {
+element.normal.urgent {
     background-color: @red;
     text-color:       @white;
 }
 
-#element.normal.active {
-    background-color: @blue-grey;
+element.normal.active {
+    background-color: @bluegrey;
     text-color:       @white;
 }
 
-#element.selected.normal {
+element.selected.normal {
     background-color: @purple;
-    text-color:       @dark-grey;
+    text-color:       @darkgrey;
 }
 
-#element.selected.urgent {
+element.selected.urgent {
     background-color: @orange;
-    text-color:       @dark-grey;
+    text-color:       @darkgrey;
 }
 
-#element.selected.active {
+element.selected.active {
     background-color: @pink;
-    text-color:       @dark-grey;
+    text-color:       @darkgrey;
 }
 
-#element.alternate.normal {
+element.alternate.normal {
     text-color:       @white;
 }
 
-#element.alternate.urgent {
+element.alternate.urgent {
     background-color: @orange;
-    text-color:       @dark-grey;
+    text-color:       @darkgrey;
 }
 
-#element alternate.active {
+element alternate.active {
     background-color: @cyan;
-    text-color:       @dark-grey;
+    text-color:       @darkgrey;
 }
 
-#sidebar {
+sidebar {
     border:       0px solid 0px 0px;
-    border-color: @dark-grey;
+    border-color: @darkgrey;
     spacing:    10;
 }
 
-#button {
+button {
     spacing: 0;
     background-color: @yellow;
-    text-color:       @dark-grey;
+    text-color:       @darkgrey;
 }
 
-#button.selected {
+button.selected {
     background-color: @orange;
-    text-color:       @dark-grey;
+    text-color:       @darkgrey;
 }
 
-#inputbar {
+inputbar {
     spacing:    10;
     padding:    9px;
     text-color: @white;
-    background-color: @dark-grey;
+    background-color: @darkgrey;
 }
 
-#inputbar {
+inputbar {
     spacing:    10;
     padding:    5px;
     text-color: @white;
     children:   [ prompt,entry ];
 }
 
-#prompt {
+prompt {
     spacing:    0;
     text-color: @white;
 }
 
-#entry {
+entry {
     spacing:    0;
     text-color: @white;
 }
