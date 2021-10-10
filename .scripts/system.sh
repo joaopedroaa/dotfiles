@@ -94,3 +94,22 @@ i3_load_workspace(){
 
   i3-msg "workspace $1; append_layout ~/dotfiles/.config/i3/layouts/$filename.json"
 }
+
+
+####################################################
+#                       Config                         #
+####################################################
+
+
+enable_systemctl () {
+  clear
+  echo "========================================  $1  ========================================"
+  sudo systemctl enable $1
+  sudo systemctl restart $1
+  sleep 3
+  sudo systemctl status $1
+}
+
+import_gpt (){
+  gpg --keyserver pool.sks-keyservers.net --recv-keys $1
+}
