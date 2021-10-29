@@ -63,6 +63,7 @@ bindsym $mod+Shift+Print exec gcolor2
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+Tab exec "rofi -show drun"
 bindsym $mod+Shift+d exec --no-startup-id rofi -show calc -modi calc -no-show-match -no-sort
 # bindsym $mod+Shift+Ctrl+d exec --no-startup-id
 

@@ -19,12 +19,12 @@ export XDG_HD_DIR="$HOME/HardDrive/Linux"
 
 # XDG
 if [ -d "$XDG_HD_DIR" ]; then
-  hdln ~/HardDrive/Linux/Desktop       ~/Desktop
-  hdln ~/HardDrive/Linux/Downloads     ~/Downloads
-  hdln ~/HardDrive/Linux/Documents     ~/Documents
-  hdln ~/HardDrive/Linux/Media         ~/Media
-  hdln ~/HardDrive/Linux/Books         ~/Books
-  hdln ~/HardDrive/Linux/Projects      ~/Projects
+  hdln $XDG_HD_DIR/Desktop       ~/Desktop
+  hdln $XDG_HD_DIR/Downloads     ~/Downloads
+  hdln $XDG_HD_DIR/Documents     ~/Documents
+  hdln $XDG_HD_DIR/Media         ~/Media
+  hdln $XDG_HD_DIR/Books         ~/Books
+  hdln $XDG_HD_DIR/Projects      ~/Projects
 
   export XDG_DESKTOP_DIR="$XDG_HD_DIR/Desktop"
   export XDG_DOWNLOAD_DIR="$XDG_HD_DIR/Downloads"
@@ -232,5 +232,5 @@ ex=:\
 
 
 # /etc/locale.conf & ~/.config/plasma-localerc
-# export LANG="en_US.UTF-8"
-# export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"

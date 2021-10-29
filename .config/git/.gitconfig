@@ -1,8 +1,6 @@
 [user]
 	name = João Pedro Alvarenga
 	email = joaopedroaats@pm.me
-[core]
-
 [push]
 	followTags = true
 [alias]
@@ -23,3 +21,29 @@
 	ld = log --pretty=format:'%C(blue)%h%C(reset) %C(green)%C(bold)%cr%C(reset) %C(magenta)<%an>%C(reset) %s' --max-count=30
 [init]
 	defaultBranch = master
+
+
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    features = decorations
+		line-numbers = true
+		side-by-side = true
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax

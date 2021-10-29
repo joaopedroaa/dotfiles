@@ -11,6 +11,8 @@ alias ccl=alias_gcc_c
 alias cclp=alias_gcc_cpp
 alias gremote=alias_git_remote
 
+alias color=color
+
 # ---- System ----------------------------
 alias :q="exit" alias :Q=":q"
 alias nv="nvim"
@@ -46,10 +48,10 @@ alias cdl="cd $XDG_HD_DIR/Projects/Local"
 alias cdh="cd $XDG_HD_DIR/Projects/Github"
 
 # ls
-alias l="ls -lF ${colorflag}"
-alias la="ls -lAF ${colorflag}"
-alias ls="command ls ${colorflag}"
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+# colorflag="--color=auto"
+alias l="lsd -lF ${colorflag}"
+alias la="lsd -lAF ${colorflag}"
+alias ls="lsd ${colorflag}"
 
 # yay
 alias yas='yay -S'
@@ -125,3 +127,9 @@ alias sizes="sudo du -sh ~/.* | sort -rh | head -10"
 alias findd="sudo find / -iname "
 alias xmonadr="xmonad --recompile"
 alias selfestival="xsel | festival --tts"
+alias disks="sudo gnome-disks"
+
+alias rofi-drun="rofi -show drun"
+alias rofi-calc="rofi -show calc"
+
+alias kitty-theme="kitty +kitten themes "

@@ -1,12 +1,7 @@
 configuration {
 	modi: "window,drun,run,ssh";
-	width: 42;
-	lines: 15;
-	columns: 2;
 	font: "mono 14";
-	bw: 1;
 	location: 0;
-	padding: 5;
 	show-icons: true;
 	icon-theme: "Papirus";
 	combi-modi: "run,window";

@@ -1,3 +1,4 @@
+source ~/.zinit/bin/zinit.zsh
 
 echo_separate (){
   length="$((${#1} - 49))"
@@ -8,7 +9,11 @@ echo_separate (){
 
 status(){
 
-  if [ "$1" = "--net" ]; then
+  if [ "$1" = "disk" ]; then
+    echo_separate "duf"
+    duf
+
+  elif [ "$1" = "net" ]; then
     echo_separate "lspci -v"
     lspci -vv | grep -A11 "Ethernet controller"
 
@@ -34,14 +39,40 @@ status(){
     echo_separate "Keyboard"
     localectl status
 
+    echo_separate "Locale"
+    locale
 
   fi
+}
+
+
+color(){
+  T='Cor'   # The test text
+
+  echo -e "\n                 40m     41m     42m     43m\
+      44m     45m     46m     47m";
+
+  for FGs in '    m' '   1m' '  30m' '1;30m' '  31m' '1;31m' '  32m' \
+            '1;32m' '  33m' '1;33m' '  34m' '1;34m' '  35m' '1;35m' \
+            '  36m' '1;36m' '  37m' '1;37m';
+    do FG=${FGs// /}
+    echo -en " $FGs \033[$FG  $T  "
+    for BG in 40m 41m 42m 43m 44m 45m 46m 47m;
+      do echo -en "$EINS \033[$FG\033[$BG  $T  \033[0m";
+    done
+    echo;
+  done
+  echo
 }
 
 
 update (){
   echo_separate "yay -Syu"
   yay -Syu
+
+  echo_separate "zinit"
+  zinit self-update
+  zinit update --parallel 40
 
   echo_separate "doom upgrade"
   doom -y upgrade
