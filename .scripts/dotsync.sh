@@ -11,12 +11,12 @@ dot_lnd(){
   homeDirPath=$HOME/$1
   [ $2 ] && homeDirPath=$HOME/$2
 
-  [ ! -d "$homeDirPath" ] && mkdir $homeDirPath &> /dev/null
+  [ ! -d "$homeDirPath" ] && mkdir $homeDirPath
 
 
 
   if [ -d "$homeDirPath" ]; then
-    ln -sv $dotsDirPath/* $homeDirPath &> /dev/null
+    ln -sv $dotsDirPath/* $homeDirPath
     echo "$messageOk $message_lnd $1"
   else
     echo "$messageError $homeDirPath"
@@ -32,11 +32,11 @@ dot_ln(){
   [ $2 ] && homeFilePath=$HOME/$2
   homeDirPath=$(dirname "$homeFilePath")
 
-  [ ! -d "$homeDirPath" ] && mkdir $homeDirPath &> /dev/null
+  [ ! -d "$homeDirPath" ] && mkdir $homeDirPath
   [ -f "$homeFilePath" ] && rm $homeFilePath
 
   if [ -d "$homeDirPath" ]; then
-    ln -sv $dotsFilePath $homeFilePath &> /dev/null
+    ln -sv $dotsFilePath $homeFilePath
     echo "$messageOk $message_ln $1 "
   else
     echo "$messageError  $homeFilePath"

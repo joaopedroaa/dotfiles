@@ -1,7 +1,5 @@
 source ~/.zinit/bin/zinit.zsh
 
-# --- zinit ---------------------------------------------------------------------------
-
 # --- oh my zsh ------
 zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/raw/master/plugins/git/git.plugin.zsh'
 zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -50,23 +48,20 @@ zinit ice as"program" make'!' atclone'./direnv hook zsh > zhook.zsh' atpull'%atc
 zinit light direnv/direnv
 
 
+# --- forgit ------
+zinit load wfxr/forgit
 
-
-zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
-    atpull'%atclone' pick"clrs.zsh" nocompile'!' \
-    atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
-zinit light trapd00r/LS_COLORS
-
-# zinit ice atclone"dircolors -b LS_COLORS > c.zsh" atpull'%atclone' pick"c.zsh" nocompile'!'
-# zinit light trapd00r/LS_COLORS
-
-
-# old
-# zinit ice as"program" pick"$ZPFX/bin/git-*" make"PREFIX=$ZPFX"
-# zinit light tj/git-extras
 
 
 
 # ---- Load Theme --------------------------------------------------------------------------
 # To customize prompt, run `p10k configure` or edit p10k.zsh.
 [[ ! -f ~/dotfiles/.config/zsh/p10k.zsh ]] || source ~/dotfiles/.config/zsh/p10k.zsh
+
+
+
+# old
+# zinit ice atclone"dircolors -b LS_COLORS > c.zsh" atpull'%atclone' pick"c.zsh" nocompile'!'
+# zinit light trapd00r/LS_COLORS
+# zinit ice as"program" pick"$ZPFX/bin/git-*" make"PREFIX=$ZPFX"
+# zinit light tj/git-extras

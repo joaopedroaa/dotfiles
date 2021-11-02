@@ -1,20 +1,19 @@
 source ~/dotfiles/.scripts/system.sh
 
 alias up=update
+alias color=color
 alias status=status
 alias i3save=i3_save_workspace
 alias i3load=i3_load_workspace
 
-
-alias restart_systemctl=enable_systemctl
 alias ccl=alias_gcc_c
 alias cclp=alias_gcc_cpp
-alias gremote=alias_git_remote
 
-alias color=color
+alias systemctl-restart=enable_systemctl
+alias git-remote=alias_git_remote
+
 
 # ---- System ----------------------------
-alias :q="exit" alias :Q=":q"
 alias nv="nvim"
 alias t="touch"
 alias r="ranger"

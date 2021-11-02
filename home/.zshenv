@@ -1,6 +1,8 @@
 #!/bin/zsh
 source ~/dotfiles/.scripts/dotsync.sh
 
+export SHELL="/bin/zsh"
+
 # Default apps
 export TERMINAL="kitty"
 export EDITOR="emacs"
@@ -62,6 +64,7 @@ export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/anaconda3/bin"
+export PATH="$PATH:$FORGIT_INSTALL_DIR/bin"
 
 # Man color
 export PAGER="most"
