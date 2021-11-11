@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 [ "$1" = "code" ] && echo_separate "makepkg vscode insiders" \
                   && cd ~/.cache/yay/visual-studio-code-insiders-bin \
                   && makepkg -si --noconfirm

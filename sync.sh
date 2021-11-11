@@ -5,12 +5,12 @@ source ~/dotfiles/.scripts/dotsync.sh
 
 if [ "$1" == "x" ]; then
     echo_separate "X11"
-    dot_ln  home/.xinitrc                           /
-    dot_ln  home/.xprofile                          /
+    stot -l  home/.xinitrc                           /
+    stot -l  home/.xprofile                          /
 
-    dot_cp  etc/X11/xorg.conf.d/00-keyboard.conf
-    dot_cp  etc/X11/xorg.conf.d/50-mouse-acceleration.conf
-    dot_cp  etc/X11/xorg.conf
+    stot -c  etc/X11/xorg.conf.d/00-keyboard.conf
+    stot -c  etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+    stot -c  etc/X11/xorg.conf
 fi
 
 echo_separate "/home"
@@ -54,32 +54,32 @@ stot -l .local/bin
 
 echo_separate "/etc"
 stot -c etc/dhcpcd.conf
-dot_cp etc/hosts
+stot -c etc/hosts
 stot -c etc/locale.conf
 stot -c etc/locale.gen
-dot_cp etc/pacman.conf
-dot_cp etc/resolv.conf
-dot_cp etc/sysctl.conf
-dot_cp etc/vconsole.conf
+stot -c etc/pacman.conf
+stot -c etc/resolv.conf
+stot -c etc/sysctl.conf
+stot -c etc/vconsole.conf
 
-dot_cp etc/httpd/conf/httpd.conf
-dot_cp etc/httpd/conf/extra/phpmyadmin.conf
-dot_cp etc/lightdm/lightdm.conf
-dot_cp etc/lightdm/lightdm-webkit2-greeter.conf
+stot -c etc/httpd/conf/httpd.conf
+stot -c etc/httpd/conf/extra/phpmyadmin.conf
+stot -c etc/lightdm/lightdm.conf
+stot -c etc/lightdm/lightdm-webkit2-greeter.conf
 
-dot_cp etc/modprobe.d/blacklist.conf
-dot_cp etc/pacman.d/mirrorlist
-dot_cp etc/php/php.ini
-dot_cp etc/pulse/default.pa
-dot_cp etc/systemd/logind.conf
-dot_cp etc/xdg/reflector/reflector.conf
+stot -c etc/modprobe.d/blacklist.conf
+stot -c etc/pacman.d/mirrorlist
+stot -c etc/php/php.ini
+stot -c etc/pulse/default.pa
+stot -c etc/systemd/logind.conf
+stot -c etc/xdg/reflector/reflector.conf
 
 
 echo_separate "/usr"
-dot_cp usr/lib/NetworkManager/conf.d/20-connectivity.conf
+stot -c usr/lib/NetworkManager/conf.d/20-connectivity.conf
 
 echo_separate "/srv"
-dot_cp srv/http/test.php
+stot -c srv/http/test.php
 
 
 echo -e "\n"

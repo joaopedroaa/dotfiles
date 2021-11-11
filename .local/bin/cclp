@@ -1,2 +1,4 @@
+#!/usr/bin/env bash
+
 filename="${1%.*}"
 gcc $filename.cpp -o $filename -lstdc++ && ./$filename

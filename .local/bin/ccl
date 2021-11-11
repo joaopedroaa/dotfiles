@@ -1,2 +1,4 @@
+#!/usr/bin/env bash
+
 filename="${1%.*}"
 gcc $filename.c -o $filename && ./$filename
