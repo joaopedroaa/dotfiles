@@ -1,17 +1,5 @@
-source ~/dotfiles/.scripts/system.sh
-
 alias up=update
-alias color=color
-alias status=status
-alias i3save=i3_save_workspace
-alias i3load=i3_load_workspace
-
-alias ccl=alias_gcc_c
-alias cclp=alias_gcc_cpp
-
-alias systemctl-restart=enable_systemctl
-alias git-remote=alias_git_remote
-
+alias systemctl-restart=systemctl-enable
 
 # ---- System ----------------------------
 alias nv="nvim"
@@ -19,6 +7,8 @@ alias t="touch"
 alias r="ranger"
 alias cat="bat"
 alias ca="calcurse"
+alias help="tldr"
+alias dir="dir --color "
 
 alias bye="shutdown 0"
 alias soon="i3lock -c 000000; systemctl suspend"
@@ -26,6 +16,8 @@ alias soon="i3lock -c 000000; systemctl suspend"
 alias ctl="systemctl"
 alias xev="xev -event keyboard  | egrep -o 'keycode.*\)'"
 
+alias x+="chmod +x"
+alias x++="sudo chmod +x"
 
 # Navigation
 alias ..="cd .."
@@ -75,12 +67,12 @@ alias yaorph='yay -Qtd'
 
 # Code
 alias code="code-insiders"
-alias dotfiles="code $XDG_DOTFILES_DIR"
-alias dots="dotfiles"
+alias dots="code $XDG_DOTFILES_DIR"
 alias update-code="cd ~/.cache/yay/visual-studio-code-insiders-bin && makepkg -si"
 
 # Scripts
 alias syncd="sh $XDG_DOTFILES_DIR/sync.sh"
+# alias stot="sh $XDG_DOTFILES_DIR/.scripts/stot.sh"
 
 # Docker
 alias dr="docker run"

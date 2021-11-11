@@ -1,0 +1,60 @@
+while getopts ":hvdnc" opt; do
+  case $opt in
+    h)
+      echo "Usage: status [OPTION]"
+      echo ""
+      echo "   -h, --help                  "
+      echo "   -v, --virtual               "
+      echo "   -d, --disk                  "
+      echo "   -n, --net                   "
+      echo "   -c, --config                "
+    ;;
+
+    v)
+      VBoxManage setextradata global GUI/SuppressMessages "all"
+    ;;
+
+    d)
+      echo_separate "duf"
+      duf
+    ;;
+
+    n)
+      echo_separate "lspci -v"
+      lspci -vv | grep -A11 "Ethernet controller"
+
+      echo_separate "cat /etc/modprobe.d/blacklist.conf"
+      cat /etc/modprobe.d/blacklist.conf
+
+      echo_separate "cat /usr/lib/modprobe.d/r8168.conf"
+      cat /usr/lib/modprobe.d/r8168.conf
+
+      echo_separate "dmesg | grep r8169"
+      sudo dmesg | grep r8169
+
+      echo_separate "dmesg | grep r8168"
+      sudo dmesg | grep r8168
+
+      echo_separate "httpstat google.com"
+      httpstat https://www.google.com
+    ;;
+
+    c)
+      echo_separate "Clock"
+      sudo hwclock --show
+      timedatectl
+
+      echo_separate "Keyboard"
+      localectl status
+
+      echo_separate "Locale"
+      locale
+    ;;
+
+    \?) echo "Invalid option: -$OPTARG"
+    ;;
+
+    :) echo "Option -$OPTARG requires an argument."
+    ;;
+  esac
+done

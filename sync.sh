@@ -1,5 +1,6 @@
 source ~/dotfiles/.scripts/dotsync.sh
-source ~/dotfiles/.scripts/system.sh
+[ ! -f ~/.local/bin/stot ] && ln -sv ~/dotfiles/.local/bin/stot ~/.local/bin/stot
+
 
 
 if [ "$1" == "x" ]; then
@@ -13,48 +14,49 @@ if [ "$1" == "x" ]; then
 fi
 
 echo_separate "/home"
-dot_lnd .doom.d
-
-dot_ln  home/.Xresources                        /
-dot_ln  home/.zshenv                            /
-dot_ln  home/.zshrc                             /
+stot -l home/.Xresources                        /
+stot -l home/.zshenv                            /
+stot -l home/.zshrc                             /
 
 echo_separate "/home/.config"
-dot_lnd .config/alacritty
-dot_lnd .config/cava
-dot_lna .config/doom
-dot_lna .config/dunst
-dot_lna .config/flameshot
-dot_lnd .config/i3
-dot_lnd .config/i3blocks
-dot_lnd .config/kitty
-dot_lnd .config/lf
-dot_lnd .config/nvim
-dot_lnd .config/neofetch
-dot_lnd .config/polybar
-dot_lnd .config/ranger
-dot_lnd .config/redshift
-dot_lnd .config/rofi
-dot_lnd .config/xmobar
-dot_lnd .config/xmonad
-dot_lnd .config/zathura
+stot -l .config/alacritty
+stot -l .config/cava
+stot -l .config/doom
+stot -l .config/dunst
+stot -l .config/flameshot
+stot -l .config/i3
+stot -l .config/i3blocks
+stot -l .config/kitty
+stot -l .config/lf
+stot -l .config/nvim
+stot -l .config/neofetch
+stot -l .config/polybar
+stot -l .config/ranger
+stot -l .config/redshift
+stot -l .config/rofi
+stot -l .config/xmobar
+stot -l .config/xmonad
+stot -l .config/zathura
 
-dot_ln  .config/dolphin/dolphinrc                .config/dolphinrc
-dot_ln  .config/git/.gitconfig                   .gitconfig
-dot_ln  .config/pavucontrol/pavucontrol.ini      .config/pavucontrol.ini
-dot_ln  .config/picom/picom.conf                 .config/picom.conf
-dot_ln  .config/.mostrc                          .mostrc
-dot_ln  .config/tmux/.tmux.conf                  .tmux.conf
-dot_ln  .config/yakuake/yakuakerc                .config/yakuakerc
-dot_ln  .config/user-dirs.dirs
-dot_ln  .config/plasma-localerc
+stot -l .config/dolphin/dolphinrc                .config/dolphinrc
+stot -l .config/git/.gitconfig                   .gitconfig
+stot -l .config/pavucontrol/pavucontrol.ini      .config/pavucontrol.ini
+stot -l .config/picom/picom.conf                 .config/picom.conf
+stot -l .config/most/.mostrc                     .mostrc
+stot -l .config/tmux/.tmux.conf                  .tmux.conf
+stot -l .config/yakuake/yakuakerc                .config/yakuakerc
 
+stot -l .config/user-dirs.dirs
+stot -l .config/plasma-localerc
+
+echo_separate "/home/.local"
+stot -l .local/bin
 
 echo_separate "/etc"
-dot_cp etc/dhcpcd.conf
+stot -c etc/dhcpcd.conf
 dot_cp etc/hosts
-dot_cp etc/locale.conf
-dot_cp etc/locale.gen
+stot -c etc/locale.conf
+stot -c etc/locale.gen
 dot_cp etc/pacman.conf
 dot_cp etc/resolv.conf
 dot_cp etc/sysctl.conf
@@ -75,7 +77,6 @@ dot_cp etc/xdg/reflector/reflector.conf
 
 echo_separate "/usr"
 dot_cp usr/lib/NetworkManager/conf.d/20-connectivity.conf
-dot_cp usr/share/xsessions/plasma-i3.desktop
 
 echo_separate "/srv"
 dot_cp srv/http/test.php

@@ -29,8 +29,8 @@ zinit light junegunn/fzf
 
 
 # --- syntax highlighting ------
-zinit ice wait"0c" lucid atinit"zpcompinit;zpcdreplay"
-zinit light zdharma/fast-syntax-highlighting
+# zinit ice wait"0c" lucid atinit"zpcompinit;zpcdreplay"
+# zinit light zdharma/fast-syntax-highlighting
 # zinit light zsh-users/zsh-syntax-highlighting
 
 

@@ -1,0 +1,141 @@
+#!/usr/bin/env bash
+
+   messageOk="|:ok |"
+messageError="|:error |"
+
+ message_ln=" ln  | 📄 |"
+message_lnd=" ln  | 📁 |"
+message_lna=" ln  | 📁 |"
+ message_cp=" cp  | 📄 |"
+
+
+if (($# == 0)); then
+  echo "Please pass argumensts"
+  echo "Usage: stot [OPTION]... SOURCE"
+  exit 1;
+fi
+
+
+while getopts ":hlc" opt; do
+  case $opt in
+    h)
+        echo "Usage: stot [OPTION]... SOURCE"
+        echo "   or: stot [OPTION]... SOURCE DEST"
+        echo ""
+        echo "   -h                          help        "
+        echo "   -l                          ln     "
+        exit 0;
+    ;;
+
+    l) METHOD="ln"
+    ;;
+
+    c) METHOD="cp"
+    ;;
+
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1;
+    ;;
+
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1;
+    ;;
+
+  esac
+done
+
+shift $(($OPTIND - 1))
+PASSED=$1
+
+
+
+
+if [[ $1 ]]; then
+  # ------------------------------------------
+  #                 LN
+  # ------------------------------------------
+  if [ $METHOD == "ln" ]; then
+    [ $1 ] && sourcePath=$HOME/dotfiles/$1
+    [ $1 ] && destPath=$HOME/$1
+    [ $2 ] && destPath=$HOME/$2
+
+
+    # IS FOLDER
+    # -------------
+    if [[ -d $sourcePath ]]; then
+
+      [ !  -d "$destPath" ] && mkdir $destPath &> /dev/null
+      if [ -d "$destPath" ]; then
+        ln -sv $sourcePath/* $destPath &> /dev/null
+        echo "$messageOk $message_lnd $1"
+      else
+        echo "$messageError $destPath not found"
+      fi
+
+
+    # IS FILE
+    # -------------
+    elif [[ -f $sourcePath ]]; then
+      destFolderPath=$(dirname "$destPath")
+
+      [ ! -d "$destFolderPath" ] && mkdir $destFolderPath &> /dev/null
+      [ -f "$destPath" ] && rm $destPath &> /dev/null
+
+      if [ -d "$destFolderPath" ]; then
+        ln -sv $sourcePath $destPath &> /dev/null
+        echo "$messageOk $message_ln $1 "
+      else
+        echo "$messageError  $homeFilePath"
+      fi
+
+
+    # IS NOT VALID
+    # -------------
+    else
+      echo "$sourcePath is not valid"
+      exit 1
+    fi
+
+
+
+  exit 1;
+
+  # ------------------------------------------
+  #                 CP
+  # ------------------------------------------
+  elif [ "$METHOD" == "cp" ]; then
+    [ $1 ] && sourcePath=$HOME/dotfiles/$1
+    [ $1 ] && destPath=/$1
+    [ $2 ] && destPath=/$2
+
+    # IS FILE
+    # -------------
+    if [[ -f $sourcePath ]]; then
+      destFolderPath=$(dirname "$destPath")
+
+      if [ -d $destFolderPath ]; then
+          sudo cp $sourcePath $destFolderPath &> /dev/null
+          echo "$messageOk $message_cp $destPath"
+      else
+          echo "$messageError $destPath"
+      fi
+
+    # IS NOT VALID
+    # -------------
+    else
+      echo "$sourcePath is not valid"
+      exit 1
+    fi
+
+  exit 1;
+  fi
+
+else
+    echo "Please pass valid source"
+    echo "Usage: stot [OPTION]... SOURCE"
+    exit 1
+fi
+
+

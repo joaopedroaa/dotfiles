@@ -1,0 +1,3 @@
+length="$((${#1} - 49))"
+printf -v spaces '%*s' $length '';
+echo -e "\n==== $1"  ${spaces// /=}
