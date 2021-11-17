@@ -21,7 +21,7 @@ git clone git@github.com:joaopedroaats/dotfiles.git ~/dotfiles
 - `lightdm` - display manager
 
 
-## Other settings
+
 
 - [rEFInd](https://gitlab.com/joaopedroaats/pers-rEFInd)
 ```sh

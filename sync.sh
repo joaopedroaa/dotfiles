@@ -1,5 +1,5 @@
 source ~/dotfiles/.scripts/dotsync.sh
-[ ! -f ~/.local/bin/stot ] && ln -sv ~/dotfiles/.local/bin/stot ~/.local/bin/stot
+[ ! -f ~/.local/bin/stot ] && ln -sv ~/dotfiles/bin/stot ~/.local/bin/stot
 
 
 
@@ -50,7 +50,7 @@ stot -l .config/user-dirs.dirs
 stot -l .config/plasma-localerc
 
 echo_separate "/home/.local"
-stot -l .local/bin
+stot -l bin .local/bin
 
 echo_separate "/etc"
 stot -c etc/dhcpcd.conf

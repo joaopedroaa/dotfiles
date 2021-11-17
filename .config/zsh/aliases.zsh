@@ -1,30 +1,57 @@
+_exists() {
+  command -v $1 > /dev/null 2>&1
+}
+
 alias up=update
 alias systemctl-restart=systemctl-enable
 
 # ---- System ----------------------------
-alias nv="nvim"
 alias t="touch"
-alias r="ranger"
 alias cat="bat"
+alias r="ranger"
 alias ca="calcurse"
 alias help="tldr"
 alias dir="dir --color "
 
+
 alias bye="shutdown 0"
 alias soon="i3lock -c 000000; systemctl suspend"
 
-alias ctl="systemctl"
 alias xev="xev -event keyboard  | egrep -o 'keycode.*\)'"
 
 alias x+="chmod +x"
 alias x++="sudo chmod +x"
+alias -- +x="chmod +x"
+alias -- ++x="sudo chmod +x"
 
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias c.="code ." alias C.="c."
-alias c..="code . && exit" alias C..="c.."
+
+alias c.="code ."
+alias c..="code . && exit"
+
+alias n="nvim"
+alias n.="nvim ."
+
+alias e="$EDITOR"
+alias e.="$EDITOR ."
+alias e..="$EDITOR . && exit"
+
+
+# Folder Shortcuts
+alias cdd="cd $XDG_HD_DIR/Desktop/"
+alias cdhd="cd $XDG_HD_DIR"
+alias cdl="cd $XDG_HD_DIR/Projects/Local"
+alias cdh="cd $XDG_HD_DIR/Projects/Github"
+
+
+# ls  -  colorflag="--color=auto"
+alias l="lsd -a ${colorflag}"
+alias ls="lsd -lF ${colorflag}"
+alias lsa="lsd -lAF ${colorflag}"
+
 
 # tar
 alias tarzip='unzip'
@@ -32,17 +59,7 @@ alias tarx='tar -xvf'
 alias targz='tar -zxvf'
 alias tarbz2='tar -jxvf'
 
-# Shortcuts
-alias cdd="cd $XDG_HD_DIR/Desktop/"
-alias cde="cd $XDG_HD_DIR"
-alias cdl="cd $XDG_HD_DIR/Projects/Local"
-alias cdh="cd $XDG_HD_DIR/Projects/Github"
 
-# ls
-# colorflag="--color=auto"
-alias l="lsd -lF ${colorflag}"
-alias la="lsd -lAF ${colorflag}"
-alias ls="lsd ${colorflag}"
 
 # yay
 alias yas='yay -S'
@@ -118,9 +135,16 @@ alias sizes="sudo du -sh ~/.* | sort -rh | head -10"
 alias findd="sudo find / -iname "
 alias xmonadr="xmonad --recompile"
 alias selfestival="xsel | festival --tts"
-alias disks="sudo gnome-disks"
+alias kitty-theme="kitty +kitten themes "
 
 alias rofi-drun="rofi -show drun"
 alias rofi-calc="rofi -show calc"
 
-alias kitty-theme="kitty +kitten themes "
+alias disks="sudo gnome-disks"
+alias PATH='echo -e ${PATH//:/\\n}'
+
+
+alias xselin='xsel --clipboard --input'
+alias xselou='xsel --clipboard --output'
+alias pass='</dev/urandom tr -dc '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' | head -c42 | xselin; echo $(xselou)'
+# alias pass='openssl rand -base64 ${1:-42} | xselin ; echo "$(xselou)"'

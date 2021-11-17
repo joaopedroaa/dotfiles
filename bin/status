@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-while getopts ":hvdnc" opt; do
+while getopts ":hvdncs" opt; do
   case $opt in
     h)
       echo "Usage: status [OPTION]"
@@ -10,6 +10,7 @@ while getopts ":hvdnc" opt; do
       echo "   -d, --disk                  "
       echo "   -n, --net                   "
       echo "   -c, --config                "
+      echo "   -s, --size                "
     ;;
 
     v)
@@ -51,6 +52,10 @@ while getopts ":hvdnc" opt; do
 
       echo_separate "Locale"
       locale
+    ;;
+
+    s)
+      echo_separate "du"
     ;;
 
     \?) echo "Invalid option: -$OPTARG"
