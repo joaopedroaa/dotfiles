@@ -22,8 +22,9 @@ while getopts ":hlc" opt; do
         echo "Usage: stot [OPTION]... SOURCE"
         echo "   or: stot [OPTION]... SOURCE DEST"
         echo ""
-        echo "   -h                          help        "
         echo "   -l                          ln     "
+        echo "   -c                          cd     "
+        echo "   -h                          display this help and exit   "
         exit 0;
     ;;
 

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+xselin='xsel --clipboard --input'
+xselou='xsel --clipboard --output'
+
+</dev/urandom tr -dc '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' | head -c42 | $xselin; echo $($xselou)

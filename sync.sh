@@ -1,6 +1,4 @@
-source ~/dotfiles/.scripts/dotsync.sh
 [ ! -f ~/.local/bin/stot ] && ln -sv ~/dotfiles/bin/stot ~/.local/bin/stot
-
 
 
 if [ "$1" == "x" ]; then
@@ -51,6 +49,9 @@ stot -l .config/plasma-localerc
 
 echo_separate "/home/.local"
 stot -l bin .local/bin
+
+echo_separate "/boot"
+stot -c boot/efi/EFI/refind/refind.conf
 
 echo_separate "/etc"
 stot -c etc/dhcpcd.conf

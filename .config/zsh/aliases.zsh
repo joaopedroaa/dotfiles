@@ -60,7 +60,6 @@ alias targz='tar -zxvf'
 alias tarbz2='tar -jxvf'
 
 
-
 # yay
 alias yas='yay -S'
 alias yaup="yay -Syyu"
@@ -89,7 +88,6 @@ alias update-code="cd ~/.cache/yay/visual-studio-code-insiders-bin && makepkg -s
 
 # Scripts
 alias syncd="sh $XDG_DOTFILES_DIR/sync.sh"
-# alias stot="sh $XDG_DOTFILES_DIR/.scripts/stot.sh"
 
 # Docker
 alias dr="docker run"
@@ -105,6 +103,7 @@ alias dc="docker-compose"
 alias dcup="docker-compose up"
 alias dcupd="docker-compose up -d"
 
+
 # Elixir
 alias mcr="mix credo"
 alias mco="mix compile"
@@ -119,6 +118,7 @@ alias megm="mix ecto.gen.migration"
 alias mpn="mix phx.new"
 alias mps="mix phx.server"
 
+
 # Playerctl
 alias plspotify="playerctl -p spotify "
 alias plplay="plspotify play-pause"
@@ -126,10 +126,12 @@ alias plnext="plspotify next"
 alias plprev="plspotify previous"
 alias plvolu="plspotify volume"
 
+
 # Du / Agedu
 alias agdw="sudo agedu -w --auth none"
 alias agds="sudo agedu -s /home/joaopedro"
 alias sizes="sudo du -sh ~/.* | sort -rh | head -10"
+
 
 # MISC
 alias findd="sudo find / -iname "
@@ -141,10 +143,3 @@ alias rofi-drun="rofi -show drun"
 alias rofi-calc="rofi -show calc"
 
 alias disks="sudo gnome-disks"
-alias PATH='echo -e ${PATH//:/\\n}'
-
-
-alias xselin='xsel --clipboard --input'
-alias xselou='xsel --clipboard --output'
-alias pass='</dev/urandom tr -dc '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' | head -c42 | xselin; echo $(xselou)'
-# alias pass='openssl rand -base64 ${1:-42} | xselin ; echo "$(xselou)"'

@@ -52,6 +52,7 @@ zinit light direnv/direnv
 zinit load wfxr/forgit
 
 
+zinit snippet OMZP::sudo
 zinit snippet OMZP::fzf
 zinit snippet OMZP::bgnotify
 

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+hdFilePath=$1
+homeFilePath=$2
+
+if [ ! -d "$homeFilePath" ]; then
+  ln -sv $hdFilePath $homeFilePath &> /dev/null
+  # echo "$messageOk ln - dir | $1 "
+  # echo "$messageError  $homeFilePath"
+fi

@@ -1,5 +1,15 @@
 #!/bin/zsh
-source ~/dotfiles/.scripts/dotsync.sh
+
+hdln(){
+  hdFilePath=$1
+  homeFilePath=$2
+
+  if [ ! -d "$homeFilePath" ]; then
+    ln -sv $hdFilePath $homeFilePath &> /dev/null
+  fi
+}
+
+
 
 export SHELL="/bin/zsh"
 

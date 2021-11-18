@@ -1,8 +1,47 @@
+/******
+* name: arkenfox user.js
+* date: 25 October 2021
+* version 94-alpha
+* url: https://github.com/arkenfox/user.js
+* license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
+
+* INDEX:
+  0100: STARTUP
+  0200: GEOLOCATION / LANGUAGE / LOCALE
+  0300: QUIETER FOX
+  0400: SAFE BROWSING
+  0600: BLOCK IMPLICIT OUTBOUND
+  0700: DNS / DoH / PROXY / SOCKS / IPv6
+  0800: LOCATION BAR / SEARCH BAR / SUGGESTIONS / HISTORY / FORMS
+  0900: PASSWORDS
+  1000: DISK AVOIDANCE
+  1200: HTTPS (SSL/TLS / OCSP / CERTS / HPKP)
+  1400: FONTS
+  1600: HEADERS / REFERERS
+  1700: CONTAINERS
+  2000: PLUGINS / MEDIA / WEBRTC
+  2300: WEB WORKERS
+  2400: DOM (DOCUMENT OBJECT MODEL)
+  2600: MISCELLANEOUS
+  2700: PERSISTENT STORAGE
+  2800: SHUTDOWN
+  4000: FPI (FIRST PARTY ISOLATION)
+  4500: RFP (RESIST FINGERPRINTING)
+  5000: OPTIONAL OPSEC
+  5500: OPTIONAL HARDENING
+  6000: DON'T TOUCH
+  7000: DON'T BOTHER
+  8000: DON'T BOTHER: NON-RFP
+  9000: PERSONAL
+  9999: DEPRECATED / REMOVED / LEGACY / RENAMED
+******/
+
 // search
 user_pref("browser.search.region", "US");
 
 // Fix mouse
 user_pref("ui.context_menus.after_mouseup", true);
+
 
 /* 0000: disable about:config warning ***/
 user_pref("browser.aboutConfig.showWarning", false);
