@@ -43,14 +43,14 @@ while getopts ":hvdncs" opt; do
     ;;
 
     c)
-      echo_separate "Clock"
+      echo_separate "Clock (hwclock --show)"
       sudo hwclock --show
       timedatectl
 
-      echo_separate "Keyboard"
+      echo_separate "Keyboard (localectl status)"
       localectl status
 
-      echo_separate "Locale"
+      echo_separate "Locale (locale)"
       locale
     ;;
 

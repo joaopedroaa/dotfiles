@@ -712,7 +712,8 @@ user_pref("_user.js.parrot", "4500 syntax error: the parrot's popped 'is clogs")
  * [SETUP-WEB] RFP can cause some website breakage: mainly canvas, use a site exception via the urlbar
  * RFP also has a few side effects: mainly timezone is UTC0, and websites will prefer light theme
  * [1] https://bugzilla.mozilla.org/418986 ***/
-user_pref("privacy.resistFingerprinting", true);
+ // user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting", false);
 /* 4502: set new window sizes to round to hundreds [FF55+] [SETUP-CHROME]
  * Width will round down to multiples of 200s and height to 100s, to fit your screen.
  * The max values are a starting point to round from if you want some control

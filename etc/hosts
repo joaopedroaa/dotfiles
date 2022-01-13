@@ -94957,8 +94957,8 @@ fe80::1%lo0       localhost
 0.0.0.0 www.3xhd.tv
 0.0.0.0 3xkittens.com
 0.0.0.0 boards.420chan.org
-0.0.0.0 4chan.org
-0.0.0.0 boards.4chan.org
+# 0.0.0.0 4chan.org
+# 0.0.0.0 boards.4chan.org
 0.0.0.0 4kporn.tube
 0.0.0.0 4kporns.com
 0.0.0.0 4plaisir.com

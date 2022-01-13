@@ -36,6 +36,7 @@ stot -l .config/xmobar
 stot -l .config/xmonad
 stot -l .config/zathura
 
+stot -l .config/firefox/user.js                  .mozilla/firefox/vdhmokqy.default-nightly/user.js
 stot -l .config/dolphin/dolphinrc                .config/dolphinrc
 stot -l .config/git/.gitconfig                   .gitconfig
 stot -l .config/pavucontrol/pavucontrol.ini      .config/pavucontrol.ini

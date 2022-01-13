@@ -12,6 +12,7 @@ alias r="ranger"
 alias ca="calcurse"
 alias help="tldr"
 alias dir="dir --color "
+alias rms="shred -uzvn3"
 
 
 alias bye="shutdown 0"

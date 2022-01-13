@@ -248,3 +248,6 @@ ex=:\
 # /etc/locale.conf & ~/.config/plasma-localerc
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
+
+export FS_MOUNTOPTIONS="uid=1000,gid=1000"
