@@ -21,6 +21,7 @@ source at `bin`
 - `color` —  terminal colors test
 - `pass` —  generate a new password with 42 characters. e.g. ` pjDZHrjXB9LCnHHd1D5BvmbpKExkcOBYqA9oZ3nXxi`
 - `PATH` —  print $PATH in readable view
+- `radio` —  play online radio with mpv
 
 ### Folders Scheme
 
