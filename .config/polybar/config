@@ -18,9 +18,6 @@
 
 
 [colors]
-background = #aa282c34
-foreground = #bdc0c7
-
 color0 = ${xrdb:color0}
 color1 = ${xrdb:color1}
 color2 = ${xrdb:color2}
@@ -38,8 +35,18 @@ color13 = ${xrdb:color13}
 color14 = ${xrdb:color14}
 color15 = ${xrdb:color15}
 
-dark-light = #aa16181c
+background = #aa090013
+background-dark = #aa090013
+
+; background = #aa282c34
+; background-dark = #aa16181c
+
+foreground = #bdc0c7
 active-light = #313435
+
+underline=${xrdb:color15}
+
+
 
 
 
@@ -71,7 +78,7 @@ module-margin-right = 0
 
 tray-position = right
 
-line-size = 1
+line-size = 2
 bottom = false
 
 modules-left = i3 spotify
@@ -90,14 +97,33 @@ font-3 = unifont:fontformat=truetype:size=10:antialias=true;
 [module/i3]
 ;=====================
 type = internal/i3
-format = <label-state> <label-mode>
+
+pin-workspaces = true
 index-sort = true
 wrapping-scroll = false
-; workspace-label = %index%
-workspace-label = %name%
+format = <label-state> <label-mode>
 
-; Only show workspaces on the same output as the bar
-pin-workspaces = true
+
+; workspace-label = %index%
+workspace-label = %icon%
+
+fuzzy-match = true
+
+
+ws-icon-0 = 0;0
+ws-icon-1 = 1;Fire
+ws-icon-2 = 2;Code
+ws-icon-3 = 3;3
+ws-icon-4 = 4;4
+ws-icon-5 = 5;5
+ws-icon-6 = 6;6
+ws-icon-7 = 7;Disc
+ws-icon-8 = 8;Musc
+ws-icon-9 = 9;Read
+ws-icon-10 = 10;Back
+ws-icon-default =
+
+
 
 label-mode-padding =
 label-mode-foreground = #000
@@ -132,8 +158,8 @@ label-urgent-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
-
-
+label-separator-padding = 0
+label-separator-foreground = ${self.workspace-label}
 
 
 
@@ -147,7 +173,7 @@ interval = 1
 ;format = <label>
 format-padding = 2
 
-format-background = ${colors.dark-light}
+format-background = ${colors.background-dark}
 format-foreground = ${colors.color2}
 format-underline = ${colors.color2}
 
@@ -211,7 +237,7 @@ type = internal/xwindow
 
 
 label = %title%
-label-maxlen = 100
+label-maxlen = 24
 
 label-empty = Empty
 label-empty-foreground = #707880
@@ -221,7 +247,7 @@ format-prefix-underline = #292d3e
 
 ; format-foreground =${colors.color5}
 ; format-underline = ${colors.color2}
-; format-background = ${colors.dark-light}
+; format-background = ${colors.background-dark}
 format-padding = 2
 
 
@@ -301,8 +327,8 @@ label-volume-foreground = ${root.foreground}
 
 
 
-label-underline = ${colors.color15}
-label-background = ${colors.dark-light}
+label-underline = ${colors.underline}
+label-background = ${colors.background-dark}
 label-padding = 1
 
 
@@ -352,8 +378,8 @@ format = <label>
 
 
 
-format-underline = ${colors.color15}
-format-background = ${colors.dark-light}
+format-underline = ${colors.underline}
+format-background = ${colors.background-dark}
 format-padding = 1
 
 label = %percentage%%
@@ -368,8 +394,8 @@ interval = 0.5
 format = <label>
 format-prefix = "﬙ "
 
-format-underline = ${colors.color15}
-format-background = ${colors.dark-light}
+format-underline = ${colors.underline}
+format-background = ${colors.background-dark}
 format-padding = 1
 
 label = %output% MB
@@ -382,8 +408,8 @@ interval = 0.5
 
 format-prefix = "﬙ "
 format-prefix-foreground = ${colors.color15}
-format-underline = ${colors.color15}
-format-background = ${colors.dark-light}
+format-underline = ${colors.underline}
+format-background = ${colors.background-dark}
 format-padding = 1
 
 label = Mem %percentage_used%%
@@ -406,13 +432,13 @@ format-prefix = " "
 format = <label>
 format-warn = <label-warn>
 
-format-underline =  ${colors.color15}
-format-background = ${colors.dark-light}
+format-underline =  ${colors.underline}
+format-background = ${colors.background-dark}
 format-padding = 1
 
+format-warn-underline = ${colors.underline}
+format-warn-background = ${colors.background-dark}
 format-warn-foreground = ${colors.color1}
-format-warn-underline = ${colors.color1}
-format-warn-background = ${colors.dark-light}
 format-warn-padding = 1
 
 label = %temperature-c%
@@ -428,8 +454,8 @@ interval = 1800
 
 ;format = <label>
 format-padding = 1
-format-background = ${colors.dark-light}
-format-underline = ${colors.color15}
+format-background = ${colors.background-dark}
+format-underline = ${colors.underline}
 
 label = %output%
 
@@ -442,8 +468,8 @@ exec = ~/dotfiles/.config/polybar/scripts/updates-pacman.sh
 interval = 1000
 label =  %output%
 
-format-underline =${colors.color15}
-format-background = ${colors.dark-light}
+format-underline =${colors.underline}
+format-background = ${colors.background-dark}
 format-padding = 1
 
 
@@ -459,8 +485,8 @@ date-alt = "%A %m/%d"
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline =  ${colors.color15}
-format-background = ${colors.dark-light}
+format-underline =  ${colors.underline}
+format-background = ${colors.background-dark}
 format-padding = 1
 
 label =  %date%
@@ -476,8 +502,8 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline =  ${colors.color15}
-format-background = ${colors.dark-light}
+format-underline =  ${colors.underline}
+format-background = ${colors.background-dark}
 format-padding = 1
 
 label = %time%

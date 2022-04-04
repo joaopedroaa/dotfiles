@@ -4,6 +4,8 @@ _exists() {
 
 alias up=update
 alias systemctl-restart=systemctl-enable
+alias start-bot="cd ~/Projects/Github/spambot-discord/ && yarn start"
+alias teams="teams --disable-seccomp-filter-sandbox"
 
 # ---- System ----------------------------
 alias t="touch"
@@ -14,6 +16,7 @@ alias help="tldr"
 alias dir="dir --color "
 alias rms="shred -uzvn3"
 
+alias iexm="iex -S mix"
 
 alias bye="shutdown 0"
 alias soon="i3lock -c 000000; systemctl suspend"

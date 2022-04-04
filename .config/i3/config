@@ -125,7 +125,7 @@ bindsym $mod+KP_Enter exec kitty ranger
 bindsym $mod+KP_Add exec alacritty
 
 # Short
-bindsym $mod+F1 exec firefox-nightly
+bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec thunar
 bindsym $mod+F3 exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 

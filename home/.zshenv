@@ -16,7 +16,7 @@ export SHELL="/bin/zsh"
 # Default apps
 export TERMINAL="kitty"
 export EDITOR="nvim"
-export BROWSER="firefox-nightly"
+export BROWSER="firefox"
 export READER="zathura"
 # export TERM="vt100"
 
