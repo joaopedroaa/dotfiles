@@ -1,4 +1,14 @@
-### Installation
+<h1 align="center">~/.</h1>
+
+![desktop screenshot](./images/desktop.png)
+
+<p align="center">
+Daily driver configuration
+</p>
+
+
+### Installing
+
 
 Download repo
 ```sh
@@ -17,7 +27,7 @@ source at `bin`
 
 - `update` —  will update your system `yay, zinit, doom, cabal...`
 - `status` —  print useful infos. type `status -h` for help
-- `stot` —  like gnu stow, but easier. type `stot -h` for help
+- `stot` —  like gnu stow, but easier. source at bin/stot, type `stot -h` for help,
 - `color` —  terminal colors test
 - `pass` —  generate a new password with 42 characters. e.g. ` pjDZHrjXB9LCnHHd1D5BvmbpKExkcOBYqA9oZ3nXxi`
 - `PATH` —  print $PATH in readable view
