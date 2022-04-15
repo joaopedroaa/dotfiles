@@ -6,6 +6,7 @@ alias up=update
 alias systemctl-restart=systemctl-enable
 alias start-bot="cd ~/Projects/Github/spambot-discord/ && yarn start"
 alias teams="teams --disable-seccomp-filter-sandbox"
+alias get-class="xprop | grep \"WM_CLASS\""
 
 # ---- System ----------------------------
 alias t="touch"

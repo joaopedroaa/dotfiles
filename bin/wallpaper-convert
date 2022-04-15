@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ffmpeg -i $1.mp4 -b:v 0 -b:a 128k -crf 30 -c:v libvpx-vp9 -c:a libopus $1.webm

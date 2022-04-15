@@ -18,6 +18,7 @@ stot -l home/.zshrc                             /
 
 echo_separate "/home/.config"
 stot -l .config/alacritty
+stot -l .config/BetterDiscord
 stot -l .config/cava
 stot -l .config/doom
 stot -l .config/dunst
@@ -26,6 +27,7 @@ stot -l .config/i3
 stot -l .config/i3blocks
 stot -l .config/kitty
 stot -l .config/lf
+stot -l .config/mpv
 stot -l .config/nvim
 stot -l .config/neofetch
 stot -l .config/polybar

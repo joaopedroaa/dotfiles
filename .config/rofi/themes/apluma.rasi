@@ -6,8 +6,8 @@
 
 * {
     /* Custom colours */
-    darkgrey:              #44475a;
-    lightgrey:             #44475a;
+    darkgrey:              #44475a90;
+    lightgrey:             #44475a90;
     bluegrey:              #6464FF;
     white:                 #f8f8f2;
     cyan:                  #8be9fd;

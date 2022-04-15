@@ -128,6 +128,7 @@ bindsym $mod+KP_Add exec alacritty
 bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec thunar
 bindsym $mod+F3 exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
+bindsym $mod+F4 exec pcmanfm
 
 
 bindsym $mod+Scroll_Lock exec i3lock -c 000000
