@@ -1,18 +1,17 @@
 #!/bin/sh
 
+# -- Use gnome-disks --
+# sudo mount /dev/sdb1 /home/joaopedro/HardDrive
+# sudo modprobe r8169
 
 xmodmap $XDG_DOTFILES_DIR/.config/keyboard/.Xmodmap_dead_greek
 
-# sudo mount /dev/sdc1 /home/joaopedro/HD
-# sudo modprobe r8169
-
 nitrogen --restore &
-picom --experimental-backends --backend glx --xrender-sync-fence &
+picom --backend glx --xrender-sync-fence &
 flameshot &
 dunst &
 redshift &
 discord --start-minimized &
-
 nvidia-settings --load-config-only
 
 # exec xmonad

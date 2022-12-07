@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 git remote add origin $1
-git push origin master
+git push origin main
