@@ -133,8 +133,8 @@ alias plvolu="plspotify volume"
 
 
 # Du / Agedu
-alias agdw="sudo agedu -w --auth none"
-alias agds="sudo agedu -s /home/joaopedro"
+alias ageduh="sudo agedu -s /home/joaopedro -w --auth none"
+alias agedus="sudo agedu -s / -w --auth none"
 alias sizes="sudo du -sh ~/.* | sort -rh | head -10"
 
 
