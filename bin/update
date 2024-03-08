@@ -6,17 +6,16 @@
                 && makepkg -si --noconfirm
 
 echo_separate "yay -Syu"
-yay -Syu
-
-echo_separate "zinit"
-zinit self-update
-zinit update --parallel 80
-
-echo_separate "doom upgrade"
-doom -y upgrade
-
-echo_separate "cabal update"
-cabal update
+yay -Syyu
 
 echo_separate "tldr -u"
 tldr -u
+
+# echo_separate "zinit"
+# zinit update
+
+# echo_separate "doom upgrade"
+# doom -y upgrade
+
+# echo_separate "cabal update"
+# cabal update

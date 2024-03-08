@@ -54,7 +54,6 @@ else
 fi
 
 
-
 # .config
 export XMONAD_CONFIG_DIR="$XDG_CONFIG_HOME/xmonad"
 export XMONAD_CACHE_DIR="$XDG_CACHE_HOME/xmonad"

@@ -71,8 +71,8 @@ radiosRioDeJaneiro=(
 
 )
 radiosUrls=(
-    "https://20283.live.streamtheworld.com/SULAMERICAAAC_SC"
-    "https://26143.live.streamtheworld.com/JBFMAAC.aac"
+    ""
+    ""
     "https://playerservices.streamtheworld.com/api/livestream-redirect/MIXRIO.mp3"
     "https://live.paineldj.com.br/proxy/jptresrios?mp=/stream"
 )

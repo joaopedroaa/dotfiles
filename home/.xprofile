@@ -4,15 +4,15 @@
 # sudo mount /dev/sdb1 /home/joaopedro/HardDrive
 # sudo modprobe r8169
 
-xmodmap $XDG_DOTFILES_DIR/.config/keyboard/.Xmodmap_dead_greek
-
 nitrogen --restore &
-picom --backend glx --xrender-sync-fence &
 flameshot &
 dunst &
-redshift &
+nvidia-settings --load-config-only &
+picom --backend glx --xrender-sync-fence &
 discord --start-minimized &
-nvidia-settings --load-config-only
+
+xmodmap $XDG_DOTFILES_DIR/.config/keyboard/.Xmodmap_dead_greek
+# redshift &
 
 # exec xmonad
 # exec i3

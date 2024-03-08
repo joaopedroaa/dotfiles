@@ -12,6 +12,8 @@ if [ "$1" == "x" ]; then
 fi
 
 echo_separate "/home"
+stot -l home/.nvidia-settings-rc                /
+stot -l home/.screenlayout-main.sh              /
 stot -l home/.Xresources                        /
 stot -l home/.zshenv                            /
 stot -l home/.zshrc                             /

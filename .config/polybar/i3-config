@@ -301,7 +301,8 @@ format-prefix-foreground = ${colors.foreground-alt}
 type = internal/cpu
 interval = 0.5
 
-format-prefix = "  "
+; format-prefix = "  "
+format-prefix = ""
 format = <label>
 
 format-prefix-foreground = ${colors.foreground-alt}

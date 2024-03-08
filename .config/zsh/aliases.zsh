@@ -4,7 +4,6 @@ _exists() {
 
 alias up=update
 alias systemctl-restart=systemctl-enable
-alias start-bot="cd ~/Projects/Github/spambot-discord/ && yarn start"
 alias teams="teams --disable-seccomp-filter-sandbox"
 alias get-class="xprop | grep \"WM_CLASS\""
 
@@ -84,15 +83,20 @@ alias yalst='yay -Qe'
 alias yaorph='yay -Qtd'
 
 
+# pacman
+alias pacman-reset='sudo pacman -Syyu $(pacman -Qnq) --overwrite "*"'
+
+
 # ---- Apps ----------------------------
 
 # Code
 alias code="code-insiders"
 alias dots="code $XDG_DOTFILES_DIR"
-alias update-code="cd ~/.cache/yay/visual-studio-code-insiders-bin && makepkg -si"
+
 
 # Scripts
 alias syncd="sh $XDG_DOTFILES_DIR/sync.sh"
+
 
 # Docker
 alias dr="docker run"
