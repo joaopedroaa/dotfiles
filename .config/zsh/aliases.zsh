@@ -49,6 +49,7 @@ alias cdd="cd $XDG_HD_DIR/Desktop/"
 alias cdhd="cd $XDG_HD_DIR"
 alias cdl="cd $XDG_HD_DIR/Projects/Local"
 alias cdh="cd $XDG_HD_DIR/Projects/Github"
+alias cdm="cd /home/joaopedro/Docs/medalta"
 
 
 # ls  -  colorflag="--color=auto"
@@ -152,3 +153,5 @@ alias rofi-drun="rofi -show drun"
 alias rofi-calc="rofi -show calc"
 
 alias disks="sudo gnome-disks"
+
+alias infos="inxi & inxi -G"

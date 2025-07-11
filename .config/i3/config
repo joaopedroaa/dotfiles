@@ -7,6 +7,10 @@
 #       Please see http://i3wm.org/docs/userguide.html for a complete reference!
 # -------------------------------------------------------------------------------
 
+# Monitors
+set $monitor0  DP-4
+set $monitor1  HDMI-0
+
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
@@ -167,7 +171,7 @@ bindsym $mod+Ctrl+Shift+Left resize grow width 10 px or 10 ppt
 
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+t reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -227,8 +231,16 @@ bindsym $mod+r mode "resize"
 #         status_command i3blocks
 # }
 
+# # class                 border  backgr. text    indicator child_border
+# client.focused          #4c7899 #285577 #ffffff #2e9ef4   #a8a8ff
+# client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+# client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+# client.urgent           #2f343a #FF8383 #ffffff #FF8383   #FF8383
+# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# client.background       #ffffff
+
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #a8a8ff
+client.focused          #ffffff #ffffff #ffffff #ffffff   #ffffff
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #FF8383 #ffffff #FF8383   #FF8383
@@ -236,7 +248,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 
-###########################
+###########################``
 #        Workspace        #
 ###########################
 
@@ -253,6 +265,11 @@ set $ws8  8
 set $ws9  9
 set $ws10 10
 
+set $wsmsic 11
+set $wscomu 12
+set $wstrsh 20
+
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -264,6 +281,9 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+m workspace $wsmsic
+bindsym $mod+c workspace $wscomu
+bindsym $mod+x workspace $wstrsh
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -276,18 +296,22 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+m move container to workspace $wsmsic
+bindsym $mod+Shift+c move container to workspace $wscomu
+bindsym $mod+Shift+x move container to workspace $wstrsh
 
-set $monitor0  DP-4
-set $monitor1  HDMI-0
-
+# Layouts ---------------------------------------------
 workspace $ws1  output $monitor0
 workspace $ws2  output $monitor1
 workspace $ws3  output $monitor1
 workspace $ws4  output $monitor1
 workspace $ws5  output $monitor1
 workspace $ws10 output $monitor1
+workspace $wsmsic output $monitor0
+workspace $wscomu output $monitor0
+workspace $wstrsh output $monitor1
 
-exec "sh ~/dotfiles/.config/i3/start.sh"
+exec "sh ~/dotfiles/.config/i3layouts/startLayouts.sh"
 
 
 # Move between monitors
@@ -309,3 +333,9 @@ exec --no-startup-id kdeconnect-indicator
 
 ## Autotiling ######################### https://github.com/nwg-piotr/autotiling
 exec_always --no-startup-id autotiling
+
+## Dunst #########################
+exec_always --no-startup-id dunst
+
+## Picom #########################
+exec_always  --no-startup-id picom --backend glx --xrender-sync-fence

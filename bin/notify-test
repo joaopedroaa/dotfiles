@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+notify-send 'Hello world 1!' 'This is an example notification.' --icon=dialog-information
+notify-send 'Hello world 2!' 'This is an example notification.' --icon=dialog-information
+notify-send 'Hello world 3!' 'This is an example notification.' --icon=dialog-information
+notify-send 'Hello world 4!' 'This is an example notification.' --icon=dialog-information
+notify-send 'Hello world 5!' 'This is an example notification.' --icon=dialog-information

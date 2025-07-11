@@ -13,7 +13,7 @@ Version=202
 ViewPropsTimestamp=2020,12,23,19,20,1
 
 [IconsMode]
-PreviewSize=128
+PreviewSize=112
 
 [InformationPanel]
 previewsShown=false
@@ -52,7 +52,6 @@ HDMI-0 Width 1920=1280
 HDMI-0 XPosition=537
 HDMI-0 YPosition=185
 MenuBar=Disabled
-ToolBarsMovable=Disabled
 
 [Open-with settings]
 CompletionMode=1

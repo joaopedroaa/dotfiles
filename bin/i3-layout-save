@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+filename=$1
+[ $2 ] && filename=$2
+
+i3-save-tree --workspace $1 > ~/dotfiles/.config/i3layouts/$filename.json
+echo "Workspace $1 saved (~/dotfiles/.config/i3layouts/$filename.json)"

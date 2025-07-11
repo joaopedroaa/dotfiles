@@ -38,8 +38,8 @@ color15 = ${xrdb:color15}
 ; background = #17002f
 ; background-dark = #17002f
 
-background = #0b001700
-background-dark = #0b001700
+background = #49445A
+background-dark = #49445A
 
 foreground = #bdc0c7
 active-light = #313435
@@ -80,9 +80,9 @@ line-size = 2
 bottom = false
 
 ; xwindow
-modules-left =  spotify
+modules-left =   spotify
 modules-center = i3
-modules-right = time date memory-mb cpu temperature xbacklight wlan battery pulseaudio
+modules-right = time date memory-mb cpu temperature xbacklight wlan battery eth pulseaudio
 # modules-right = battery wlan xbacklight pulseaudio cpu temperature memory-mb aur-updates date time
 
 
@@ -133,6 +133,9 @@ ws-icon-7 = 7;VII
 ws-icon-8 = 8;VIII
 ws-icon-9 = 9;IX
 ws-icon-10 = 10;X
+ws-icon-11 = 11;Ms
+ws-icon-12 = 12;Dc
+ws-icon-13 = 20;
 
 ws-icon-default =
 label-mode-padding =
@@ -314,7 +317,7 @@ bar-fill-font = 2
 bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
+bar-empty-foreground = ${colors.foreground}
 
 
 
@@ -336,8 +339,7 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 
 label-volume =  %percentage%%
-label-volume-foreground = ${root.foreground}
-
+label-volume-foreground = ${colors.foreground}
 
 
 label-underline = ${colors.underline}
@@ -345,10 +347,8 @@ label-background = ${colors.background-dark}
 label-padding = 1
 
 
-label-muted = 🔇 muted
-label-muted-foreground = #666
-
-
+label-muted = "🔇 muted"
+label-muted-foreground = #FF0000
 
 
 
@@ -358,7 +358,7 @@ label-muted-foreground = #666
 type = custom/script
 interval = 300
 exec = ~/dotfiles/.config/polybar/scripts/crypto/crypto.py
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground}
 
 
 ;=========================================================================================
@@ -367,16 +367,16 @@ type = internal/network
 interface = enp3s0
 interval = 3.0
 
-format-connected-underline = ${colors.color2}
+format-connected-underline = ${colors.underline}
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;label-disconnected-foreground = ${colors.foreground}
 
 
 
@@ -498,7 +498,7 @@ date = %a %m/%d
 date-alt = "%A %m/%d"
 
 format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground}
 format-underline =  ${colors.underline}
 format-background = ${colors.background-dark}
 format-padding = 1
@@ -515,7 +515,7 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground}
 format-underline =  ${colors.underline}
 format-background = ${colors.background-dark}
 format-padding = 1

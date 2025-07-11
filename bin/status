@@ -14,9 +14,9 @@ while getopts ":hvdncs" opt; do
       echo "   -i, --info                "
     ;;
 
-    v)
-      VBoxManage setextradata global GUI/SuppressMessages "all"
-    ;;
+    # v)
+    #   VBoxManage setextradata global GUI/SuppressMessages "all"
+    # ;;
 
     i)
       pactl info

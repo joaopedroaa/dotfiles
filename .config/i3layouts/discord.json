@@ -1,0 +1,25 @@
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1028,
+       "width": 1898,
+       "x": 1931,
+       "y": 41
+    },
+    "marks": [],
+    "name": "Friends - Discord",
+    "percent": 1,
+    "swallows": [
+       {
+       "class": "^discord$",
+       "instance": "^discord$",
+       "machine": "^anyon$",
+       "title": "^Friends\\ \\-\\ Discord$",
+       "window_role": "^browser\\-window$"
+       }
+    ],
+    "type": "con"
+}
+

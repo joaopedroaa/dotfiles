@@ -1,15 +1,37 @@
 #!/bin/zsh
 
-hdln(){
-  hdFilePath=$1
-  homeFilePath=$2
+# hdln(){
+#   hdFilePath=$1
+#   homeFilePath=$2
 
-  if [ ! -d "$homeFilePath" ]; then
-    ln -sv $hdFilePath $homeFilePath &> /dev/null
-  fi
-}
+#   if [ ! -d "$homeFilePath" ]; then
+#     ln -sv $hdFilePath $homeFilePath &> /dev/null
+#   fi
+# }
 
+# # XDG
+# if [ -d "$XDG_HD_DIR" ]; then
+#   hdln $XDG_HD_DIR/Desktop       ~/Desktop
+#   hdln $XDG_HD_DIR/Downloads     ~/Downloads
+#   hdln $XDG_HD_DIR/Documents     ~/Documents
+#   hdln $XDG_HD_DIR/Media         ~/Media
+#   hdln $XDG_HD_DIR/Books         ~/Books
+#   hdln $XDG_HD_DIR/Projects      ~/Projects
 
+#   export XDG_DESKTOP_DIR="$XDG_HD_DIR/Desktop"
+#   export XDG_DOWNLOAD_DIR="$XDG_HD_DIR/Downloads"
+#   export XDG_DOCUMENTS_DIR="$XDG_HD_DIR/Documents"
+#   export XDG_PICTURES_DIR="$XDG_HD_DIR/Media"
+#   export XDG_MUSIC_DIR="$XDG_HD_DIR/Media"
+#   export XDG_VIDEOS_DIR="$XDG_HD_DIR/Media"
+# else
+#   export XDG_DESKTOP_DIR="$HOME/Desktop"
+#   export XDG_DOWNLOAD_DIR="$HOME/Downloads"
+#   export XDG_DOCUMENTS_DIR="$HOME/Documents"
+#   export XDG_PICTURES_DIR="$HOME/Media"
+#   export XDG_MUSIC_DIR="$HOME/Media"
+#   export XDG_VIDEOS_DIR="$HOME/Media"
+# fi
 
 export SHELL="/bin/zsh"
 
@@ -26,32 +48,17 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_DOTFILES_DIR="$HOME/dotfiles"
-export XDG_HD_DIR="$HOME/HardDrive/Linux"
+export XDG_HD_DIR="$HOME/"
 
 
-# XDG
-if [ -d "$XDG_HD_DIR" ]; then
-  hdln $XDG_HD_DIR/Desktop       ~/Desktop
-  hdln $XDG_HD_DIR/Downloads     ~/Downloads
-  hdln $XDG_HD_DIR/Documents     ~/Documents
-  hdln $XDG_HD_DIR/Media         ~/Media
-  hdln $XDG_HD_DIR/Books         ~/Books
-  hdln $XDG_HD_DIR/Projects      ~/Projects
 
-  export XDG_DESKTOP_DIR="$XDG_HD_DIR/Desktop"
-  export XDG_DOWNLOAD_DIR="$XDG_HD_DIR/Downloads"
-  export XDG_DOCUMENTS_DIR="$XDG_HD_DIR/Documents"
-  export XDG_PICTURES_DIR="$XDG_HD_DIR/Media"
-  export XDG_MUSIC_DIR="$XDG_HD_DIR/Media"
-  export XDG_VIDEOS_DIR="$XDG_HD_DIR/Media"
-else
+
   export XDG_DESKTOP_DIR="$HOME/Desktop"
   export XDG_DOWNLOAD_DIR="$HOME/Downloads"
   export XDG_DOCUMENTS_DIR="$HOME/Documents"
   export XDG_PICTURES_DIR="$HOME/Media"
   export XDG_MUSIC_DIR="$HOME/Media"
   export XDG_VIDEOS_DIR="$HOME/Media"
-fi
 
 
 # .config
