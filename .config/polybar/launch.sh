@@ -22,10 +22,10 @@ case $desktop in
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
       echo $m
-        MONITOR=$m polybar --reload poly -c ~/.config/polybar/config &
+        MONITOR=$m polybar --reload main -c ~/.config/polybar/config.ini &
       done
     else
-    polybar --reload poly -c ~/.config/polybar/config &
+    polybar --reload main -c ~/.config/polybar/config.ini &
     fi
     ;;
 
@@ -34,10 +34,10 @@ case $desktop in
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
       echo $m
-        MONITOR=$m polybar --reload poly -c ~/.config/polybar/config &
+        MONITOR=$m polybar --reload main -c ~/.config/polybar/config.ini &
       done
     else
-    polybar --reload poly -c ~/.config/polybar/config &
+    polybar --reload main -c ~/.config/polybar/config.ini &
     fi
     ;;
 esac
@@ -45,20 +45,20 @@ esac
 # xmonad|/usr/share/xsessions/xmonad)
 # if [ $count = 1 ]; then
 #   m=$(xrandr --query | grep " connected" | cut -d" " -f1)
-#   MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
+#   MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config.ini &
 # else
 #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-#     MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
+#     MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config.ini &
 #   done
 # fi
 
 # second polybar at bottom
 # if [ $count = 1 ]; then
 #   m=$(xrandr --query | grep " connected" | cut -d" " -f1)
-#   MONITOR=$m polybar --reload mainbar-xmonad-extra -c ~/.config/polybar/config &
+#   MONITOR=$m polybar --reload mainbar-xmonad-extra -c ~/.config/polybar/config.ini &
 # else
 #   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-#     MONITOR=$m polybar --reload mainbar-xmonad-extra -c ~/.config/polybar/config &
+#     MONITOR=$m polybar --reload mainbar-xmonad-extra -c ~/.config/polybar/config.ini &
 #   done
 # fi
 

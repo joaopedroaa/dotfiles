@@ -49,6 +49,7 @@ alias cdd="cd $XDG_HD_DIR/Desktop/"
 alias cdhd="cd $XDG_HD_DIR"
 alias cdl="cd $XDG_HD_DIR/Projects/Local"
 alias cdh="cd $XDG_HD_DIR/Projects/Github"
+alias cdda="cd $XDG_HD_DIR/Projects/dasa"
 alias cdm="cd /home/joaopedro/Docs/medalta"
 
 
@@ -93,6 +94,7 @@ alias pacman-reset='sudo pacman -Syyu $(pacman -Qnq) --overwrite "*"'
 # Code
 alias code="code-insiders"
 alias dots="code $XDG_DOTFILES_DIR"
+alias packs="code ~/packages"
 
 
 # Scripts
