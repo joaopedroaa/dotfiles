@@ -7,7 +7,7 @@ configuration {
 	combi-modi: "run,window";
 }
 
-@theme "~/dotfiles/.config/rofi/themes/apricot.rasi"
+
 
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -113,10 +113,15 @@ configuration {
 
 
 //@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
-//@theme "/home/joaopedro/.config/rofi/themes/custom.rasi"
-//@theme "/home/joaopedro/.config/rofi/themes/custom.rasi"
-//@theme "/home/joaopedro/.config/rofi/themes/azeny.rasi"
+//@theme "/usr/share/rofi/themes/iggy.rasi"
+//@theme "/usr/share/rofi/themes/purple.rasi"
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
 //@theme "/home/joaopedro/.config/rofi/themes/custom.rasi"
 //@theme "/home/joaopedro/.config/rofi/themes/apluma.rasi"
 //@theme "/home/joaopedro/.config/rofi/themes/apluma-sidebar.rasi"
-@theme "/home/joaopedro/.config/rofi/themes/apricot.rasi"
+//@theme "/home/joaopedro/.config/rofi/themes/apricot.rasi"
+//@theme "/home/joaopedro/.config/rofi/themes/styletwoline.rasi"
+
+
+@theme "/home/joaopedro/.config/rofi/themes/main.rasi"

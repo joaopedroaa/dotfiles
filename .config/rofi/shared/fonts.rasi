@@ -1,0 +1,10 @@
+* {
+    font: "JetBrains Mono Nerd Font 10";
+    font: "Material Icons 10";
+    font: "Material Icons Outlined 10";
+    font: "Material Icons Round 10";
+    font: "Material Icons Sharp 10";
+    font: "Material Icons TwoTone 10";
+}
+
+

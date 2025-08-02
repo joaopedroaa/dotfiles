@@ -6,16 +6,16 @@ xrandr --auto
 nitrogen --restore &
 flameshot &
 nvidia-settings --load-config-only &
+discord --start-minimized &
 
 xmodmap $XDG_DOTFILES_DIR/.config/keyboard/.Xmodmap_dead_greek
 
-sudo mount /dev/sdd1 /home/joaopedro/HardDrive
+# sudo mount /dev/sdd1 /home/joaopedro/HardDrive
 
 
 # -- Use gnome-disks --
 # sudo mount /dev/sdb1 /home/joaopedro/HardDrive
 # sudo modprobe r8169
-# discord --start-minimized &
 # dunst &
 # picom --backend glx --xrender-sync-fence &
 # redshift &
