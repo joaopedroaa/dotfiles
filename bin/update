@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-[ "$1" = "-c" ] && echo_separate "makepkg vscode insiders" \
+[ "$1" = "--all" ] && echo_separate "makepkg vscode insiders" \
                 && cd ~/.cache/yay/visual-studio-code-insiders-bin \
                 && makepkg -si --noconfirm
 
@@ -11,8 +11,8 @@ yay -Syyu
 echo_separate "tldr -u"
 tldr -u
 
-# echo_separate "zinit"
-# zinit update
+echo_separate "zinit"
+zinit update
 
 # echo_separate "doom upgrade"
 # doom -y upgrade

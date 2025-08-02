@@ -92,7 +92,7 @@ alias pacman-reset='sudo pacman -Syyu $(pacman -Qnq) --overwrite "*"'
 # ---- Apps ----------------------------
 
 # Code
-alias code="code-insiders"
+alias code="code"
 alias dots="code $XDG_DOTFILES_DIR"
 alias packs="code ~/packages"
 
@@ -157,3 +157,4 @@ alias rofi-calc="rofi -show calc"
 alias disks="sudo gnome-disks"
 
 alias infos="inxi & inxi -G"
+alias char="gucharmap"

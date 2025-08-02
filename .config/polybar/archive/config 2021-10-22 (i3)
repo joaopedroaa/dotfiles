@@ -33,7 +33,7 @@ success=#0f0
 
 
 ;=========================================================================================
-[bar/poly]
+[bar/main]
 monitor = ${env:MONITOR}
 monitor-strict = false
 override-redirect = false
