@@ -5,18 +5,29 @@ while getopts ":hvdncs" opt; do
     h)
       echo "Usage: status [OPTION]"
       echo ""
-      echo "   -h, --help                  "
-      echo "   -v, --virtual               "
-      echo "   -d, --disk                  "
-      echo "   -n, --net                   "
-      echo "   -c, --config                "
-      echo "   -s, --size                "
-      echo "   -i, --info                "
+      echo "   -h    Show this help message"
+      # echo "   -v    Virtual"
+      echo "   -d    Show disk usage (duf)"
+      echo "   -n    Show network info"
+      echo "   -m    Show monitor info"
+      echo "   -c    Show config info (clock, keyboard, locale)"
+      echo "   -a    Apps"
+      echo "   -i    Show audio info (pactl info)"
+
     ;;
 
     # v)
     #   VBoxManage setextradata global GUI/SuppressMessages "all"
     # ;;
+
+    a)
+      mozo
+      pkgbrowser
+    ;;
+
+    m)
+      arandr
+    ;;
 
     i)
       pactl info

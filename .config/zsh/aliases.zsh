@@ -36,8 +36,8 @@ alias ....="cd ../../.."
 alias c.="code ."
 alias c..="code . && exit"
 
-alias n="nvim"
-alias n.="nvim ."
+alias nv="nvim"
+alias nv.="nvim ."
 
 alias e="$EDITOR"
 alias e.="$EDITOR ."

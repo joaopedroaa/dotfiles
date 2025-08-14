@@ -67,7 +67,7 @@ bindsym $mod+Shift+Print exec gcolor2
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+Tab exec "rofi -show drun"
+bindsym $mod+Tab  exec --no-startup-id $HOME/dotfiles/.config/rofi/powermenu.sh
 bindsym $mod+Shift+d exec --no-startup-id rofi -show calc -modi calc -no-show-match -no-sort
 # bindsym $mod+Shift+Ctrl+d exec --no-startup-id
 
@@ -89,7 +89,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+# bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -131,8 +131,8 @@ bindsym $mod+KP_Add exec alacritty
 # Short
 bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec thunar
-bindsym $mod+F3 exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
-bindsym $mod+F4 exec pcmanfm
+bindsym $mod+F3 exec spotify
+# bindsym $mod+F4 exec pcmanfm
 
 
 bindsym $mod+Scroll_Lock exec i3lock -c 000000
@@ -264,11 +264,11 @@ set $ws7  7
 set $ws8  8
 set $ws9  9
 set $ws10 10
-
-set $wsmsic 11
-set $wscomu 12
+set $wsmusic 11
+set $wsteams 12
+set $wsfront 13
+set $wsback 14
 set $wstrsh 20
-
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -281,8 +281,10 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
-bindsym $mod+m workspace $wsmsic
-bindsym $mod+c workspace $wscomu
+bindsym $mod+m workspace $wsmusic
+bindsym $mod+c workspace $wsteams
+bindsym $mod+f workspace $wsfront
+bindsym $mod+b workspace $wsback
 bindsym $mod+x workspace $wstrsh
 
 # move focused container to workspace
@@ -296,8 +298,10 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-bindsym $mod+Shift+m move container to workspace $wsmsic
-bindsym $mod+Shift+c move container to workspace $wscomu
+bindsym $mod+Shift+m move container to workspace $wsmusic
+bindsym $mod+Shift+c move container to workspace $wsteams
+bindsym $mod+Shift+f move container to workspace $wsfront
+bindsym $mod+Shift+b move container to workspace $wsback
 bindsym $mod+Shift+x move container to workspace $wstrsh
 
 # Layouts ---------------------------------------------
@@ -307,8 +311,10 @@ workspace $ws3  output $monitor1
 workspace $ws4  output $monitor1
 workspace $ws5  output $monitor1
 workspace $ws10 output $monitor1
-workspace $wsmsic output $monitor0
-workspace $wscomu output $monitor0
+workspace $wsmusic output $monitor0
+workspace $wsteams output $monitor0
+workspace $wsfront output $monitor0
+workspace $wsback output $monitor0
 workspace $wstrsh output $monitor1
 
 exec "sh ~/dotfiles/.config/i3layouts/startLayouts.sh"
@@ -328,8 +334,8 @@ gaps outer 0
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ## Kde Connect #########################
-exec --no-startup-id /usr/lib/kdeconnectd
-exec --no-startup-id kdeconnect-indicator
+# exec --no-startup-id /usr/lib/kdeconnectd
+# exec --no-startup-id kdeconnect-indicator
 
 ## Autotiling ######################### https://github.com/nwg-piotr/autotiling
 exec_always --no-startup-id autotiling

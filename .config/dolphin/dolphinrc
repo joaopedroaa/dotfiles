@@ -53,6 +53,9 @@ HDMI-0 XPosition=537
 HDMI-0 YPosition=185
 MenuBar=Disabled
 
+[Notification Messages]
+warnAboutRisksBeforeActingAsAdmin=false
+
 [Open-with settings]
 CompletionMode=1
 History=vl,oku,goog
