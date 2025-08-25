@@ -21,6 +21,7 @@ while getopts ":hvdncs" opt; do
     # ;;
 
     a)
+      xprop
       mozo
       pkgbrowser
     ;;

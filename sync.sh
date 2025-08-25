@@ -36,6 +36,7 @@ stot -l .config/polybar
 stot -l .config/ranger
 stot -l .config/redshift
 stot -l .config/rofi
+stot -l .config/xdg-desktop-portal
 stot -l .config/xmobar
 stot -l .config/xmonad
 stot -l .config/zathura
