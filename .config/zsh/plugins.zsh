@@ -1,4 +1,4 @@
-# source ~/.zinit/bin/zinit.zsh
+source ~/.zinit/bin/zinit.zsh
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -44,6 +44,13 @@ bindkey '^[[B' history-substring-search-down
 # zsh-autopair
 # Fecha automaticamente parênteses, colchetes, etc
 zinit light hlissner/zsh-autopair
+
+zinit ice as"program" from"gh-r"
+zinit light muesli/duf
+
+zinit ice as"program" from"gh-r"
+zinit light dundee/gdu
+
 
 # ============================================================================== #
 # ==                        COMPLETIONS (AUTOCOMPLETAR)                         == #
