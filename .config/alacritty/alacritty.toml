@@ -1,0 +1,101 @@
+
+[color.bright]
+black = "0x2d2d2d"
+blue = "0x6699cc"
+cyan = "0x66cccc"
+green = "0xa5e1ad"
+magenta = "0xbd93f9"
+red = "0xe5989b"
+white = "0xf2f0ec"
+yellow = "0xffcc66"
+
+[color.normal]
+black = "0x2d2d2d"
+blue = "0x6699cc"
+cyan = "0x66cccc"
+green = "0xa5e1ad"
+magenta = "0xbd93f9"
+red = "0xe5989b"
+white = "0xd3d0c8"
+yellow = "0xffcc66"
+
+[color.primary]
+background = "#312f43"
+foreground = "0xd3d0c8"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "0x2d2d2d"
+blue = "0x6699cc"
+cyan = "0x66cccc"
+green = "0xa5e1ad"
+magenta = "0xbd93f9"
+red = "0xe5989b"
+white = "0xf2f0ec"
+yellow = "0xffcc66"
+
+[colors.normal]
+black = "0x2d2d2d"
+blue = "0x6699cc"
+cyan = "0x66cccc"
+green = "0xa5e1ad"
+magenta = "0xbd93f9"
+red = "0xe5989b"
+white = "0xd3d0c8"
+yellow = "0xffcc66"
+
+[colors.primary]
+background = "#312f43"
+foreground = "0xd3d0c8"
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "monospace"
+style = "Bold"
+
+[font.bold_italic]
+family = "monospace"
+style = "Bold Italic"
+
+[font.italic]
+family = "monospace"
+style = "Italic"
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[nord.bright]
+black = "#4C566A"
+blue = "#81A1C1"
+cyan = "#8FBCBB"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#ECEFF4"
+yellow = "#EBCB8B"
+
+[nord.normal]
+black = "#3B4252"
+blue = "#81A1C1"
+cyan = "#88C0D0"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#E5E9F0"
+yellow = "#EBCB8B"
+
+[nord.primary]
+background = "#2E3440"
+foreground = "#D8DEE9"
+
+[scrolling]
+history = 10000

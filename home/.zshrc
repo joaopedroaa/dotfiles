@@ -5,9 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source ~/dotfiles/.config/zsh/config.zsh    # 1
-source ~/dotfiles/.config/zsh/aliases.zsh   # 2
-source ~/dotfiles/.config/zsh/plugins.zsh   # 3
+
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -21,3 +19,9 @@ fi
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
+export PATH="$HOME/.config/emacs/bin:$PATH"
+
+
+source ~/dotfiles/.config/zsh/config.zsh    # 1
+source ~/dotfiles/.config/zsh/aliases.zsh   # 2
+source ~/dotfiles/.config/zsh/plugins.zsh   # 3

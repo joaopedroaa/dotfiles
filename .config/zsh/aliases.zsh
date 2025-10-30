@@ -3,6 +3,7 @@ _exists() {
 }
 
 alias up=update
+alias upd="brew update && brew upgrade"
 alias systemctl-restart=systemctl-enable
 alias teams="teams --disable-seccomp-filter-sandbox"
 alias get-class="xprop | grep \"WM_CLASS\""
@@ -61,11 +62,11 @@ alias cdm="cd $XDG_HD_DIR/dev/work/lab/medalta"
 # alias ls="lsd -lF ${colorflag}"
 # alias lsa="lsd -lAF ${colorflag}"
 
-alias l='exa --icons '
-alias ls='exa --icons -l'
-alias la='exa --icons -la'
-alias ll='exa --icons -l'
-alias lt='exa --icons --tree'
+alias l='eza --icons '
+alias ls='eza --icons -l'
+alias la='eza --icons -la'
+alias ll='eza --icons -l'
+alias lt='eza --icons --tree'
 
 # tar
 alias tarzip='unzip'
