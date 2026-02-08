@@ -2,6 +2,9 @@
 
 # sudo cp ~/dotfiles/bin/stot /usr/local/bin
 
+stot -l .config/borders
+stot -l .config/yabai
+stot -l .config/skhd
 stot -l .config/alacritty
 stot -l .config/doom
 stot -l .config/kitty

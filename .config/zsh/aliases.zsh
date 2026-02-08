@@ -46,14 +46,13 @@ alias e..="$EDITOR . && exit"
 
 
 # Folder Shortcuts
-alias cdd="cd $XDG_HD_DIR/Desktop/"
-alias cdhd="cd $XDG_HD_DIR"
-alias cdh="cd $XDG_HD_DIR/dev/Github"
+alias cdd="cd ~/Desktop/"
+alias cdh="cd ~/dev/Github"
 
-alias cda="cd $XDG_HD_DIR/dev/work/dasa/"
-alias cdv="cd $XDG_HD_DIR/dev/work/vasdev/"
-alias cdl="cd $XDG_HD_DIR/dev/work/lab/"
-alias cdm="cd $XDG_HD_DIR/dev/work/lab/medalta"
+alias cda="cd ~/dev/work/dasa/"
+alias cdv="cd ~/dev/work/vasdev/"
+alias cdl="cd ~/dev/work/lab/"
+alias cdm="cd ~/dev/work/lab/medalta"
 
 
 
@@ -102,12 +101,13 @@ alias pacman-reset='sudo pacman -Syyu $(pacman -Qnq) --overwrite "*"'
 
 # Code
 alias code="code"
-alias dots="code $XDG_DOTFILES_DIR"
+alias dots="code ~/dotfiles"
 alias packs="code ~/packages"
 
 
 # Scripts
-alias syncd="sh $XDG_DOTFILES_DIR/sync.sh"
+alias syncd="sh ~/dotfiles/sync.sh"
+alias syncm="sh ~/dotfiles/syncm.sh"
 
 
 # Docker

@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+
+# --- LAYOUT & BORDAS ---
+yabai -m config layout                       bsp
+
+# --- GAPS & PADDING ---
+yabai -m config window_gap                   12
+yabai -m config top_padding                  8
+yabai -m config bottom_padding               12
+yabai -m config left_padding                 12
+yabai -m config right_padding                12
+
+# --- REGRAS PARA APLICATIVOS  ---
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Calendar$" manage=off
+yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app="^Alfred$" manage=off
+yabai -m rule --add title="Preferences" manage=off
+yabai -m rule --add title="Settings" manage=off
+
+
+# --- CONFIGURAÇÕES GLOBAIS ---
+# Foco da janela segue o mouse (auto-focus) ou não (off)
+yabai -m config mouse_follows_focus          off
+
+# Foco não é transferido para a janela que foi movida com o mouse
+yabai -m config focus_follows_mouse          off
+
+# Janelas novas aparecem no lado direito da janela focada
+yabai -m config window_placement             second_child
