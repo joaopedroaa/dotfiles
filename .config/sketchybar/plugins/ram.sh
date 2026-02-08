@@ -21,4 +21,4 @@ PAGES_COMPRESSED=$(echo "$VM_STAT" | grep "Pages occupied by compressor" | awk '
 USED_PAGES=$(($PAGES_ACTIVE + $PAGES_WIRED + $PAGES_COMPRESSED))
 USED_PERCENT=$(( ($USED_PAGES * 100) / $TOTAL_PAGES ))
 
-sketchybar --set $NAME label="$USED_PERCENT%" icon=$MEMORY icon.color=$BLUE
+sketchybar --set $NAME label="$USED_PERCENT%" icon=$MEMORY

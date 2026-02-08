@@ -8,7 +8,7 @@ SSID=$(/usr/sbin/ipconfig getsummary en0 | awk -F ' SSID : '  '/ SSID : / {print
 IP=$(ipconfig getifaddr en0)
 
 if [ "$SSID" = "" ]; then
-  sketchybar --set $NAME label="Disconnected" icon=$WIFI_DISCONNECTED
+  sketchybar --set $NAME label="Disconnected" icon=$WIFI_DISCONNECTED icon.color=$GREY
 else
-  sketchybar --set $NAME label="$IP" icon=$WIFI_CONNECTED
+  sketchybar --set $NAME label="$IP" icon=$WIFI_CONNECTED icon.color=$TEAL
 fi

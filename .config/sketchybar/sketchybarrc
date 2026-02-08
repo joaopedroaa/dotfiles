@@ -1,37 +1,39 @@
 #!/usr/bin/env bash
 
-# --- CONFIGURAÇÃO DA BARRA ---
 . "$HOME/.config/sketchybar/colors.sh"
 . "$HOME/.config/sketchybar/icons.sh"
 
-# --- CONFIGURAÇÃO DA BARRA ---
-# --- CONFIGURAÇÃO DA BARRA ---
 sketchybar --bar \
-  height=44 \
+  height=40 \
   color=$TRANSPARENT \
   border_width=0 \
-  position=top \
-  y_offset=6 \
   margin=12 \
+  y_offset=2 \
+  corner_radius=12 \
+  position=top \
   sticky=on \
   padding_left=0 \
-  padding_right=0
+  padding_right=0 \
+  shadow=on
 
-# --- PADRÕES (DEFAULTS) ---
 sketchybar --default \
-  icon.font="JetBrainsMono Nerd Font:Bold:15.0" \
-  icon.color=$WHITE \
+  icon.font="JetBrainsMono Nerd Font:Bold:16.0" \
+  icon.color=$ICON_COLOR \
   label.font="JetBrainsMono Nerd Font:Bold:14.0" \
-  label.color=$WHITE \
+  label.color=$LABEL_COLOR \
   background.color=$TRANSPARENT \
-  icon.padding_left=8 \
-  icon.padding_right=8 \
+  icon.padding_left=10 \
+  icon.padding_right=4 \
   label.padding_left=4 \
-  label.padding_right=8 \
-  label.y_offset=0
+  label.padding_right=10 \
+  label.y_offset=0 \
+  popup.background.border_width=2 \
+  popup.background.corner_radius=12 \
+  popup.background.border_color=$GREY \
+  popup.blur_radius=20
 
 # ==============================================================================
-#  ESQUERDA: WORKSPACES (ILHA 1)
+#  ESQUERDA
 # ==============================================================================
 
 SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
@@ -43,55 +45,46 @@ for i in "${!SPACE_ICONS[@]}"; do
     --set space.$sid \
       space=$sid \
       icon="${SPACE_ICONS[i]}" \
-      icon.padding_left=12 \
-      icon.padding_right=12 \
+      icon.padding_left=10 \
+      icon.padding_right=10 \
       label.drawing=off \
       background.drawing=off \
+      icon.color=$SUBTEXT1 \
+      icon.highlight_color=$MAUVE \
       script="$HOME/.config/sketchybar/plugins/space.sh"
 done
-
-sketchybar --add item title left \
-  --set title \
-    icon.drawing=off \
-    label.color=$WHITE \
-    margin=20 \
-    background.color=$ITEM_BG_COLOR \
-    background.corner_radius=10 \
-    background.border_color=$GREY \
-    background.border_width=2 \
-    background.height=32 \
-    padding_left=10 \
-    padding_right=10 \
-    script="$HOME/.config/sketchybar/plugins/title.sh" \
-    --subscribe title front_app_switched
-
-sketchybar --add item media center \
-  --set media \
-    icon=􀊈 \
-    icon.color=$ACCENT_COLOR \
-    label.color=$WHITE \
-    background.color=$ITEM_BG_COLOR \
-    background.corner_radius=10 \
-    background.border_color=$GREY \
-    background.border_width=2 \
-    background.height=32 \
-    padding_left=10 \
-    padding_right=10 \
-    script="$HOME/.config/sketchybar/plugins/media.sh" \
-    --subscribe media media_change
 
 
 # Bracket para Spaces (Fundo unificado)
 sketchybar --add bracket spaces_bracket '/space\..*/' \
   --set spaces_bracket \
-    background.color=$ITEM_BG_COLOR \
-    background.corner_radius=10 \
-    background.border_color=$GREY \
-    background.border_width=2 \
+    background.color=$SURFACE0 \
+    background.corner_radius=12 \
+    background.border_color=$SURFACE1 \
+    background.border_width=1 \
     background.height=32
 
+
+sketchybar --add item title left \
+  --set title \
+    icon.drawing=off \
+    label.color=$TEXT \
+    margin=12 \
+    background.color=$SURFACE0 \
+    background.corner_radius=12 \
+    background.border_color=$SURFACE1 \
+    background.border_width=1 \
+    background.height=32 \
+    padding_left=10 \
+    padding_right=10 \
+    label.padding_left=12 \
+    label.padding_right=12 \
+    script="$HOME/.config/sketchybar/plugins/title.sh" \
+    --subscribe title front_app_switched
+
+
 # ==============================================================================
-#  DIREITA: STATUS SISTEMA (ILHA 3)
+#  DIREITA: GRUPO 1 (CALENDARIO, BATERIA, WIFI)
 # ==============================================================================
 
 # Relógio
@@ -100,52 +93,64 @@ sketchybar --add item clock right \
     update_freq=10 \
     icon="" \
     icon.color=$BLUE \
+    label.color=$TEXT \
+    padding_left=4 \
+    padding_right=4 \
     script="$HOME/.config/sketchybar/plugins/clock.sh" \
     click_script="open -a 'Calendar'"
-
-
-
-# WiFi
-sketchybar --add item wifi right \
-  --set wifi \
-    update_freq=10 \
-    icon.color=$ORANGE \
-    script="$HOME/.config/sketchybar/plugins/wifi.sh" \
-    click_script="open /System/Library/PreferencePanes/Network.prefPane"
-
 
 # Bateria
 sketchybar --add item battery right \
   --set battery \
     update_freq=120 \
+    icon.color=$GREEN \
+    label.color=$TEXT \
+    padding_left=4 \
+    padding_right=4 \
     script="$HOME/.config/sketchybar/plugins/battery.sh" \
     --subscribe battery system_woke power_source_change
 
+# WiFi
+sketchybar --add item wifi right \
+  --set wifi \
+    update_freq=2 \
+    icon.color=$TEAL \
+    label.color=$TEXT \
+    padding_left=4 \
+    padding_right=4 \
+    script="$HOME/.config/sketchybar/plugins/wifi_net.sh" \
+    click_script="open /System/Library/PreferencePanes/Network.prefPane"
+
+# Bracket: Grupo 1
+sketchybar --add bracket group_1 clock battery wifi \
+  --set group_1 \
+    background.color=$SURFACE0 \
+    background.corner_radius=12 \
+    background.border_color=$SURFACE1 \
+    background.border_width=1 \
+    background.height=32
+
+# ==============================================================================
+#  DIREITA: GRUPO 2 (VOLUME, CPU, MEMORIA)
+# ==============================================================================
+
+# Spacer betwen islands
+sketchybar --add item spacer_islands right \
+  --set spacer_islands \
+    width=16 \
+    background.drawing=off \
+    icon.drawing=off \
+    label.drawing=off
 
 # Volume
 sketchybar --add item volume right \
   --set volume \
+    icon.color=$PINK \
+    label.color=$TEXT \
+    padding_left=4 \
+    padding_right=4 \
     script="$HOME/.config/sketchybar/plugins/volume.sh" \
     --subscribe volume volume_change
-
-
-# # Disk
-# sketchybar --add item disk right \
-#   --set disk \
-#     update_freq=60 \
-#     icon=$DISK \
-#     icon.color=$MAGENTA \
-#     script="$HOME/.config/sketchybar/plugins/disk.sh" \
-#     click_script="open /System/Volumes/Data"
-
-# RAM
-sketchybar --add item ram right \
-  --set ram \
-    update_freq=5 \
-    icon=$MEMORY \
-    icon.color=$BLUE \
-    script="$HOME/.config/sketchybar/plugins/ram.sh" \
-    click_script="open -a 'Activity Monitor'"
 
 # CPU
 sketchybar --add item cpu right \
@@ -153,27 +158,32 @@ sketchybar --add item cpu right \
     update_freq=5 \
     icon=$CPU \
     icon.color=$RED \
+    label.color=$TEXT \
+    padding_left=4 \
+    padding_right=4 \
     script="$HOME/.config/sketchybar/plugins/cpu.sh" \
     click_script="open -a 'Activity Monitor'"
 
-# Download Speed
-sketchybar --add item net_down right \
-  --set net_down \
-    update_freq=2 \
-    script="$HOME/.config/sketchybar/plugins/net_down.sh"
+# RAM
+sketchybar --add item ram right \
+  --set ram \
+    update_freq=5 \
+    icon=$MEMORY \
+    icon.color=$YELLOW \
+    label.color=$TEXT \
+    padding_left=4 \
+    padding_right=4 \
+    script="$HOME/.config/sketchybar/plugins/ram.sh" \
+    click_script="open -a 'Activity Monitor'"
 
-
-
-# Bracket para Status (Fundo unificado)
-sketchybar --add bracket status_bracket  ram net net_down wifi cpu volume battery clock \
-  --set status_bracket \
-    background.color=$ITEM_BG_COLOR \
-    background.corner_radius=10 \
-    background.border_color=$GREY \
-    background.border_width=2 \
+# Bracket: Grupo 2
+sketchybar --add bracket group_2 volume cpu ram \
+  --set group_2 \
+    background.color=$SURFACE0 \
+    background.corner_radius=12 \
+    background.border_color=$SURFACE1 \
+    background.border_width=1 \
     background.height=32
-
-
 
 # Finaliza a configuração
 sketchybar --update

@@ -46,7 +46,7 @@ format_speed() {
 DOWN_FORMATTED=$(format_speed $SPEED_IN)
 
 # Update Sketchybar
-sketchybar --set $NAME label="↓ $DOWN_FORMATTED"
+sketchybar --set $NAME label="$DOWN_FORMATTED" icon="$NET_DOWN"
 
 # Save current state
 echo "$BYTES_IN $TIMESTAMP" > "$STATE_FILE"

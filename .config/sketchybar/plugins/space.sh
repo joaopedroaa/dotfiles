@@ -8,11 +8,13 @@
 if [ "$SELECTED" = "true" ]; then
   sketchybar --animate sin 10 --set $NAME \
     background.drawing=on \
-    background.color=$ACCENT_COLOR \
-    icon.color=$BLACK
+    background.color=$WHITE \
+    background.height=32 \
+    background.corner_radius=0 \
+    icon.color=$BAR_COLOR
 else
   sketchybar --animate sin 10 --set $NAME \
     background.drawing=off \
     background.color=$TRANSPARENT \
-    icon.color=$WHITE
+    icon.color=$SUBTEXT1
 fi
