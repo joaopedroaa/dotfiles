@@ -1,5 +1,8 @@
 #!/bin/sh
 
+. "$HOME/.config/sketchybar/colors.sh"
+. "$HOME/.config/sketchybar/icons.sh"
+
 PERCENTAGE=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
 CHARGING=$(pmset -g batt | grep 'AC Power')
 
@@ -7,17 +10,24 @@ if [ $PERCENTAGE = "" ]; then
   exit 0
 fi
 
-COLOR=0xff50fa7b # Verde
+COLOR=$GREEN
 
 if [ $PERCENTAGE -lt 20 ]; then
-  COLOR=0xffff5555 # Vermelho
+  COLOR=$RED
+  ICON=$BATTERY_0
 elif [ $PERCENTAGE -lt 50 ]; then
-  COLOR=0xffffb86c # Laranja
+  COLOR=$ORANGE
+  ICON=$BATTERY_25
+elif [ $PERCENTAGE -lt 75 ]; then
+  COLOR=$YELLOW
+  ICON=$BATTERY_50
+else
+  ICON=$BATTERY_75
 fi
 
-ICON=""
 if [ "$CHARGING" != "" ]; then
-  ICON=""
+  ICON=$BATTERY_CHARGING
+  COLOR=$GREEN
 fi
 
 sketchybar --set $NAME icon="$ICON" label="${PERCENTAGE}%" icon.color=$COLOR

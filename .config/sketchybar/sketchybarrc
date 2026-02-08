@@ -1,37 +1,29 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-# --- CORES (Dracula) ---
-BLACK=0xff282a36
-WHITE=0xfff8f8f2
-RED=0xffff5555
-GREEN=0xff50fa7b
-BLUE=0xff8be9fd
-YELLOW=0xfff1fa8c
-ORANGE=0xffffb86c
-MAGENTA=0xffbd93f9
-GREY=0xff44475a
-TRANSPARENT=0x00000000
+# --- CONFIGURAÇÃO DA BARRA ---
+. "$HOME/.config/sketchybar/colors.sh"
+. "$HOME/.config/sketchybar/icons.sh"
 
 # --- CONFIGURAÇÃO DA BARRA ---
 # --- CONFIGURAÇÃO DA BARRA ---
 sketchybar --bar \
   height=44 \
-  color=0x00000000 \
+  color=$TRANSPARENT \
   border_width=0 \
   position=top \
   y_offset=6 \
   margin=12 \
   sticky=on \
-  padding_left=12 \
-  padding_right=12
+  padding_left=0 \
+  padding_right=0
 
 # --- PADRÕES (DEFAULTS) ---
 sketchybar --default \
   icon.font="JetBrainsMono Nerd Font:Bold:15.0" \
-  icon.color=0xfff8f8f2 \
+  icon.color=$WHITE \
   label.font="JetBrainsMono Nerd Font:Bold:14.0" \
-  label.color=0xfff8f8f2 \
-  background.color=0x00000000 \
+  label.color=$WHITE \
+  background.color=$TRANSPARENT \
   icon.padding_left=8 \
   icon.padding_right=8 \
   label.padding_left=4 \
@@ -58,26 +50,14 @@ for i in "${!SPACE_ICONS[@]}"; do
       script="$HOME/.config/sketchybar/plugins/space.sh"
 done
 
-# Bracket para Spaces (Fundo unificado)
-sketchybar --add bracket spaces_bracket '/space\..*/' \
-  --set spaces_bracket \
-    background.color=0xff282a36 \
-    background.corner_radius=10 \
-    background.border_color=0xff44475a \
-    background.border_width=2 \
-    background.height=32
-
-# ==============================================================================
-#  CENTRO: TÍTULO DA JANELA (ILHA 2)
-# ==============================================================================
-
-sketchybar --add item title center \
+sketchybar --add item title left \
   --set title \
     icon.drawing=off \
-    label.color=0xfff8f8f2 \
-    background.color=0xff282a36 \
+    label.color=$WHITE \
+    margin=20 \
+    background.color=$ITEM_BG_COLOR \
     background.corner_radius=10 \
-    background.border_color=0xff44475a \
+    background.border_color=$GREY \
     background.border_width=2 \
     background.height=32 \
     padding_left=10 \
@@ -85,30 +65,54 @@ sketchybar --add item title center \
     script="$HOME/.config/sketchybar/plugins/title.sh" \
     --subscribe title front_app_switched
 
+sketchybar --add item media center \
+  --set media \
+    icon=􀊈 \
+    icon.color=$ACCENT_COLOR \
+    label.color=$WHITE \
+    background.color=$ITEM_BG_COLOR \
+    background.corner_radius=10 \
+    background.border_color=$GREY \
+    background.border_width=2 \
+    background.height=32 \
+    padding_left=10 \
+    padding_right=10 \
+    script="$HOME/.config/sketchybar/plugins/media.sh" \
+    --subscribe media media_change
+
+
+# Bracket para Spaces (Fundo unificado)
+sketchybar --add bracket spaces_bracket '/space\..*/' \
+  --set spaces_bracket \
+    background.color=$ITEM_BG_COLOR \
+    background.corner_radius=10 \
+    background.border_color=$GREY \
+    background.border_width=2 \
+    background.height=32
+
 # ==============================================================================
 #  DIREITA: STATUS SISTEMA (ILHA 3)
 # ==============================================================================
+
+# Relógio
+sketchybar --add item clock right \
+  --set clock \
+    update_freq=10 \
+    icon="" \
+    icon.color=$BLUE \
+    script="$HOME/.config/sketchybar/plugins/clock.sh" \
+    click_script="open -a 'Calendar'"
+
+
 
 # WiFi
 sketchybar --add item wifi right \
   --set wifi \
     update_freq=10 \
-    icon.color=0xffffb86c \
-    script="$HOME/.config/sketchybar/plugins/wifi.sh"
+    icon.color=$ORANGE \
+    script="$HOME/.config/sketchybar/plugins/wifi.sh" \
+    click_script="open /System/Library/PreferencePanes/Network.prefPane"
 
-# CPU
-sketchybar --add item cpu right \
-  --set cpu \
-    update_freq=5 \
-    icon="" \
-    icon.color=0xffff5555 \
-    script="$HOME/.config/sketchybar/plugins/cpu.sh"
-
-# Volume
-sketchybar --add item volume right \
-  --set volume \
-    script="$HOME/.config/sketchybar/plugins/volume.sh" \
-    --subscribe volume volume_change
 
 # Bateria
 sketchybar --add item battery right \
@@ -117,22 +121,58 @@ sketchybar --add item battery right \
     script="$HOME/.config/sketchybar/plugins/battery.sh" \
     --subscribe battery system_woke power_source_change
 
-# Relógio
-sketchybar --add item clock right \
-  --set clock \
-    update_freq=10 \
-    icon="" \
-    icon.color=0xff8be9fd \
-    script="$HOME/.config/sketchybar/plugins/clock.sh"
+
+# Volume
+sketchybar --add item volume right \
+  --set volume \
+    script="$HOME/.config/sketchybar/plugins/volume.sh" \
+    --subscribe volume volume_change
+
+
+# # Disk
+# sketchybar --add item disk right \
+#   --set disk \
+#     update_freq=60 \
+#     icon=$DISK \
+#     icon.color=$MAGENTA \
+#     script="$HOME/.config/sketchybar/plugins/disk.sh" \
+#     click_script="open /System/Volumes/Data"
+
+# RAM
+sketchybar --add item ram right \
+  --set ram \
+    update_freq=5 \
+    icon=$MEMORY \
+    icon.color=$BLUE \
+    script="$HOME/.config/sketchybar/plugins/ram.sh" \
+    click_script="open -a 'Activity Monitor'"
+
+# CPU
+sketchybar --add item cpu right \
+  --set cpu \
+    update_freq=5 \
+    icon=$CPU \
+    icon.color=$RED \
+    script="$HOME/.config/sketchybar/plugins/cpu.sh" \
+    click_script="open -a 'Activity Monitor'"
+
+# Download Speed
+sketchybar --add item net_down right \
+  --set net_down \
+    update_freq=2 \
+    script="$HOME/.config/sketchybar/plugins/net_down.sh"
+
+
 
 # Bracket para Status (Fundo unificado)
-sketchybar --add bracket status_bracket wifi cpu volume battery clock \
+sketchybar --add bracket status_bracket  ram net net_down wifi cpu volume battery clock \
   --set status_bracket \
-    background.color=0xff282a36 \
+    background.color=$ITEM_BG_COLOR \
     background.corner_radius=10 \
-    background.border_color=0xff44475a \
+    background.border_color=$GREY \
     background.border_width=2 \
     background.height=32
+
 
 
 # Finaliza a configuração
