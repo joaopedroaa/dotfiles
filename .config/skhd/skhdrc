@@ -1,5 +1,6 @@
 # --- Atalho para o Terminal ---
 alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+alt - space : open -a Shortcat
 alt + shift - q : yabai -m window --close
 
 # --- Foco da Janela  ---
