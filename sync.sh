@@ -40,6 +40,8 @@ stot -l .config/xdg-desktop-portal
 stot -l .config/xmobar
 stot -l .config/xmonad
 stot -l .config/zathura
+stot -l .config/plasma-workspace/shutdown
+
 
 stot -l .config/firefox/user.js                  .mozilla/firefox/vdhmokqy.default-nightly/user.js
 stot -l .config/dolphin/dolphinrc                .config/dolphinrc

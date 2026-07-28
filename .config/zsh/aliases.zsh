@@ -19,7 +19,7 @@ alias rms="shred -uzvn3"
 
 alias iexm="iex -S mix"
 
-alias bye="shutdown 0"
+alias bye="i3-session-save && shutdown 0"
 alias soon="i3lock -c 000000; systemctl suspend"
 
 alias xev="xev -event keyboard  | egrep -o 'keycode.*\)'"

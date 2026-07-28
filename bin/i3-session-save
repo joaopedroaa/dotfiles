@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Ensure save directory exists
+mkdir -p ~/.i3/i3-resurrect
+
+# Clear old session files to prevent restoring closed workspaces
+rm -f ~/.i3/i3-resurrect/workspace_*
+
+# Save workspace mapping (workspace name, output/monitor, and focus state) as JSON
+i3-msg -t get_workspaces | jq -c '.[] | {name: .name, output: .output, focused: .focused}' > ~/.i3/i3-resurrect/workspace_info.json
+
+# Save all active workspaces
+while read -r ws; do
+    [ -z "$ws" ] && continue
+    i3-resurrect save -w "$ws"
+done < <(jq -r '.name' ~/.i3/i3-resurrect/workspace_info.json)

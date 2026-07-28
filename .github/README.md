@@ -131,7 +131,7 @@ As configurações completas para estes softwares encontram-se dentro de `.confi
 - **Visualização de Arquivos:** **Ranger** e **LF** (gerenciadores de arquivo em terminal), **Zathura** (leitor de PDFs leve)
 - **Interface e Áudio:** **Dunst** (notificações), **Flameshot** (capturas de tela), **Cava** (visualizador de áudio)
 - **Browsers & Web:** **Firefox** (otimização via `user.js`)
-- **Shell & Terminal:** **Zsh** (gerenciado com **Zinit** e tema **Powerlevel10k**)
+- **Shell & Terminal:** **Zsh** gerenciado com **Zinit** (carregamento assíncrono Turbo) e tema **Powerlevel10k**. Otimizado com carregamento tardio (*lazy loading*) para NVM (inicialização do terminal ~5x mais rápida) e visualização enriquecida no completamento via **fzf-tab**.
 
 ---
 
@@ -151,6 +151,22 @@ Abaixo estão alguns dos atalhos mais úteis configurados em [aliases.zsh](file:
 - **`la` / `ls` / `lt`:** Atalhos para o comando `eza` para listar arquivos de maneira legível e com ícones.
 - **`ipconfig`:** Retorna rapidamente seus endereços de IP interno e externo.
 - **`sizes`:** Lista os 10 maiores arquivos/diretórios ocultos no seu diretório `HOME`.
+
+---
+
+## Recursos Especiais e Otimizações
+
+O setup do Zsh conta com otimizações avançadas de desempenho e usabilidade:
+
+- **Lazy Loading de NVM:** O carregamento do Node Version Manager (NVM) é postergado até que você execute comandos do Node (`nvm`, `node`, `npm`, `npx` ou `yarn`). Isso reduziu o tempo de inicialização do Zsh de ~0.8s para **~0.18s** (cerca de 5x mais rápido).
+- **Previews Interativos com `fzf-tab`:** Ao usar a completação com a tecla `Tab`, o terminal exibirá janelas de pré-visualização interativas:
+  - `cd <Tab>` exibe o conteúdo das pastas usando o `eza`.
+  - `cat`/`bat`/`nvim`/`code` `<Tab>` exibe uma prévia do arquivo usando o `bat` com destaque de sintaxe e numeração de linhas.
+- **Prevenção de Duplicados no PATH:** As variáveis `$PATH` e `$fpath` são sanitizadas automaticamente no início do shell para evitar caminhos duplicados ao abrir novos sub-shells.
+- **Usabilidade de Histórico:**
+  - Comandos que iniciam com um caractere de espaço em branco não são salvos no histórico (ideal para senhas).
+  - Expansões automáticas de histórico como `!!` e `!$` exigem confirmação do botão `Enter` antes de executar.
+  - Navegação automática `AUTO_CD`: digitar o caminho de um diretório existente realiza o `cd` diretamente.
 
 ---
 

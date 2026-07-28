@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+# Ensure directory exists
+mkdir -p ~/.i3/i3-resurrect
+
+# If we have the saved workspace info (with monitor mappings)
+if [ -f ~/.i3/i3-resurrect/workspace_info.json ]; then
+    # 1. Restore each workspace using i3-resurrect
+    while read -r ws; do
+        [ -z "$ws" ] && continue
+        echo "Restoring workspace: $ws"
+        i3-resurrect restore -w "$ws"
+    done < <(jq -r '.name' ~/.i3/i3-resurrect/workspace_info.json)
+
+    # 2. Move each workspace to its saved output/monitor
+    while read -r row; do
+        ws=$(echo "$row" | jq -r '.name')
+        output=$(echo "$row" | jq -r '.output')
+        [ -z "$ws" ] || [ -z "$output" ] && continue
+        echo "Moving workspace $ws to output $output"
+        i3-msg "workspace \"$ws\"; move workspace to output \"$output\""
+    done < <(jq -c '.' ~/.i3/i3-resurrect/workspace_info.json)
+
+    # 3. Restore focus to the workspace that was focused when saving
+    focused_ws=$(jq -r 'select(.focused == true) | .name' ~/.i3/i3-resurrect/workspace_info.json)
+    if [ -n "$focused_ws" ] && [ "$focused_ws" != "null" ]; then
+        echo "Restoring focus to workspace: $focused_ws"
+        i3-msg "workspace \"$focused_ws\""
+    fi
+else
+    # Fallback to the old logic if workspace_info.json is missing
+    for file in ~/.i3/i3-resurrect/workspace_*_layout.json; do
+        if [ -e "$file" ]; then
+            basename=$(basename "$file")
+            ws_name=${basename#workspace_}
+            ws_name=${ws_name%_layout.json}
+
+            echo "Restoring workspace: $ws_name"
+            i3-resurrect restore -w "$ws_name"
+        fi
+    done
+fi
+
+sleep 5
+for win in $(wmctrl -l | awk -F' ' '{print $1}'); do
+    wmctrl -i -r $win -b remove,demands_attention
+done
