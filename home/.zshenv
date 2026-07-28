@@ -33,7 +33,10 @@
 #   export XDG_VIDEOS_DIR="$HOME/Media"
 # fi
 
+typeset -U path fpath
+
 export SHELL="/bin/zsh"
+
 
 # Default apps
 export TERMINAL="kitty"

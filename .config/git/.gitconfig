@@ -1,6 +1,8 @@
 [user]
 	name = João Pedro Alvarenga
 	email = joaopedroaats@pm.me
+[includeIf "gitdir:~/work/dasa"]
+	path = ~/.gitconfig-work
 [push]
 	followTags = true
 [alias]

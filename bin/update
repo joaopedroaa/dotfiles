@@ -1,9 +1,12 @@
 #!/usr/bin/env zsh
 
 
-[ "$1" = "--all" ] && echo_separate "makepkg vscode insiders" \
-                && cd ~/.cache/yay/visual-studio-code-insiders-bin \
-                && makepkg -si --noconfirm
+[ "$1" = "-a" ] && echo_separate "makepkg vscode insiders" \
+&& cd ~/.cache/yay/visual-studio-code-insiders-bin \
+&& makepkg -si --noconfirm
+
+echo_separate "sudo pacman -Syu"
+sudo pacman -Syu
 
 echo_separate "yay -Syu"
 yay -Syyu

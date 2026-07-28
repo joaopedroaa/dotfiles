@@ -6,7 +6,6 @@ kitty &
 kitty &
 
 i3-msg 'workspace 11;  append_layout ~/dotfiles/.config/i3layouts/spotify.json'
-LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify &
 kitty &
 
 i3-msg 'workspace 12;  append_layout ~/dotfiles/.config/i3layouts/discord.json'

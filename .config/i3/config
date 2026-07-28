@@ -57,7 +57,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym $mod+Print exec flameshot gui
+bindsym $mod+Print exec spectacle
 bindsym $mod+Shift+Print exec gcolor2
 
 
@@ -266,8 +266,11 @@ set $ws9  9
 set $ws10 10
 set $wsmusic 11
 set $wsteams 12
-set $wsfront 13
-set $wsback 14
+set $wshttp 13
+set $wsfront 14
+set $wsfront2 15
+set $wsback 16
+set $wsback2 17
 set $wstrsh 20
 
 # switch to workspace
@@ -283,8 +286,11 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 bindsym $mod+m workspace $wsmusic
 bindsym $mod+c workspace $wsteams
+bindsym $mod+p workspace $wshttp
 bindsym $mod+f workspace $wsfront
+bindsym $mod+g workspace $wsfront2
 bindsym $mod+b workspace $wsback
+bindsym $mod+n workspace $wsback2
 bindsym $mod+x workspace $wstrsh
 
 # move focused container to workspace
@@ -300,8 +306,11 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+m move container to workspace $wsmusic
 bindsym $mod+Shift+c move container to workspace $wsteams
+bindsym $mod+Shift+p move container to workspace $wshttp
 bindsym $mod+Shift+f move container to workspace $wsfront
+bindsym $mod+Shift+g move container to workspace $wsfront2
 bindsym $mod+Shift+b move container to workspace $wsback
+bindsym $mod+Shift+n move container to workspace $wsback2
 bindsym $mod+Shift+x move container to workspace $wstrsh
 
 # Layouts ---------------------------------------------
@@ -313,7 +322,9 @@ workspace $ws5  output $monitor1
 workspace $ws10 output $monitor1
 workspace $wsmusic output $monitor0
 workspace $wsteams output $monitor0
+workspace $wshttp output $monitor0
 workspace $wsfront output $monitor0
+workspace $wsfront2 output $monitor0
 workspace $wsback output $monitor0
 workspace $wstrsh output $monitor1
 

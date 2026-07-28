@@ -118,7 +118,7 @@ alias di="docker image"
 alias dv="docker volume"
 
 alias dls="docker ps -a"
-alias drmall="docker rm $(docker ps -a -q)"
+alias drmall='docker rm $(docker ps -a -q)'
 
 alias dc="docker-compose"
 alias dcup="docker-compose up"
@@ -171,8 +171,9 @@ alias char="gucharmap"
 alias df='duf'
 alias du='gdu -c' # -c para mostrar cores
 
-alias fordasa='sudo openfortivpn dasavpn2.dasa.com.br:443 --saml-login'
+alias fortasa='sudo openfortivpn dasavpn2.dasa.com.br:443 --saml-login'
 
+alias game='killall picom'
 
 
 
@@ -197,9 +198,9 @@ clean(){
     GREEN='\033[0;32m'
     YELLOW='\033[1;33m'
     NC='\033[0m' # Sem Cor
-
+    
     echo -e "${GREEN}--- Iniciando Limpeza do Sistema ---${NC}"
-
+    
     # 1. Remover pacotes órfãos
     echo -e "\n${YELLOW}Verificando pacotes órfãos...${NC}"
     # Usamos 'pacman -Qtdq' para listar os órfãos. Se a lista não estiver vazia, removemos.
@@ -210,17 +211,17 @@ clean(){
     else
         echo "Nenhum pacote órfão encontrado. Ótimo!"
     fi
-
+    
     # 2. Limpar cache de pacotes do pacman
     echo -e "\n${YELLOW}Limpando cache de pacotes antigos do pacman...${NC}"
     # 'paccache -r' remove todas as versões em cache de pacotes, exceto as 3 mais recentes.
     sudo paccache -r
-
+    
     # 3. Limpar cache do yay
     echo -e "\n${YELLOW}Limpando cache do yay (AUR helper)...${NC}"
     # 'yay -Scc' remove todos os arquivos em cache e fontes que não estão instalados.
     yay -Scc --noconfirm
-
+    
     echo -e "\n${GREEN}--- Limpeza Concluída ---${NC}"
 }
 
@@ -228,32 +229,32 @@ reload(){
     GREEN='\033[0;32m'
     YELLOW='\033[1;33m'
     NC='\033[0m' # Sem Cor
-
+    
     echo -e "${GREEN}--- Iniciando Atualização de Caches ---${NC}"
-
+    
     # Valida o timestamp do sudo no início para não pedir senha a cada comando
     sudo -v
-
+    
     # 1. Cache de fontes (Font Cache)
     echo -e "\n${YELLOW}Reconstruindo o cache de fontes...${NC}"
     fc-cache -fv
-
+    
     # 2. Cache de ícones (Icon Cache)
     echo -e "\n${YELLOW}Atualizando o cache de ícones...${NC}"
     # Atualiza os caches nos diretórios padrão de ícones do sistema
     # O GTK usa esses caches para carregar ícones de forma mais rápida.
     sudo gtk-update-icon-cache -qtf /usr/share/icons/hicolor
     # Se você usa outros temas, pode adicionar o caminho deles aqui também.
-
+    
     # 3. Base de dados de aplicativos (Desktop Database)
     echo -e "\n${YELLOW}Atualizando a base de dados de tipos MIME...${NC}"
     # Garante que o sistema saiba qual aplicativo abrir para cada tipo de arquivo.
     sudo update-desktop-database -q
-
+    
     # 4. Base de dados do 'man'
     echo -e "\n${YELLOW}Atualizando a base de dados das 'man pages'...${NC}"
     sudo mandb -q
-
+    
     echo -e "\n${GREEN}--- Atualização de Caches Concluída ---${NC}"
 }
 
@@ -278,74 +279,74 @@ status() {
                 echo "   -c    Show config info (clock, keyboard, locale)"
                 echo "   -a    Apps"
                 echo "   -i    Show audio info (pactl info)"
-
+                
             ;;
-
+            
             # v)
             #   VBoxManage setextradata global GUI/SuppressMessages "all"
             # ;;
-
+            
             a)
                 xprop
                 mozo
                 pkgbrowser
             ;;
-
+            
             m)
                 arandr
             ;;
-
+            
             i)
                 pactl info
             ;;
-
+            
             d)
                 echo_separate "duf"
                 duf
             ;;
-
+            
             n)
                 echo_separate "lspci -v"
                 lspci -vv | grep -A11 "Ethernet controller"
-
+                
                 echo_separate "cat /etc/modprobe.d/blacklist.conf"
                 cat /etc/modprobe.d/blacklist.conf
-
+                
                 echo_separate "cat /usr/lib/modprobe.d/r8168.conf"
                 cat /usr/lib/modprobe.d/r8168.conf
-
+                
                 echo_separate "dmesg | grep r8169"
                 sudo dmesg | grep r8169
-
+                
                 echo_separate "dmesg | grep r8168"
                 sudo dmesg | grep r8168
-
+                
                 echo_separate "httpstat google.com"
                 httpstat https://www.google.com
             ;;
-
+            
             c)
                 echo_separate "Clock (hwclock --show)"
                 sudo hwclock --show
                 timedatectl
-
+                
                 echo_separate "Keyboard (localectl status)"
                 localectl status
-
+                
                 echo_separate "Locale (locale)"
                 locale
             ;;
-
+            
             s)
                 echo_separate "du"
             ;;
-
+            
             \?) echo "Invalid option: -$OPTARG"
             ;;
-
+            
             :) echo "Option -$OPTARG requires an argument."
             ;;
         esac
     done
-
+    
 }

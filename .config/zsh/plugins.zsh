@@ -17,39 +17,36 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 
 # --- Auto Suggestions (Sugestões Automáticas) ---
+# Sugestões automáticas de comandos baseadas no seu histórico
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20 # Limita o tamanho do buffer de sugestão
 zinit ice wait"0a" lucid atload"_zsh_autosuggest_start"
 zinit light zsh-users/zsh-autosuggestions
 
 
 # --- Syntax Highlighting (Realce de Sintaxe) ---
-zinit ice wait"0c" lucid atinit"zpcompinit;zpcdreplay"
-zinit light zsh-users/zsh-syntax-highlighting
-
-
-# --- Auto Suggestions (Sugestões Automáticas) ---
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20 # Limita o tamanho do buffer de sugestão
-zinit ice wait"0a" lucid atload"_zsh_autosuggest_start"
-zinit light zsh-users/zsh-autosuggestions
+# Realce de sintaxe em tempo real no terminal (detecta comandos válidos/inválidos)
+zinit ice wait"0c" lucid atinit"zicompinit; zicdreplay"
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 
 # --- History Substring Search (Busca no Histórico) ---
+# Busca no histórico digitando parte de um comando e usando as setas para cima/baixo
 zinit ice wait"0b" lucid atload'bindkey "$terminfo[kcuu1]" history-substring-search-up; bindkey "$terminfo[kcud1]" history-substring-search-down'
 zinit light zsh-users/zsh-history-substring-search
+
 # Bindings adicionais para as setas (pode ser necessário dependendo do terminal)
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 
 # zsh-autopair
-# Fecha automaticamente parênteses, colchetes, etc
+# Fecha aspas, parênteses, colchetes e chaves automaticamente ao digitar
 zinit light hlissner/zsh-autopair
 
-zinit ice as"program" from"gh-r"
-zinit light muesli/duf
-
-zinit ice as"program" from"gh-r"
-zinit light dundee/gdu
+# zsh-you-should-use
+# Lembra você de usar os aliases configurados caso digite o comando completo
+zinit ice wait"0b" lucid
+zinit light MichaelAquilina/zsh-you-should-use
 
 
 # ============================================================================== #
@@ -57,16 +54,22 @@ zinit light dundee/gdu
 # ============================================================================== #
 
 # --- zsh-completions ---
-# Coleção de definições de autocompletar adicionais para vários comandos.
+# Coleção de definições de autocompletar adicionais para centenas de comandos comuns
 zinit ice wait"0b" lucid blockf
 zinit light zsh-users/zsh-completions
 
 # --- yarn-completion ---
-# Autocompletar para o gerenciador de pacotes Yarn.
+# Autocompletar aprimorado para pacotes, scripts e comandos do Yarn
+zinit ice as"completion" mv"yarn-extra-completion.plugin.zsh -> _yarn_extra"
 zinit light buonomo/yarn-completion
 
+# --- conda-zsh-completion ---
+# Autocompletar para comandos e nomes de ambientes virtuais do Conda
+zinit ice as"completion"
+zinit light esc/conda-zsh-completion
+
 # --- fzf (Fuzzy Finder) ---
-# Ferramenta de busca por aproximação para a linha de comando.
+# Substitui o menu padrão de completions do Tab por uma lista interativa via fzf
 zinit ice lucid wait'0'
 zinit light Aloxaf/fzf-tab
 
@@ -76,25 +79,25 @@ zinit light Aloxaf/fzf-tab
 
 
 # --- zoxide ---
-# Navegação de diretórios inteligente)
-zinit ice as"program" from"gh-r"
+# Navegação inteligente de diretórios (substituto moderno e rápido do 'cd' com 'z')
+zinit ice as"program" from"gh-r" lucid wait"0b"
 zinit light ajeetdsouza/zoxide
 
 
 # --- forgit ---
-# Ferramenta interativa que usa o fzf para operações do Git.
+# Atalhos interativos usando fzf para logs, status, diff e commits do Git
 zinit load wfxr/forgit
 
 
 # --- docker-compose ---
-# Baixa a versão mais recente do docker-compose dos releases do GitHub.
-zinit ice from"gh-r" as"program" mv"docker* -> docker-compose" bpick"*linux*"
+# Baixa e disponibiliza a versão mais recente do binário do docker-compose
+zinit ice from"gh-r" as"program" mv"docker* -> docker-compose" bpick"*linux*" lucid wait"0b"
 zinit load docker/compose
 
 
 # --- direnv ---
-# Carrega e descarrega variáveis de ambiente dependendo do diretório atual.
-zinit ice as"program" make'!' atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' src"zhook.zsh"
+# Carrega e desmarca variáveis de ambiente automaticamente ao entrar/sair de pastas
+zinit ice as"program" make'!' atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' src"zhook.zsh" lucid wait"0b"
 zinit light direnv/direnv
 
 
@@ -107,6 +110,7 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::bgnotify
 zinit snippet OMZP::extract # Extrair qualquer arquivo compactado com um único comando
+zinit snippet OMZP::colored-man-pages # Coloriza as páginas de manual (man) para melhor leitura
 
 # ============================================================================== #
 # ==                           FINALIZAÇÃO E CONFIGURAÇÃO                       == #

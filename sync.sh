@@ -44,6 +44,7 @@ stot -l .config/zathura
 stot -l .config/firefox/user.js                  .mozilla/firefox/vdhmokqy.default-nightly/user.js
 stot -l .config/dolphin/dolphinrc                .config/dolphinrc
 stot -l .config/git/.gitconfig                   .gitconfig
+stot -l .config/git/.gitconfig-work              .gitconfig-work
 stot -l .config/pavucontrol/pavucontrol.ini      .config/pavucontrol.ini
 stot -l .config/picom/picom.conf                 .config/picom.conf
 stot -l .config/most/.mostrc                     .mostrc
@@ -75,6 +76,7 @@ stot -c etc/lightdm/lightdm.conf
 stot -c etc/lightdm/lightdm-webkit2-greeter.conf
 
 stot -c etc/modprobe.d/blacklist.conf
+stot -c etc/modprobe.d/nvidia-power-management.conf
 stot -c etc/pacman.d/mirrorlist
 stot -c etc/php/php.ini
 stot -c etc/pulse/default.pa
